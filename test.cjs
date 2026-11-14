@@ -18,3 +18,22 @@ for(const mode of ['orbit','choir','saw','tide','braid','gyre','quake']){
  for(let n=1;n<=4;n++){const a=C.phasonAt(.23,mode,.56,.08,-.12),b=C.phasonAt(n+.23,mode,.56,.08,-.12);assert(Math.hypot(a[0]-b[0],a[1]-b[1])<1e-11,'twin closure: '+mode);}
 }
 console.log('PASS',A.tiles.length,'rhombi,',A.connections.length,'edges,',routes.length,'closed routes, seven + twin loops.');
+
+// Phase 004: a finger-stroke follows real graph adjacency, never teleports.
+const stitches=[{id:'stitch-a',points:[[0,0],[1.5,-1.1],[2.3,1.7],[-.6,2]]}];
+const guided=C.stitchRoutes(A,stitches);
+assert.equal(guided.length,1,'one editable stitch becomes one real graph path');
+assert(guided[0].indices.length>4,'route has multiple real tiles');
+assert.equal(JSON.stringify(guided),JSON.stringify(C.stitchRoutes(A,stitches)),'guided deterministic replay');
+for(const route of guided){
+ for(let i=0;i<route.indices.length;i++){
+  const a=route.indices[i],b=route.indices[(i+1)%route.indices.length];
+  assert(edges.has([Math.min(a,b),Math.max(a,b)].join(':')),'stitch only traverses shared-edge neighbors');
+ }
+}
+const depths=C.graphDepths(A,[0,0]);
+assert.equal(depths.length,A.tiles.length,'graph-distance field covers all tile identities');
+assert.equal(Math.min(...depths),0,'branching propagation has a real source');
+for(const e of A.connections)if(depths[e.a]>=0&&depths[e.b]>=0)assert(Math.abs(depths[e.a]-depths[e.b])<=1,'BFS neighboring depths differ by at most one');
+assert.equal(C.stitchRoutes(A,[]).length,0,'no authored guides produce no guide routes');
+console.log('PASS: Phase 004 stitched rhomb graph routes, deterministic replay, branching network depths.');
