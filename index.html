@@ -3,12 +3,12 @@
 <style>
 :root{color-scheme:dark;--bg:#090a13;--panel:#131523;--panel2:#1c1e31;--line:#3b3b54;--text:#f4f2ff;--sub:#b9b4cc;--a:#e7ff72;--b:#ff63e5}*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 8% -8%,#53215a55,transparent 40%),radial-gradient(ellipse at 95% 1%,#103d5b66,transparent 42%),var(--bg);color:var(--text)}button,select,input{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--a);outline-offset:2px}button:disabled{opacity:.45;cursor:not-allowed}.shell{max-width:1120px;margin:auto;padding:14px 15px 50px}.mast{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:3px 0 12px}.brand{font-weight:950;letter-spacing:-1.3px;font-size:clamp(24px,5vw,40px);line-height:1}.brand em{font-style:normal;color:var(--a)}.smallcaps{font-size:10px;letter-spacing:2.5px;font-weight:800;color:var(--sub);margin-top:5px}.caps{font-size:10px;color:#c9bed4;letter-spacing:1.7px;text-transform:uppercase;font-weight:750}.status{display:flex;gap:8px;align-items:center;white-space:nowrap;font-size:11px;color:var(--sub);letter-spacing:1px}.dot{width:9px;height:9px;border-radius:50%;background:var(--a);box-shadow:0 0 10px var(--a)}.stage{background:#070711;border:1px solid #59526b;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 12px 50px #000b,0 0 70px #cc42e11a;display:flex;align-items:center;justify-content:center;isolation:isolate;min-height:220px}.stage canvas{display:block;max-height:66vh;max-width:100%;touch-action:none;user-select:none;-webkit-user-select:none;cursor:crosshair}.stage:before{content:'';pointer-events:none;position:absolute;z-index:2;inset:0;border:1px solid #ffffff16;border-radius:16px}.overlay{pointer-events:none;position:absolute;z-index:3;top:10px;left:12px;font-size:10px;line-height:1.6;text-shadow:0 2px 5px #000;letter-spacing:1px;color:#fff9}.overlay.right{left:auto;right:12px;text-align:right}.toolbar{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 12px;align-items:center}.btn{border:1px solid #615d7c;background:#202238;border-radius:10px;color:white;padding:10px 12px;font-weight:700;min-height:40px}.btn:hover{border-color:#cbb7f7}.btn.primary{background:var(--a);border-color:var(--a);color:#16151c}.btn.pink{background:#803777;border-color:#dc79d3}.btn.tiny{min-height:34px;padding:7px 10px;font-size:12px}.grow{flex:1}.tabs{display:flex;overflow-x:auto;gap:5px;padding:3px;border-radius:12px;background:#171824;scrollbar-width:thin}.tab{border:0;border-radius:9px;background:transparent;color:#b9b4cc;font-size:13px;font-weight:800;padding:11px 16px;white-space:nowrap}.tab.active{background:#343049;color:var(--a)}.panel{background:linear-gradient(160deg,#181a2c,#10111f);border:1px solid #3a3b58;border-radius:0 0 16px 16px;padding:16px;margin-top:-4px;min-height:205px}.description{font-size:13px;line-height:1.55;color:#c1bad2;max-width:750px;margin:1px 0 14px}.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 18px}.field{display:flex;flex-direction:column;gap:8px;min-width:0}.field label{font-weight:750;font-size:12px;display:flex;justify-content:space-between;gap:8px}.value{color:var(--a);font-variant-numeric:tabular-nums}.field input[type=range]{width:100%;accent-color:var(--a);height:20px}.field select{width:100%;color:#faf7ff;background:#25253c;border:1px solid #62627c;border-radius:8px;padding:10px;min-height:42px}.field option{background:#23223a}.help{font-size:11px;color:#a6a1bc;line-height:1.4}.swatches{display:flex;gap:6px;margin-top:7px}.swatches span{display:block;height:18px;flex:1;border-radius:4px;border:1px solid #ffffff2a}.inline{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.toggle{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;cursor:pointer}.toggle input{accent-color:var(--a);width:18px;height:18px}.notice{margin-top:15px;background:#242439;border-left:3px solid #c2ee6a;padding:10px 12px;color:#c7c5d4;font-size:12px;line-height:1.5}.footer{font-size:11px;color:#8986a3;line-height:1.6;margin-top:16px}.foot-em{color:#bfea80}.pill{border:1px solid #6d547d;border-radius:30px;padding:6px 10px;color:#e0d3e8;background:#201c32;font-size:11px}.summary{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 8px}.badge{border:1px solid #4f4d69;padding:5px 9px;border-radius:20px;font-size:11px;color:#e4deef}#errors{color:#ff9bba;font-size:12px;white-space:pre-wrap} .viewer-warning{position:absolute;z-index:4;inset:auto 12px 14px 12px;background:#29233c;border:1px solid #e7ff72;border-radius:14px;padding:14px;font-size:13px;line-height:1.55;color:#fff4fa;box-shadow:0 6px 28px #000a}.viewer-warning strong{display:block;color:#e7ff72;margin-bottom:3px}.phason-ready .viewer-warning{display:none} .hidden{display:none!important}@media(max-width:620px){.shell{padding:10px 10px 32px}.controls{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 12px}.panel{padding:13px}.brand{letter-spacing:-.6px}.stage canvas{max-height:55vh}.status{font-size:10px}.mast{margin-bottom:9px}.tab{padding:11px 12px}.toolbar{gap:5px}.btn{padding:9px 10px;font-size:12px}.overlay{font-size:9px}}@media(max-width:360px){.controls{grid-template-columns:1fr}.stage canvas{max-height:52vh}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style></head><body><main class="shell">
-<header class="mast"><div><div class="brand">PHASON <em>RIOT</em></div><div class="smallcaps">LIVING QUASICRYSTAL STUDIO · 002</div></div><div class="status"><span class="dot" id="liveDot"></span><span id="liveText">STRUCTURAL MOTION</span></div></header>
+<header class="mast"><div><div class="brand">PHASON <em>RIOT</em></div><div class="smallcaps">LIVING QUASICRYSTAL STUDIO · 003</div></div><div class="status"><span class="dot" id="liveDot"></span><span id="liveText">STRUCTURAL MOTION</span></div></header>
 <section class="stage" id="stage"><canvas id="art" aria-label="Interactive animated Penrose-style quasicrystal. Drag to shift phason offsets."></canvas><div class="overlay"><div>⊹ PENTAGRID / 05</div><div id="tileStats">GENERATING…</div></div><div class="overlay right"><div id="motionStats">U 0.00 · V 0.00</div><div id="loopStats">LOOP 08.0s</div></div><div class="viewer-warning"><strong>⚠ PREVIEW ONLY — JAVASCRIPT IS NOT RUNNING</strong>This preview cannot run the JavaScript engine. Open the published GitHub Pages site in Safari, or load this file into a JavaScript-enabled HTML editor. GitHub's code/file preview and iPhone Files Quick Look are NOT the running app.</div></section>
 <nav class="toolbar" aria-label="Artwork actions"><button class="btn primary" id="playBtn">Ⅱ Pause</button><button class="btn" id="newBtn">✦ New Design</button><button class="btn" id="undoBtn">↶ Undo</button><button class="btn" id="redoBtn">↷ Redo</button><span class="grow"></span><button class="btn" id="exportPng">↓ PNG</button><button class="btn" id="exportJson">↓ Recipe</button></nav>
-<nav class="tabs" aria-label="Editor sections"><button class="tab active" data-tab="motion">Motion</button><button class="tab" data-tab="material">Materials</button><button class="tab" data-tab="geometry">Geometry</button><button class="tab" data-tab="color">Color</button><button class="tab" data-tab="export">Export</button></nav>
+<nav class="tabs" aria-label="Editor sections"><button class="tab active" data-tab="motion">Motion</button><button class="tab" data-tab="material">Materials</button><button class="tab" data-tab="twin">Twin Field</button><button class="tab" data-tab="geometry">Geometry</button><button class="tab" data-tab="color">Color</button><button class="tab" data-tab="export">Export</button></nav>
 <div class="panel" id="panel"></div><div id="errors" role="status"></div>
-<footer class="footer">REAL GEOMETRY: de Bruijn five-family dual pentagrid · RHOMBI: 36° / 72° · PHASON: global perpendicular-space offset path. GRAPH: actual shared-edge adjacency trails. Light waves, luminous filaments and fault highlights are artistic render layers, not physical particle or local phason simulations. <span class="foot-em">No paid APIs. No Netlify. Works offline.</span></footer>
+<footer class="footer">REAL GEOMETRY: de Bruijn five-family dual pentagrid · RHOMBI: 36° / 72° · PHASON: global perpendicular-space offset path. GRAPH: actual shared-edge adjacency trails. The second pentagrid independently changes tile adjacency; walkers travel along actual shared-edge graph links and reroute as geometry changes. These remain constructed artworks, not physical local phason kinetics. <span class="foot-em">No paid APIs. No Netlify. Works offline.</span></footer>
 </main><script id="mathcore">
 const PhasonCore = (() => {
   'use strict';
@@ -82,12 +82,28 @@ const PhasonCore = (() => {
     else {u=.72*Math.cos(q)+.28*Math.cos(3*q+.45);v=.72*Math.sin(q)+.28*Math.sin(2*q+.6);}
     return [baseU+a*u,baseV+a*v];
   }
+  // Each path follows verified dual-graph neighbors; mirrored return makes a closed, non-teleporting walk.
+  function walks(geo,seed,count=12,hops=13) {
+    const neighbors=Array.from({length:geo.tiles.length},()=>[]);
+    for(const e of geo.connections){neighbors[e.a].push(e.b);neighbors[e.b].push(e.a);}
+    const random=seeded(seed ^ (geo.tiles.length*7919));const out=[];
+    for(let j=0;j<Math.min(32,count);j++){
+      let at=Math.floor(random()*geo.tiles.length),before=-1,route=[at];
+      for(let h=0;h<hops;h++){
+        const options=neighbors[at].filter(k=>k!==before);
+        const choices=options.length?options:neighbors[at];if(!choices.length)break;
+        const next=choices[Math.floor(random()*choices.length)];before=at;at=next;route.push(at);
+      }
+      if(route.length>1)out.push(route.concat(route.slice(1,-1).reverse()));
+    }
+    return out;
+  }
   function compare(a,b) {
     const m=new Map(a.tiles.map(t=>[t.id,t.label]));let changed=0,shared=0;
     for(const t of b.tiles) if(m.has(t.id)){shared++;if(m.get(t.id)!==t.label)changed++;}
     return {changed,shared};
   }
-  return {TAU,star,internal,clamp,seeded,offsets,makeGrid,generate,phasonAt,compare};
+  return {TAU,star,internal,clamp,seeded,offsets,makeGrid,generate,phasonAt,compare,walks};
 })();
 </script><script>
 (()=>{'use strict';
@@ -103,9 +119,9 @@ const palettes={
 'Ink & Gold':['#e5ae53','#ffc9a4','#c4d6ff','#faf0d7','#8656af','#ef8469']};
 const clean=(s)=>Array.isArray(s)?s.filter(x=>/^#[0-9a-fA-F]{6}$/.test(x)).slice(0,24):[];
 try{const loaded=JSON.parse(localStorage.getItem('phason_user_palettes')||'{}');for(const [k,v] of Object.entries(loaded))if(clean(v).length>=2)palettes[k]=clean(v);}catch{}
-const defaults={seed:1931,radius:8,zoom:1,mode:'orbit',period:8,amp:.82,baseU:0,baseV:0,material:'opal',palette:'Acid Carnival',intensity:1.1,glow:.65,edge:.7,comets:1,wave:1,speed:1,colorCycles:2,threadCycles:3,network:.6,structureSteps:96,showChanges:false,neonBoost:0,background:'#080b18',aspect:'square',showGrid:false,showNodes:true};
-let S={...defaults},undo=[],redo=[],lastDraw=0,isPlaying=!window.matchMedia('(prefers-reduced-motion:reduce)').matches,elapsed=0,lastTime=0,current=null,grid=[],needGeom=true,geomStamp='',frameNo=0,reference=null,referenceStamp='',referenceLabels=null,pointers=new Map(),gesture=null;
-const TABS={motion:'Real structural changes across seven closed paths. Colored light and shared-edge signals have their own rhythm. One finger changes phason U/V; pinch with two fingers to zoom.',material:'Choose an entirely different visual behavior, from opal surfaces to connected filament networks and phason fault flashes. All optical looks are stylized.',geometry:'Actual five-family dual grid. Inspect changed K-label neighborhoods relative to the frozen base offset; this is NOT a certified count of local tile flips.',color:'Chromatic waves advance at an independently chosen integer harmonic for exact loop closure. Neon boost is optional. Import any of your named palette JSON lists.',export:'Save a still or a reproducible recipe. Exact GIF/MP4 encoding is not part of this first offline build; the engine does support mathematically closed frame sampling.'};
+const defaults={seed:1931,radius:8,zoom:1,mode:'orbit',period:8,amp:.82,baseU:0,baseV:0,material:'opal',palette:'Acid Carnival',intensity:1.1,glow:.65,edge:.7,comets:1,wave:1,speed:1,colorCycles:2,threadCycles:3,network:.6,structureSteps:96,showChanges:false,neonBoost:0,background:'#080b18',aspect:'square',showGrid:false,showNodes:true,twinEnabled:true,twinMode:'gyre',twinAmp:.56,twinPhase:.23,twinFrequency:2,twinOpacity:.36,twinScale:1.02,twinU:.08,twinV:-.12,twinStyle:'mesh',riderCount:14,riderSpeed:2,riderGlow:1,gifSize:'480',gifFps:'12'};
+let S={...defaults},undo=[],redo=[],lastDraw=0,isPlaying=!window.matchMedia('(prefers-reduced-motion:reduce)').matches,elapsed=0,lastTime=0,current=null,grid=[],needGeom=true,geomStamp='',frameNo=0,reference=null,referenceStamp='',referenceLabels=null,twinGeo=null,twinStamp='',pointers=new Map(),gesture=null;
+const TABS={motion:'Real structural changes across seven closed paths. Colored light and shared-edge signals have their own rhythm. One finger changes phason U/V; pinch with two fingers to zoom.',material:'Choose an entirely different visual behavior, from opal surfaces to connected filament networks and phason fault flashes. All optical looks are stylized.',twin:'Two real pentagrid fields run their own internal-space orbits. Off restores the single-layer image. These are overlaid finite patches, NOT a magically seamless Penrose wallpaper.',geometry:'Actual five-family dual grid. Inspect changed K-label neighborhoods relative to the frozen base offset; this is NOT a certified count of local tile flips.',color:'Chromatic waves advance at an independently chosen integer harmonic for exact loop closure. Neon boost is optional. Import any of your named palette JSON lists.',export:'Save a still, original looped GIF, 16-frame atlas or reproducible recipe. GIF frames sample the exact mathematical clock; mobile performance varies. MP4 is not yet available.'};
 const modes={orbit:'Orbit — smooth structural change',choir:'Choir — 2:3 Lissajous counterpoint',saw:'Riot — multi-frequency phason jumps',tide:'Tidal — stretched orbit',braid:'Braid — fivefold harmonic crossing',gyre:'Gyre — double-wound internal orbit',quake:'Quake — sharp structural transitions'};
 const mats={opal:'Opal cathedral',neon:'Electric circuitry',velvet:'Velvet brocade',mineral:'Mineral glass',ink:'Ink constellation',filament:'Living filament network',fault:'Phason faultlines',prism:'Prism faceted glass'};
 const aspectOpts={square:'1:1 Square',portrait:'9:16 Portrait',wide:'16:9 Wide',poster:'3:4 Poster',landscape:'4:3 Landscape'};
@@ -119,12 +135,13 @@ function chooser(label,k,opts){return `<div class="field"><label for="${k}">${la
 function toggle(label,k){return `<label class="toggle"><input type="checkbox" id="${k}" ${S[k]?'checked':''}>${label}</label>`;}
 function button(label,id,cls=''){return `<button class="btn tiny ${cls}" id="${id}">${label}</button>`;}
 function paletteWidget(){return `<div class="field" style="grid-column:1 / -1"><label>Current palette</label><div class="swatches">${(palettes[S.palette]||palettes['Acid Carnival']).map(x=>`<span style="background:${x}"></span>`).join('')}</div></div>`;}
-function renderPanel(){let markup='';if(active==='motion')markup=`${chooser('Phason choreography','mode',modes)}${field('Phason amplitude','amp',0,1.6,.01,'How far internal offsets travel; larger values cause more neighborhood changes.')}${field('Cycle duration / seconds','period',2,30,.5,'Exact mathematical closure for these four periodic paths.')}${field('Structural steps / loop','structureSteps',32,192,16,'More steps for fluid rearrangement, fewer for sharp quasicrystal clicks. Art lights stay smooth.')}${field('Light wave motion','wave',0,2,.01,'Color and luminous ripples travel across rhombi.')}${field('Thread comets','comets',0,2,.01,'Moving edge highlights following tile-edge geometry.')}${field('Signal connections','network',0,1.6,.05,'Actual shared-edge adjacency: glowing travel along the tile graph.')}${field('Signal rhythm','threadCycles',1,8,1,'Integer loops per structural cycle, guaranteed to close.')}${field('Motion rate multiplier','speed',.1,3,.05,'Preview speed; exports use exact phase.')}`;
+function renderPanel(){let markup='';if(active==='motion')markup=`${chooser('Phason choreography','mode',modes)}${field('Phason amplitude','amp',0,1.6,.01,'How far internal offsets travel; larger values cause more neighborhood changes.')}${field('Cycle duration / seconds','period',2,30,.5,'Seven periodic paths; all return to their starting coordinates.')}${field('Structural steps / loop','structureSteps',32,192,16,'More steps for fluid rearrangement, fewer for sharp quasicrystal clicks. Art lights stay smooth.')}${field('Light wave motion','wave',0,2,.01,'Color and luminous ripples travel across rhombi.')}${field('Thread comets','comets',0,2,.01,'Moving edge highlights following tile-edge geometry.')}${field('Signal connections','network',0,1.6,.05,'Actual shared-edge adjacency: glowing travel along the tile graph.')}${field('Signal rhythm','threadCycles',1,8,1,'Integer loops per structural cycle, guaranteed to close.')}${field('Living travelers','riderCount',0,28,1,'Actual graph walkers; zero switches off traveling particles.')}${field('Travel cycles','riderSpeed',1,6,1,'Complete non-teleporting out-and-back routes per loop.')}${field('Traveler halo','riderGlow',0,2,.05,'Light around graph-running pulses.')}${field('Motion rate multiplier','speed',.1,3,.05,'Preview speed; exports use exact phase.')}`;
 else if(active==='material')markup=`${chooser('Surface character','material',mats)}${field('Luminous intensity','intensity',0,2,.02,'Raise to neon chaos or lower for subtle dye.')}${field('Halo / softness','glow',0,1,.02,'Bright bloom on strokes and highlights.')}${field('Visible geometry','edge',0,1,.02,'Tile-edge definition.')}<div class="field"><label for="background">Background color</label><input type="color" id="background" value="${S.background}" style="width:100%;height:40px;border:1px solid #67627c;background:#24263c;border-radius:8px;cursor:pointer"></div>${toggle('Vertex jewels','showNodes')}${toggle('Light up rearranged neighborhoods','showChanges')}`;
+else if(active==='twin')markup=`${toggle('Enable second living pentagrid','twinEnabled')}${chooser('Twin motion law','twinMode',modes)}${field('Twin phason displacement','twinAmp',0,1.5,.01,'Independent motion through its OWN internal-space offsets.')}${field('Twin harmonic','twinFrequency',1,4,1,'Whole-number cycles per main loop; exact closure.')}${field('Twin phase shift','twinPhase',0,1,.01,'Offset where the second system starts on its orbit.')}${field('Twin transparency','twinOpacity',0,1,.02,'0 = original single-layer artwork.')}${field('Twin size','twinScale',.75,1.35,.01,'Compositional scale; does not alter tile mathematics.')}${chooser('Twin drawing style','twinStyle',{mesh:'Glowing contour mesh',glass:'Iridescent ghost glass',diagonals:'Cross-woven threads'})}${field('Twin U','twinU',-1.5,1.5,.01,'Manual perpendicular-space coordinate for twin.')}${field('Twin V','twinV',-1.5,1.5,.01,'Second twin coordinate.')}`;
 else if(active==='geometry')markup=`${field('Pentagrid radius','radius',4,14,1,'Bigger = more rhombi, heavier rendering.')}${field('Camera zoom','zoom',.65,2.5,.05,'Change framing without changing the grid.')}${chooser('Canvas composition','aspect',aspectOpts)}${field('Offset U','baseU',-1.5,1.5,.01,'Stable authored internal offset, draggable from canvas.')}${field('Offset V','baseV',-1.5,1.5,.01,'Other independent phason coordinate.')}${toggle('Pentagrid overlay','showGrid')}${toggle('Show changing K-label boundaries','showChanges')}<div class="help" style="grid-column:1/-1">Changes are measured against frozen base U/V within the shared finite grid patch, not counted as isolated legal phason flips.</div>`;
 else if(active==='color')markup=`${chooser('Named palette','palette',Object.fromEntries(Object.keys(palettes).map(k=>[k,k])))}${paletteWidget()}${field('Chromatic beats','colorCycles',0,8,1,'Integer color cycles per full structural loop. Zero locks colors in place.')}${field('Saturation violence','neonBoost',0,2,.05,'Push pastel/intermediate colors outward from gray; zero preserves palette exactly.')}<div class="field" style="grid-column:1 / -1"><label for="paletteImport">Import named palette JSON</label><input type="file" id="paletteImport" accept="application/json,.json"><span class="help">Accepts {"My Palette":["#ff00ff","#00ffff",...]} or a single array of hex stops. Saved only to this browser.</span></div>${button('Shuffle color roles','shuffleColors')}`;
-else markup=`<div class="field"><label>High resolution still</label>${button('PNG · 2048px longest edge','pngLarge','primary')}<span class="help">Uses the live artwork phase. Saves a static frame at a high resolution.</span></div><div class="field"><label>Art recipe</label>${button('Save recipe JSON','jsonLarge')}<span class="help">Reproducible seed, settings and palettes. Import below.</span></div><div class="field"><label>Load recipe</label><input type="file" id="recipeImport" accept="application/json,.json"><span class="help">Undoable and non-destructive until you select a file.</span></div><div class="field"><label>Frame sheet (loop atlas)</label>${button('Export 4 × 4 loop PNG','frameSheet')}<span class="help">16 evenly sampled phases (0 to 15/16, endpoint not duplicated).</span></div>`;
-panel.innerHTML=`<p class="description">${TABS[active]}</p><div class="controls">${markup}</div>${active==='export'?'<div class="notice">Animated GIF/MP4 needs an encoder and frame-accurate export path. This prototype exports a 16-frame loop atlas instead; do not mistake it for a playable GIF.</div>':''}`;
+else markup=`<div class="field"><label>Looped animated GIF</label>${chooser('GIF resolution','gifSize',{'360':'360px fast','480':'480px balanced','720':'720px detailed'})}${chooser('GIF frames per second','gifFps',{'8':'8 fps','12':'12 fps','16':'16 fps'})}${button('Render animated GIF','gifRender','primary')}<span class="help">Encodes actual GIF89a locally, no server. Higher settings need more iPhone memory. Captures exactly one structural loop without duplicating its final frame.</span></div><div class="field"><label>High resolution still</label>${button('PNG · 2048px longest edge','pngLarge','primary')}<span class="help">Uses the live artwork phase. Saves a static frame at a high resolution.</span></div><div class="field"><label>Art recipe</label>${button('Save recipe JSON','jsonLarge')}<span class="help">Reproducible seed, settings and palettes. Import below.</span></div><div class="field"><label>Load recipe</label><input type="file" id="recipeImport" accept="application/json,.json"><span class="help">Undoable and non-destructive until you select a file.</span></div><div class="field"><label>Frame sheet (loop atlas)</label>${button('Export 4 × 4 loop PNG','frameSheet')}<span class="help">16 evenly sampled phases (0 to 15/16, endpoint not duplicated).</span></div>`;
+panel.innerHTML=`<p class="description">${TABS[active]}</p><div class="controls">${markup}</div>${active==='export'?'<div class="notice" id="exportNotice">GIF export is genuine GIF89a animation (256-color dithered), not a sprite sheet. MP4 encoding is a future phase; GIFs can be large and iOS preview apps may not play them inline.</div>':''}`;
 for(const k of Object.keys(S)){const el=$$('#'+k);if(!el||k==='paletteImport'||k==='recipeImport')continue;let before=null; if(el.type==='range'){el.addEventListener('pointerdown',()=>before=snapshot());el.addEventListener('focus',()=>{if(before===null)before=snapshot();});el.addEventListener('input',()=>{S[k]=Number(el.value);if(k==='radius')S[k]=Math.round(S[k]);const v=$$('#value-'+k);if(v)v.textContent=String(S[k]);if(k==='radius')resetGrid();if(['radius','baseU','baseV'].includes(k))needGeom=true;});el.addEventListener('change',()=>{if(before===null)before=snapshot();addHistory(before);before=null;});}
 else if(el.type==='color')el.addEventListener('change',()=>{const old=snapshot();S[k]=el.value;addHistory(old);});
 else if(el.type==='checkbox')el.addEventListener('change',()=>{const old=snapshot();S[k]=el.checked;addHistory(old);});
@@ -132,11 +149,11 @@ else if(el.tagName==='SELECT')el.addEventListener('change',()=>{const old=snapsh
 if($$('#shuffleColors'))bindEl('shuffleColors',()=>{const old=snapshot();const rng=rnd(S.seed+(frameNo*131));const a=palettes[S.palette].slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[a[i],a[j]]=[a[j],a[i]];}palettes[S.palette]=a;savePalettes();addHistory(old);renderPanel();});
 if($$('#paletteImport'))bindEl('paletteImport',async e=>{try{const before=snapshot();const obj=JSON.parse(await e.target.files[0].text());let n=0;if(Array.isArray(obj)){const colors=clean(obj);if(colors.length>=2){palettes['Imported Palette']=colors;S.palette='Imported Palette';n++;}}else for(const [k,v] of Object.entries(obj)){const colors=clean(v);if(colors.length>=2){palettes[k.slice(0,80)]=colors;n++;}}if(!n)throw Error('Need at least two valid #RRGGBB colors per palette.');savePalettes();addHistory(before);renderPanel();flash(`Imported ${n} palette(s).`);}catch(e){flash(e.message);}},'change');
 if($$('#recipeImport'))bindEl('recipeImport',async e=>{try{const recipe=JSON.parse(await e.target.files[0].text());const old=snapshot();if(recipe?.format!=='phason-riot-1'||!recipe.settings)throw Error('Not a PHASON RIOT recipe.');if(recipe.palettes&&typeof recipe.palettes==='object')for(const[k,v]of Object.entries(recipe.palettes)){let c=clean(v);if(c.length>=2)palettes[k.slice(0,80)]=c;}S={...defaults,...Object.fromEntries(Object.entries(recipe.settings).filter(([k])=>k in defaults))};S.seed=(S.seed|0);S.radius=C.clamp(Number(S.radius)||9,4,14);if(!palettes[S.palette])S.palette='Acid Carnival';savePalettes();resetGrid();addHistory(old);renderPanel();resize();}catch(err){flash(err.message)}},'change');
-if($$('#pngLarge'))bindEl('pngLarge',savePng);if($$('#jsonLarge'))bindEl('jsonLarge',saveRecipe);if($$('#frameSheet'))bindEl('frameSheet',saveSheet);
+if($$('#pngLarge'))bindEl('pngLarge',savePng);if($$('#jsonLarge'))bindEl('jsonLarge',saveRecipe);if($$('#frameSheet'))bindEl('frameSheet',saveSheet);if($$('#gifRender'))bindEl('gifRender',saveGif);
 }
 function flash(s){$$('#errors').textContent=s;setTimeout(()=>{if($$('#errors').textContent===s)$$('#errors').textContent=''},7000);}
 function savePalettes(){try{localStorage.setItem('phason_user_palettes',JSON.stringify(palettes));}catch{}}
-function resetGrid(){grid=C.makeGrid(S.radius);needGeom=true;geomStamp='';}
+function resetGrid(){grid=C.makeGrid(S.radius);needGeom=true;geomStamp='';twinGeo=null;twinStamp='';}
 function getAspect(){return {square:1,portrait:9/16,wide:16/9,poster:3/4,landscape:4/3}[S.aspect]||1;}
 function resize(){const a=getAspect(),maxW=stage.clientWidth;let w=maxW,h=w/a;const maxH=window.innerHeight*(window.innerWidth<620?.55:.66);if(h>maxH){h=maxH;w=h*a;}w=Math.max(150,Math.floor(w));h=Math.max(150,Math.floor(h));const dpr=Math.min(window.devicePixelRatio||1,1.7,Math.sqrt(2000000/(w*h)));canvas.style.width=w+'px';canvas.style.height=h+'px';canvas.width=Math.floor(w*dpr);canvas.height=Math.floor(h*dpr);}
 function hx(hex){const s=hex.slice(1);return [parseInt(s.slice(0,2),16),parseInt(s.slice(2,4),16),parseInt(s.slice(4,6),16)];}
@@ -147,7 +164,13 @@ function saturate(hex,amount){if(amount<=0)return hex;const a=hx(hex),lo=Math.mi
 function pickColor(t){const a=palettes[S.palette]||palettes['Acid Carnival'];let z=(((t%1)+1)%1)*a.length,i=Math.floor(z);return saturate(colorMix(a[i],a[(i+1)%a.length],z-i),S.neonBoost);}
 function baseReference(){const key=[S.seed,S.radius,S.baseU.toFixed(4),S.baseV.toFixed(4)].join('|');if(!reference||referenceStamp!==key){reference=C.generate(S.radius,S.seed,S.baseU,S.baseV,grid);referenceLabels=new Map(reference.tiles.map(t=>[t.id,t.label]));referenceStamp=key;}return reference;}
 function gPhase(phase){return C.phasonAt(phase,S.mode,S.amp,S.baseU,S.baseV);}
-function computed(phase){const steps=S.structureSteps||96,structuralPhase=Math.floor(phase*steps)/steps,[u,v]=gPhase(structuralPhase);const key=[S.radius,S.seed,u.toFixed(4),v.toFixed(4)].join('|');if(!current||needGeom||geomStamp!==key){current=C.generate(S.radius,S.seed,u,v,grid);geomStamp=key;needGeom=false;}return current;}
+function computed(phase){const steps=S.structureSteps||96,structuralPhase=Math.floor(phase*steps)/steps,[u,v]=gPhase(structuralPhase);const key=[S.radius,S.seed,u.toFixed(4),v.toFixed(4)].join('|');if(!current||needGeom||geomStamp!==key){current=C.generate(S.radius,S.seed,u,v,grid);current.walks=C.walks(current,S.seed,28,14);geomStamp=key;needGeom=false;}return current;}
+function twinComputed(phase){
+  const q=(((phase*S.twinFrequency+S.twinPhase)%1)+1)%1,step=Math.floor(q*(S.structureSteps||96))/(S.structureSteps||96);
+  const [u,v]=C.phasonAt(step,S.twinMode,S.twinAmp,S.twinU,S.twinV),key=[S.radius,S.seed+104729,u.toFixed(4),v.toFixed(4)].join('|');
+  if(!twinGeo||twinStamp!==key){twinGeo=C.generate(S.radius,S.seed+104729,u,v,grid);twinStamp=key;}
+  return twinGeo;
+}
 function draw(target, w, h, phase, actual){
 const st=target.getContext('2d'),pw=w,ph=h,geo=actual||C.generate(S.radius,S.seed,...gPhase(Math.floor(phase*(S.structureSteps||96))/(S.structureSteps||96)),grid);if(!st)return; const ref=baseReference();const structural=C.compare(ref,geo);
 st.clearRect(0,0,pw,ph);const dark=S.material==='ink'?'#080813':S.material==='velvet'?'#10091d':S.background;st.fillStyle=dark;st.fillRect(0,0,pw,ph);
@@ -174,6 +197,20 @@ if(S.comets>0){const ang=omega*2+(t.i*.91+t.j*.3+dist*.11),seg=((ang/C.TAU)%1+1)
 const rad=Math.max(.5,sc*.08)*S.comets;drawPoint(px,py,rad,rgb(col2,C.clamp(S.intensity*.72,0,1)));if(S.glow>0){st.save();st.globalCompositeOperation='screen';drawPoint(px,py,rad*(2+S.glow*4),rgb(col2,.12*S.glow));st.restore();}}
 if(S.showNodes && (t.i+t.j+Math.round(dist))%3===0){const pulse=.6+.4*Math.sin(omega*2+t.c[0]*.75+t.c[1]*.63);drawPoint(cx,cy,Math.max(.55,sc*.07)*pulse,rgb(col2,.56*S.intensity));}
 }
+if(S.twinEnabled && S.twinOpacity>0){
+  const second=twinComputed(phase),scale=S.twinScale;st.save();st.globalCompositeOperation='screen';st.globalAlpha=S.twinOpacity;
+  const drawTwin=p=>[offX+p[0]*sc*scale,offY+p[1]*sc*scale];
+  for(const tile of second.tiles){const points=tile.p.map(drawTwin),c=drawTwin(tile.c);
+    if(c[0]<-sc*3||c[0]>w+sc*3||c[1]<-sc*3||c[1]>h+sc*3)continue;
+    const clr=pickColor((tile.i*.33+tile.j*.19+(tile.thick?.12:.33)+phase*S.colorCycles*.3)%1+.31);
+    st.beginPath();points.forEach((pt,k)=>k?st.lineTo(...pt):st.moveTo(...pt));st.closePath();
+    if(S.twinStyle==='glass'){st.fillStyle=rgb(clr,.13);st.fill();st.lineWidth=Math.max(.55,sc*.06);st.strokeStyle=rgb(clr,.9);st.stroke();}
+    else if(S.twinStyle==='diagonals'){st.strokeStyle=rgb(clr,.86);st.lineWidth=Math.max(.6,sc*.055);st.beginPath();st.moveTo(...points[0]);st.lineTo(...points[2]);st.moveTo(...points[1]);st.lineTo(...points[3]);st.stroke();}
+    else {st.strokeStyle=rgb(clr,.85);st.lineWidth=Math.max(.55,sc*.065);st.stroke();}
+    if(tile.thick && (tile.i+tile.j)%3===0){st.fillStyle=rgb(clr,.62);st.beginPath();st.arc(c[0],c[1],Math.max(.5,sc*.085),0,C.TAU);st.fill();}
+  }
+  st.restore();
+}
 if(S.network>0){
   // True dual adjacency graph: centers join only across a verified shared rhomb edge.
   // Luminous pulses are an artistic layer, not matter moving through the tiling.
@@ -186,18 +223,67 @@ if(S.network>0){
     if(signal>.92){const f=(signal-.92)/.08;drawPoint(mid[0],mid[1],Math.max(.5,sc*.09)*f*S.network,rgb(pigment,.66*f));}
   }st.restore();
 }
+if(S.riderCount>0 && geo.connections.length){
+  // Continuous piecewise-linear journeys on actual rhomb-center adjacency paths.
+  // Re-route deterministically when a phason jump rebuilds the current graph.
+  const routes=geo.walks||(geo.walks=C.walks(geo,S.seed,S.riderCount,14));
+  st.save();st.globalCompositeOperation='screen';
+  for(let i=0;i<Math.min(routes.length,S.riderCount);i++){
+    const route=routes[i],z=((phase*S.riderSpeed+i/routes.length)%1)*route.length,k=Math.floor(z),f=z-k;
+    const tileA=geo.tiles[route[k]],tileB=geo.tiles[route[(k+1)%route.length]];if(!tileA||!tileB)continue;
+    const a=p(tileA.c),b=p(tileB.c),x=a[0]+(b[0]-a[0])*f,y=a[1]+(b[1]-a[1])*f;
+    if(x<-30||y<-30||x>w+30||y>h+30)continue;
+    const clr=pickColor(i/routes.length+phase*S.colorCycles*.17),r=Math.max(1,sc*.17);
+    const grad=st.createRadialGradient(x,y,.1,x,y,r*(2+S.riderGlow*3));
+    grad.addColorStop(0,rgb('#ffffff',.96));grad.addColorStop(.2,rgb(clr,.85));grad.addColorStop(1,rgb(clr,0));
+    st.fillStyle=grad;st.beginPath();st.arc(x,y,r*(2+S.riderGlow*3),0,C.TAU);st.fill();
+    for(let tail=1;tail<=3;tail++){
+      const zz=(z-tail*.31+route.length*3)%route.length,ki=Math.floor(zz),fi=zz-ki,ta=p(geo.tiles[route[ki]].c),tb=p(geo.tiles[route[(ki+1)%route.length]].c);
+      drawPoint(ta[0]+(tb[0]-ta[0])*fi,ta[1]+(tb[1]-ta[1])*fi,Math.max(.6,r*(.67-tail*.14)),rgb(clr,.48/tail));
+    }
+  }st.restore();
+}
 if(S.showGrid){st.save();st.strokeStyle='rgba(255,255,255,.08)';st.lineWidth=.65;for(let i=0;i<5;i++){const n=C.star[i],g=C.offsets(S.seed,...gPhase(phase))[i],max=Math.ceil(S.radius);for(let j=-max;j<=max;j++){const d=j-g,at=[n[0]*d,n[1]*d],tangent=[-n[1],n[0]];st.beginPath();st.moveTo(offX+(at[0]-tangent[0]*S.radius)*sc,offY+(at[1]-tangent[1]*S.radius)*sc);st.lineTo(offX+(at[0]+tangent[0]*S.radius)*sc,offY+(at[1]+tangent[1]*S.radius)*sc);st.stroke();}}st.restore();}
 const vignette=st.createRadialGradient(w*.5,h*.5,minSide*.08,w*.5,h*.5,Math.max(w,h)*.75);vignette.addColorStop(0,'#00000000');vignette.addColorStop(1,'#00000070');st.fillStyle=vignette;st.fillRect(0,0,w,h);
 return {shown,structural,connections:geo.connections.length};
 }
 function animate(ms){if(!lastTime)lastTime=ms;const dt=Math.min(.08,(ms-lastTime)/1000);lastTime=ms;if(isPlaying)elapsed+=dt*S.speed;const phase=((elapsed/S.period)%1+1)%1;if(ms-lastDraw<(window.innerWidth<630?1000/18:1000/24)){requestAnimationFrame(animate);return;}lastDraw=ms;
-try{const geo=computed(phase);const result=draw(canvas,canvas.width,canvas.height,phase,geo);if(frameNo++%10===0){const [u,v]=gPhase(phase);$$('#tileStats').textContent=`${geo.thick} THICK · ${geo.thin} THIN`;$$('#motionStats').textContent=`U ${u.toFixed(2)} · V ${v.toFixed(2)}`;$$('#loopStats').textContent=`LOOP ${S.period.toFixed(1)}s · ${result.shown} TILES · ${result.structural.changed}/${result.structural.shared} CHANGED · ${result.connections} LINKS${geo.near?' · GRID DEGENERACY':''}`;}}catch(err){flash('Render issue: '+err.message)}requestAnimationFrame(animate);}
+try{const geo=computed(phase);const result=draw(canvas,canvas.width,canvas.height,phase,geo);if(frameNo++%10===0){const [u,v]=gPhase(phase);$$('#tileStats').textContent=`${geo.thick} THICK · ${geo.thin} THIN`;$$('#motionStats').textContent=`U ${u.toFixed(2)} · V ${v.toFixed(2)}`;$$('#loopStats').textContent=`LOOP ${S.period.toFixed(1)}s · ${result.shown} TILES · ${result.structural.changed}/${result.structural.shared} CHANGED · ${result.connections} LINKS${S.twinEnabled?' · TWIN ACTIVE':''}${geo.near?' · GRID DEGENERACY':''}`;}}catch(err){flash('Render issue: '+err.message)}requestAnimationFrame(animate);}
 function togglePlay(){isPlaying=!isPlaying;$$('#playBtn').textContent=isPlaying?'Ⅱ Pause':'▶ Play';$$('#liveDot').style.background=isPlaying?'#e7ff72':'#ff62e5';$$('#liveText').textContent=isPlaying?'STRUCTURAL MOTION':'PAUSED';}
 function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),12000);}
 function frameCanvas(maxEdge,phase){const a=getAspect();let w,h;if(a>=1){w=maxEdge;h=Math.round(maxEdge/a);}else{h=maxEdge;w=Math.round(maxEdge*a);}const output=document.createElement('canvas');output.width=w;output.height=h;draw(output,w,h,phase);return output;}
 function toBlob(canvas,cb){canvas.toBlob(b=>b?cb(b):flash('PNG export unavailable in this browser.'),'image/png');}
 function savePng(){const phase=((elapsed/S.period)%1+1)%1;try{const out=frameCanvas(2048,phase);toBlob(out,b=>download(b,`phason-riot-${S.seed}-${S.aspect}.png`));}catch(e){flash('PNG export failed: '+e.message)}}
 function saveRecipe(){const recipe={format:'phason-riot-1',created:new Date().toISOString(),settings:S,palettes:{[S.palette]:palettes[S.palette]},phase:((elapsed/S.period)%1+1)%1,notes:'True dual pentagrid; global periodic internal phason offsets, independent color and edge animation.'};download(new Blob([JSON.stringify(recipe,null,2)],{type:'application/json'}),`phason-riot-${S.seed}.json`);}
+let exporting=false;
+async function saveGif(){
+  if(exporting)return;exporting=true;const btn=$$('#gifRender'),label=btn?.textContent||'Render animated GIF';if(btn){btn.disabled=true;btn.textContent='Encoding…';}
+  const wasPlaying=isPlaying;if(wasPlaying)togglePlay();
+  let worker;
+  try{
+    const size=Number(S.gifSize)||480,fps=Number(S.gifFps)||12,frames=Math.max(8,Math.round(S.period*fps));
+    const aspect=getAspect(),w=aspect>=1?size:Math.round(size*aspect),h=aspect>=1?Math.round(size/aspect):size;
+    if(frames*w*h>72000000)throw Error('Too many GIF pixels for mobile memory. Lower resolution, FPS, or loop duration.');
+    const script=document.getElementById('gifworker').textContent;
+    worker=new Worker(URL.createObjectURL(new Blob([script],{type:'text/javascript'})));
+    const completed=new Promise((resolve,reject)=>{
+      worker.onmessage=e=>{if(e.data.type==='done')resolve(e.data.blob);else if(e.data.type==='error')reject(new Error(e.data.message));};
+      worker.onerror=e=>reject(new Error(e.message));
+    });
+    worker.postMessage({type:'init',w,h,delay:Math.max(2,Math.round(S.period*100/frames))});
+    const out=document.createElement('canvas');out.width=w;out.height=h;const pixels=out.getContext('2d',{willReadFrequently:true});
+    for(let k=0;k<frames;k++){
+      draw(out,w,h,k/frames);const data=pixels.getImageData(0,0,w,h).data;
+      const cs=Math.round(S.period*100),frameDelay=Math.round((k+1)*cs/frames)-Math.round(k*cs/frames);worker.postMessage({type:'frame',pixels:data.buffer,delay:frameDelay},[data.buffer]);
+      if(btn)btn.textContent=`GIF ${Math.round((k+1)*100/frames)}%`;
+      if(k%2===0)await new Promise(requestAnimationFrame);
+    }
+    worker.postMessage({type:'finish'});
+    if(btn)btn.textContent='Finishing GIF…';const blob=await completed;
+    download(blob,`phason-riot-${S.seed}-${S.aspect}-${size}px.gif`);
+    flash(`Saved ${frames}-frame GIF · ${w}×${h} · ${(blob.size/1048576).toFixed(1)} MB.`);
+  }catch(e){flash('GIF export failed: '+e.message);}finally{worker?.terminate();if(btn){btn.disabled=false;btn.textContent=label;}exporting=false;if(wasPlaying&&!isPlaying)togglePlay();}
+}
 function saveSheet(){try{const width=512,cols=4,rows=4,sheet=document.createElement('canvas');sheet.width=width*cols;sheet.height=width*rows;const k=sheet.getContext('2d');for(let i=0;i<16;i++){const c=frameCanvas(width,i/16);k.fillStyle='#080b18';k.fillRect((i%4)*width,Math.floor(i/4)*width,width,width);k.drawImage(c,(i%4)*width+(width-c.width)/2,Math.floor(i/4)*width+(width-c.height)/2);k.fillStyle='#ffffffbd';k.font='13px monospace';k.fillText(`${i+1}/16`,(i%4)*width+10,Math.floor(i/4)*width+24);}toBlob(sheet,b=>download(b,`phason-riot-${S.seed}-16-frame-sheet.png`));}catch(e){flash('Frame sheet export failed: '+e.message)}}
 function undoEdit(){if(!undo.length)return;redo.push(snapshot());restore(undo.pop());resetGrid();renderPanel();resize();updateHistory();}
 function redoEdit(){if(!redo.length)return;undo.push(snapshot());restore(redo.pop());resetGrid();renderPanel();resize();updateHistory();}
@@ -231,4 +317,36 @@ window.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCa
 window.addEventListener('resize',resize);if('ResizeObserver'in window)new ResizeObserver(()=>resize()).observe(stage);
 renderPanel();resetGrid();resize();updateHistory();document.documentElement.classList.add('phason-ready');if(!isPlaying)togglePlay(),togglePlay();requestAnimationFrame(animate);
 })();
+</script><script id="gifworker" type="text/plain">
+// Original standalone GIF89a stream encoder. Fixed 3-3-2 indexed palette; ordered dithering.
+let parts=[],chunk=new Uint8Array(65536),usedBytes=0,W=0,H=0,delay=8,count=0;
+const byte=v=>{chunk[usedBytes++]=v&255;if(usedBytes===chunk.length){parts.push(chunk);chunk=new Uint8Array(65536);usedBytes=0;}},word=v=>{byte(v);byte(v>>8)},ascii=s=>{for(let i=0;i<s.length;i++)byte(s.charCodeAt(i));};
+const palette=()=>{for(let i=0;i<256;i++){byte(Math.round(((i>>5)&7)*255/7));byte(Math.round(((i>>2)&7)*255/7));byte((i&3)*85);}};
+function start(w,h,d){W=w;H=h;delay=d;parts=[];chunk=new Uint8Array(65536);usedBytes=0;count=0;ascii('GIF89a');word(W);word(H);byte(0xf7);byte(0);byte(0);palette();byte(0x21);byte(0xff);byte(11);ascii('NETSCAPE2.0');byte(3);byte(1);word(0);byte(0);}
+function lzw(indices){
+  const CLEAR=256,END=257;let dict=new Map(),next=258,bits=9;const raw=[];let buffer=0,used=0;
+  function emit(v){buffer|=v<<used;used+=bits;while(used>=8){raw.push(buffer&255);buffer>>>=8;used-=8;}}
+  function reset(){dict=new Map();next=258;bits=9;}
+  emit(CLEAR);let phrase=indices[0];
+  for(let i=1;i<indices.length;i++){
+    const k=indices[i],key=phrase*256+k,v=dict.get(key);
+    if(v!==undefined){phrase=v;continue;}
+    emit(phrase);
+    if(next<510){dict.set(key,next++);}
+    else {emit(CLEAR);reset();}
+    phrase=k;
+  }
+  emit(phrase);emit(END);if(used)raw.push(buffer&255);
+  for(let start=0;start<raw.length;start+=255){const len=Math.min(255,raw.length-start);byte(len);for(let j=0;j<len;j++)byte(raw[start+j]);}byte(0);
+}
+function frame(buffer,frameDelay){const rgba=new Uint8ClampedArray(buffer),ix=new Uint8Array(W*H),bayer=[0,8,2,10,12,4,14,6,3,11,1,9,15,7,13,5];
+  for(let y=0;y<H;y++)for(let x=0;x<W;x++){
+    const off=(y*W+x)*4,d=(bayer[(x&3)+((y&3)<<2)]-7.5)*2.3;
+    const r=Math.min(255,Math.max(0,rgba[off]+d)),g=Math.min(255,Math.max(0,rgba[off+1]+d)),b=Math.min(255,Math.max(0,rgba[off+2]+d));
+    ix[y*W+x]=(Math.floor(r/32)<<5)|(Math.floor(g/32)<<2)|(Math.floor(b/64));
+  }
+  byte(0x21);byte(0xf9);byte(4);byte(4);word(frameDelay||delay);byte(0);byte(0);
+  byte(0x2c);word(0);word(0);word(W);word(H);byte(0);byte(8);lzw(ix);count++;
+}
+onmessage=e=>{try{const d=e.data;if(d.type==='init')start(d.w,d.h,d.delay);else if(d.type==='frame')frame(d.pixels,d.delay);else if(d.type==='finish'){byte(0x3b);parts.push(chunk.subarray(0,usedBytes));const blob=new Blob(parts,{type:'image/gif'});postMessage({type:'done',blob,frames:count});}}catch(err){postMessage({type:'error',message:String(err)});}};
 </script></body></html>
