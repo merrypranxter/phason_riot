@@ -55,3 +55,29 @@ for(const item of guided){
  }
 }
 console.log('PASS: Phase 005 branching graph routes, closed motion, deterministic replay.');
+
+// Phase 006: integer-harmonic color territories are bounded and loop exactly.
+for(const mode of ['off','fronts','islands','spirals']){
+ for(let harmonic=0;harmonic<=6;harmonic++){
+  const a=C.colorTerritory(3.2,-2.7,.137,mode,1.3,harmonic);
+  const b=C.colorTerritory(3.2,-2.7,1.137,mode,1.3,harmonic);
+  assert(Math.abs(a-b)<1e-10,mode+' phase closes');
+  assert(Number.isFinite(a)&&a>=-1e-10&&a<=1+1e-10,mode+' color bounded');
+ }
+}
+const [foraging,fans,reef]=['wander','fan','reef'].map(kind=>C.branchRoutes(A,guided[0],1931,3,kind));
+for(const family of [foraging,fans,reef]){
+ assert(family.length>0,'each branch species yields graph paths');
+ for(const route of family){
+  const a=C.routePosition(A,route.indices,0),b=C.routePosition(A,route.indices,1);
+  assert(Math.hypot(a[0]-b[0],a[1]-b[1])<1e-9,'branch closes');
+  for(let k=0;k<route.indices.length;k++){
+   const a=route.indices[k],b=route.indices[(k+1)%route.indices.length];
+   assert(edges.has([Math.min(a,b),Math.max(a,b)].join(':')),'branch follows a shared edge');
+  }
+ }
+}
+assert.notEqual(JSON.stringify(foraging),JSON.stringify(fans),'fan differs structurally from wander');
+assert.notEqual(JSON.stringify(fans),JSON.stringify(reef),'reef differs structurally from fan');
+assert.equal(JSON.stringify(fans),JSON.stringify(C.branchRoutes(A,guided[0],1931,3,'fan')),'deterministic replay');
+console.log('PASS Phase 006: color-phase closure and three real-edge branch species.');
