@@ -3,13 +3,13 @@
 <style>
 :root{color-scheme:dark;--bg:#090a13;--panel:#131523;--panel2:#1c1e31;--line:#3b3b54;--text:#f4f2ff;--sub:#b9b4cc;--a:#e7ff72;--b:#ff63e5}*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 8% -8%,#53215a55,transparent 40%),radial-gradient(ellipse at 95% 1%,#103d5b66,transparent 42%),var(--bg);color:var(--text)}button,select,input{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--a);outline-offset:2px}button:disabled{opacity:.45;cursor:not-allowed}.shell{max-width:1120px;margin:auto;padding:14px 15px 50px}.mast{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:3px 0 12px}.brand{font-weight:950;letter-spacing:-1.3px;font-size:clamp(24px,5vw,40px);line-height:1}.brand em{font-style:normal;color:var(--a)}.smallcaps{font-size:10px;letter-spacing:2.5px;font-weight:800;color:var(--sub);margin-top:5px}.caps{font-size:10px;color:#c9bed4;letter-spacing:1.7px;text-transform:uppercase;font-weight:750}.status{display:flex;gap:8px;align-items:center;white-space:nowrap;font-size:11px;color:var(--sub);letter-spacing:1px}.dot{width:9px;height:9px;border-radius:50%;background:var(--a);box-shadow:0 0 10px var(--a)}.stage{background:#070711;border:1px solid #59526b;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 12px 50px #000b,0 0 70px #cc42e11a;display:flex;align-items:center;justify-content:center;isolation:isolate;min-height:220px}.stage canvas{display:block;max-height:66vh;max-width:100%;touch-action:none;user-select:none;-webkit-user-select:none;cursor:crosshair}.stage:before{content:'';pointer-events:none;position:absolute;z-index:2;inset:0;border:1px solid #ffffff16;border-radius:16px}.overlay{pointer-events:none;position:absolute;z-index:3;top:10px;left:12px;font-size:10px;line-height:1.6;text-shadow:0 2px 5px #000;letter-spacing:1px;color:#fff9}.overlay.right{left:auto;right:12px;text-align:right}.toolbar{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 12px;align-items:center}.btn{border:1px solid #615d7c;background:#202238;border-radius:10px;color:white;padding:10px 12px;font-weight:700;min-height:40px}.btn:hover{border-color:#cbb7f7}.btn.primary{background:var(--a);border-color:var(--a);color:#16151c}.btn.pink{background:#803777;border-color:#dc79d3}.btn.tiny{min-height:34px;padding:7px 10px;font-size:12px}.grow{flex:1}.tabs{display:flex;overflow-x:auto;gap:5px;padding:3px;border-radius:12px;background:#171824;scrollbar-width:thin}.tab{border:0;border-radius:9px;background:transparent;color:#b9b4cc;font-size:13px;font-weight:800;padding:11px 16px;white-space:nowrap}.tab.active{background:#343049;color:var(--a)}.panel{background:linear-gradient(160deg,#181a2c,#10111f);border:1px solid #3a3b58;border-radius:0 0 16px 16px;padding:16px;margin-top:-4px;min-height:205px}.description{font-size:13px;line-height:1.55;color:#c1bad2;max-width:750px;margin:1px 0 14px}.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 18px}.field{display:flex;flex-direction:column;gap:8px;min-width:0}.field label{font-weight:750;font-size:12px;display:flex;justify-content:space-between;gap:8px}.value{color:var(--a);font-variant-numeric:tabular-nums}.field input[type=range]{width:100%;accent-color:var(--a);height:20px}.field select{width:100%;color:#faf7ff;background:#25253c;border:1px solid #62627c;border-radius:8px;padding:10px;min-height:42px}.field option{background:#23223a}.help{font-size:11px;color:#a6a1bc;line-height:1.4}.swatches{display:flex;gap:6px;margin-top:7px}.swatches span{display:block;height:18px;flex:1;border-radius:4px;border:1px solid #ffffff2a}.inline{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.toggle{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;cursor:pointer}.toggle input{accent-color:var(--a);width:18px;height:18px}.notice{margin-top:15px;background:#242439;border-left:3px solid #c2ee6a;padding:10px 12px;color:#c7c5d4;font-size:12px;line-height:1.5}.footer{font-size:11px;color:#8986a3;line-height:1.6;margin-top:16px}.foot-em{color:#bfea80}.pill{border:1px solid #6d547d;border-radius:30px;padding:6px 10px;color:#e0d3e8;background:#201c32;font-size:11px}.summary{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 8px}.badge{border:1px solid #4f4d69;padding:5px 9px;border-radius:20px;font-size:11px;color:#e4deef}#errors{color:#ff9bba;font-size:12px;white-space:pre-wrap} .viewer-warning{position:absolute;z-index:4;inset:auto 12px 14px 12px;background:#29233c;border:1px solid #e7ff72;border-radius:14px;padding:14px;font-size:13px;line-height:1.55;color:#fff4fa;box-shadow:0 6px 28px #000a}.viewer-warning strong{display:block;color:#e7ff72;margin-bottom:3px}.phason-ready .viewer-warning{display:none} .metrics{font-size:11px;line-height:1.4;letter-spacing:.5px;color:#b9b4cc;padding:6px 3px 3px;overflow-wrap:anywhere}.touchbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:9px 0 1px}.touchlabel{font-size:10px;font-weight:850;letter-spacing:2px;color:#bdafd0;margin-right:3px}.touchchip{border:1px solid #514960;border-radius:99px;color:#d4c9ec;background:#171626;font-size:12px;font-weight:800;padding:7px 11px;min-height:36px}.touchchip.selected{background:#e7ff72;color:#161624;border-color:#e7ff72}.touchchip:focus-visible{outline:2px solid #ff61d8;outline-offset:2px}.touchhint{color:#a6a1bc;font-size:11px;flex-basis:100%;line-height:1.4;padding:0 0 3px 4px}.hidden{display:none!important}@media(max-width:620px){.shell{padding:10px 10px 32px}.controls{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 12px}.panel{padding:13px}.brand{letter-spacing:-.6px}.stage canvas{max-height:55vh}.status{font-size:10px}.mast{margin-bottom:9px}.tab{padding:11px 12px}.toolbar{gap:5px}.btn{padding:9px 10px;font-size:12px}.overlay{font-size:9px}}@media(max-width:360px){.controls{grid-template-columns:1fr}.stage canvas{max-height:52vh}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style></head><body><main class="shell">
-<header class="mast"><div><div class="brand">PHASON <em>RIOT</em></div><div class="smallcaps">LIVING QUASICRYSTAL STUDIO · 004</div></div><div class="status"><span class="dot" id="liveDot"></span><span id="liveText">STRUCTURAL MOTION</span></div></header>
+<header class="mast"><div><div class="brand">PHASON <em>RIOT</em></div><div class="smallcaps">LIVING QUASICRYSTAL STUDIO · 005</div></div><div class="status"><span class="dot" id="liveDot"></span><span id="liveText">STRUCTURAL MOTION</span></div></header>
 <section class="stage" id="stage"><canvas id="art" aria-label="Interactive animated Penrose-style quasicrystal. Drag to shift phason offsets."></canvas><div class="overlay"><div>⊹ PENTAGRID / 05</div><div id="tileStats">GENERATING…</div></div><div class="overlay right"><div id="motionStats">U 0.00 · V 0.00</div></div><div class="viewer-warning"><strong>⚠ PREVIEW ONLY — JAVASCRIPT IS NOT RUNNING</strong>This preview cannot run the JavaScript engine. Open the published GitHub Pages site in Safari, or load this file into a JavaScript-enabled HTML editor. GitHub's code/file preview and iPhone Files Quick Look are NOT the running app.</div></section><div class="metrics" id="loopStats" aria-live="off">LOOP 08.0s</div>
-<div class="touchbar" aria-label="Artwork touch tool"><span class="touchlabel">TOUCH</span><button class="touchchip selected" id="touchPrimary" data-touch="primary" aria-pressed="true">✧ Primary</button><button class="touchchip" id="touchTwin" data-touch="twin" aria-pressed="false">◇ Twin</button><button class="touchchip" id="touchStitch" data-touch="stitch" aria-pressed="false">〰 Stitch</button><span class="touchhint" id="touchHint">Drag to change PRIMARY phason offsets · pinch to zoom</span></div>
+<div class="touchbar" aria-label="Artwork touch tool"><span class="touchlabel">TOUCH</span><button class="touchchip selected" id="touchPrimary" data-touch="primary" aria-pressed="true">✧ Primary</button><button class="touchchip" id="touchTwin" data-touch="twin" aria-pressed="false">◇ Twin</button><button class="touchchip" id="touchStitch" data-touch="stitch" aria-pressed="false">〰 Stitch</button><button class="touchchip" id="touchEdit" data-touch="edit" aria-pressed="false">✎ Edit</button><span class="touchhint" id="touchHint">Drag to change PRIMARY phason offsets · pinch to zoom</span></div>
 <nav class="toolbar" aria-label="Artwork actions"><button class="btn primary" id="playBtn">Ⅱ Pause</button><button class="btn" id="newBtn">✦ New Design</button><button class="btn" id="undoBtn">↶ Undo</button><button class="btn" id="redoBtn">↷ Redo</button><span class="grow"></span><button class="btn" id="exportPng">↓ PNG</button><button class="btn" id="exportJson">↓ Recipe</button></nav>
 <nav class="tabs" aria-label="Editor sections"><button class="tab active" data-tab="motion">Motion</button><button class="tab" data-tab="material">Materials</button><button class="tab" data-tab="twin">Twin Field</button><button class="tab" data-tab="geometry">Geometry</button><button class="tab" data-tab="color">Color</button><button class="tab" data-tab="export">Export</button></nav>
 <div class="panel" id="panel"></div><div id="errors" role="status"></div>
-<footer class="footer">REAL GEOMETRY: de Bruijn five-family dual pentagrid · RHOMBI: 36° / 72° · PHASON: global perpendicular-space offset path. GRAPH: actual shared-edge adjacency trails. The second pentagrid independently changes tile adjacency; walkers and hand-drawn stitch paths travel along verified shared-edge links and reroute as geometry changes. These remain constructed artworks, not physical local phason kinetics. <span class="foot-em">No paid APIs. No Netlify. Works offline.</span></footer>
+<footer class="footer">REAL GEOMETRY: de Bruijn five-family dual pentagrid · RHOMBI: 36° / 72° · PHASON: global perpendicular-space offset path. GRAPH: actual shared-edge adjacency trails. The second pentagrid changes independently; saved editable routes and branched travelers traverse real shared-edge links and reroute with the geometry. Collisions are deterministic proximity flares, not kinetic impacts. These remain constructed artworks, not physical local phason kinetics. <span class="foot-em">No paid APIs. No Netlify. Works offline.</span></footer>
 </main><script id="mathcore">
 const PhasonCore = (() => {
   'use strict';
@@ -146,12 +146,38 @@ const PhasonCore = (() => {
     while(head<tail){const v=q[head++];for(const a of neighbors[v])if(dist[a]===-1){dist[a]=dist[v]+1;q[tail++]=a;}}
     return dist;
   }
+  // Deterministic out-and-back side paths from an authored route; never traverse a non-edge.
+  function branchRoutes(geo,route,seed,count=2){
+    if(!route||!route.indices||route.indices.length<2||!geo.connections.length)return [];
+    const neighbors=Array.from({length:geo.tiles.length},()=>[]);
+    for(const e of geo.connections){neighbors[e.a].push(e.b);neighbors[e.b].push(e.a);}
+    const hash=String(route.id).split('').reduce((h,c)=>Math.imul(h^c.charCodeAt(0),16777619)|0,2166136261);
+    const random=seeded(seed^hash^geo.tiles.length);const out=[];
+    const main=new Set(route.indices);
+    for(let k=0;k<Math.min(3,count);k++){
+      const start=route.indices[Math.floor((k+.5)*route.indices.length/Math.min(3,count))];
+      let at=start,prev=-1,forward=[start];
+      for(let t=0;t<Math.min(8,3+k*2);t++){
+        const options=neighbors[at].filter(x=>x!==prev),off=options.filter(x=>!main.has(x));
+        const choices=off.length?off:options;if(!choices.length)break;
+        const next=choices[Math.floor(random()*choices.length)];prev=at;at=next;forward.push(at);
+      }
+      if(forward.length>1)out.push({id:`${route.id}:branch${k}`,indices:forward.concat(forward.slice(1,-1).reverse()),parentId:route.id});
+    }
+    return out;
+  }
+  function routePosition(geo,indices,cycles){
+    if(!Array.isArray(indices)||indices.length<2)return null;
+    const z=((cycles%1)+1)%1*indices.length,k=Math.floor(z),f=z-k;
+    const a=geo.tiles[indices[k]]?.c,b=geo.tiles[indices[(k+1)%indices.length]]?.c;
+    return a&&b?[a[0]+(b[0]-a[0])*f,a[1]+(b[1]-a[1])*f]:null;
+  }
   function compare(a,b) {
     const m=new Map(a.tiles.map(t=>[t.id,t.label]));let changed=0,shared=0;
     for(const t of b.tiles) if(m.has(t.id)){shared++;if(m.get(t.id)!==t.label)changed++;}
     return {changed,shared};
   }
-  return {TAU,star,internal,clamp,seeded,offsets,makeGrid,generate,phasonAt,compare,walks,stitchRoutes,graphDepths};
+  return {TAU,star,internal,clamp,seeded,offsets,makeGrid,generate,phasonAt,compare,walks,stitchRoutes,graphDepths,branchRoutes,routePosition};
 })();
 </script><script>
 (()=>{'use strict';
@@ -167,9 +193,9 @@ const palettes={
 'Ink & Gold':['#e5ae53','#ffc9a4','#c4d6ff','#faf0d7','#8656af','#ef8469']};
 const clean=(s)=>Array.isArray(s)?s.filter(x=>/^#[0-9a-fA-F]{6}$/.test(x)).slice(0,24):[];
 try{const loaded=JSON.parse(localStorage.getItem('phason_user_palettes')||'{}');for(const [k,v] of Object.entries(loaded))if(clean(v).length>=2)palettes[k]=clean(v);}catch{}
-const defaults={seed:1931,radius:8,zoom:1,mode:'orbit',period:8,amp:.82,baseU:0,baseV:0,material:'opal',palette:'Acid Carnival',intensity:1.1,glow:.65,edge:.7,comets:1,wave:1,speed:1,colorCycles:2,threadCycles:3,network:.6,structureSteps:96,showChanges:false,neonBoost:0,background:'#080b18',aspect:'square',showGrid:false,showNodes:true,twinEnabled:true,twinMode:'gyre',twinAmp:.56,twinPhase:.23,twinFrequency:2,twinOpacity:.36,twinScale:1.02,twinU:.08,twinV:-.12,twinStyle:'mesh',riderCount:14,riderSpeed:2,riderGlow:1,gifSize:'480',gifFps:'12',touchMode:'primary',stitches:[],stitchSerial:1,guideIntensity:1.3,guideCycles:2,linkStyle:'flow',previewFps:18};
-let S={...defaults},undo=[],redo=[],lastDraw=0,isPlaying=!window.matchMedia('(prefers-reduced-motion:reduce)').matches,elapsed=0,lastTime=0,current=null,grid=[],needGeom=true,geomStamp='',frameNo=0,reference=null,referenceStamp='',referenceLabels=null,twinGeo=null,twinStamp='',pointers=new Map(),gesture=null;
-const TABS={motion:'Seven structural phason paths; flow, branching waves and braided light across verified shared-edge links. Use the TOUCH chips above the controls to choose which field your finger changes.',material:'Choose an entirely different visual behavior, from opal surfaces to connected filament networks and phason fault flashes. All optical looks are stylized.',twin:'Touch ◇ Twin above the controls to directly manipulate this second field. Two real pentagrid fields run their own internal-space orbits. Off restores the single-layer image. These are overlaid finite patches, NOT a magically seamless Penrose wallpaper.',geometry:'Touch ✧ Primary above the controls to edit these phason coordinates, or 〰 Stitch to write persistent routes into the tile graph. Actual five-family dual grid. Inspect changed K-label neighborhoods relative to the frozen base offset; this is NOT a certified count of local tile flips.',color:'Chromatic waves advance at an independently chosen integer harmonic for exact loop closure. Neon boost is optional. Import any of your named palette JSON lists.',export:'Your stitched paths are included in recipe and loop exports. Save a still, original looped GIF, 16-frame atlas or reproducible recipe. GIF frames sample the exact mathematical clock; mobile performance varies. MP4 is not yet available.'};
+const defaults={seed:1931,radius:8,zoom:1,mode:'orbit',period:8,amp:.82,baseU:0,baseV:0,material:'opal',palette:'Acid Carnival',intensity:1.1,glow:.65,edge:.7,comets:1,wave:1,speed:1,colorCycles:2,threadCycles:3,network:.6,structureSteps:96,showChanges:false,neonBoost:0,background:'#080b18',aspect:'square',showGrid:false,showNodes:true,twinEnabled:true,twinMode:'gyre',twinAmp:.56,twinPhase:.23,twinFrequency:2,twinOpacity:.36,twinScale:1.02,twinU:.08,twinV:-.12,twinStyle:'mesh',riderCount:14,riderSpeed:2,riderGlow:1,gifSize:'480',gifFps:'12',touchMode:'primary',stitches:[],stitchSerial:1,guideIntensity:1.3,guideCycles:2,linkStyle:'flow',previewFps:18,guideBranching:true,guideCollision:0.85,mp4Size:'720',mp4Fps:'16'};
+let S={...defaults},undo=[],redo=[],lastDraw=0,isPlaying=!window.matchMedia('(prefers-reduced-motion:reduce)').matches,elapsed=0,lastTime=0,current=null,grid=[],needGeom=true,geomStamp='',frameNo=0,reference=null,referenceStamp='',referenceLabels=null,twinGeo=null,twinStamp='',pointers=new Map(),gesture=null,selectedStitchId=null,mp4Cancel=false,recordingMp4=false;
+const TABS={motion:'Seven structural phason paths and real graph-linked filaments, now with individually named stitch voices, side branches and collision sparks. Use the TOUCH chips to manipulate the artwork.',material:'Choose an entirely different visual behavior, from opal surfaces to connected filament networks and phason fault flashes. All optical looks are stylized.',twin:'Touch ◇ Twin above the controls to directly manipulate this second field. Two real pentagrid fields run their own internal-space orbits. Off restores the single-layer image. These are overlaid finite patches, NOT a magically seamless Penrose wallpaper.',geometry:'Use 〰 Stitch to draw a new graph route, then ✎ Edit routes to select, drag and reshape its placement. Each route has its own animation voice and branches. Actual five-family dual grid. Inspect changed K-label neighborhoods relative to the frozen base offset; this is NOT a certified count of local tile flips.',color:'Chromatic waves advance at an independently chosen integer harmonic for exact loop closure. Neon boost is optional. Import any of your named palette JSON lists.',export:'Recipe, PNG and looped GIF preserve all route settings. Experimental native MP4 is offered ONLY when this browser reports real MP4 recording support; recording timing is real-time and can drop frames under load.'};
 const modes={orbit:'Orbit — smooth structural change',choir:'Choir — 2:3 Lissajous counterpoint',saw:'Riot — multi-frequency phason jumps',tide:'Tidal — stretched orbit',braid:'Braid — fivefold harmonic crossing',gyre:'Gyre — double-wound internal orbit',quake:'Quake — sharp structural transitions'};
 const mats={opal:'Opal cathedral',neon:'Electric circuitry',velvet:'Velvet brocade',mineral:'Mineral glass',ink:'Ink constellation',filament:'Living filament network',fault:'Phason faultlines',prism:'Prism faceted glass'};
 const aspectOpts={square:'1:1 Square',portrait:'9:16 Portrait',wide:'16:9 Wide',poster:'3:4 Poster',landscape:'4:3 Landscape'};
@@ -186,22 +212,43 @@ function paletteWidget(){return `<div class="field" style="grid-column:1 / -1"><
 function renderPanel(){let markup='';if(active==='motion')markup=`${chooser('Phason choreography','mode',modes)}${field('Phason amplitude','amp',0,1.6,.01,'How far internal offsets travel; larger values cause more neighborhood changes.')}${field('Cycle duration / seconds','period',2,30,.5,'Seven periodic paths; all return to their starting coordinates.')}${field('Structural steps / loop','structureSteps',32,192,16,'More steps for fluid rearrangement, fewer for sharp quasicrystal clicks. Art lights stay smooth.')}${field('Light wave motion','wave',0,2,.01,'Color and luminous ripples travel across rhombi.')}${field('Thread comets','comets',0,2,.01,'Moving edge highlights following tile-edge geometry.')}${field('Signal connections','network',0,1.6,.05,'Actual shared-edge adjacency: glowing travel along the tile graph.')}${chooser('Signal anatomy','linkStyle',{flow:'Flowing nerve signals',branch:'Branching graph wavefronts',braid:'Triple-strand braided circuitry'})}${field('Signal rhythm','threadCycles',1,8,1,'Integer loops per structural cycle, guaranteed to close.')}${field('Living travelers','riderCount',0,28,1,'Actual graph walkers; zero switches off traveling particles.')}${field('Travel cycles','riderSpeed',1,6,1,'Complete non-teleporting out-and-back routes per loop.')}${field('Traveler halo','riderGlow',0,2,.05,'Light around graph-running pulses.')}${field('Motion rate multiplier','speed',.1,3,.05,'Preview speed; exports use exact phase.')}${field('Preview frame cap','previewFps',8,30,1,'Phone performance control; GIF exports use their independent frame rate.')}`;
 else if(active==='material')markup=`${chooser('Surface character','material',mats)}${field('Luminous intensity','intensity',0,2,.02,'Raise to neon chaos or lower for subtle dye.')}${field('Halo / softness','glow',0,1,.02,'Bright bloom on strokes and highlights.')}${field('Visible geometry','edge',0,1,.02,'Tile-edge definition.')}<div class="field"><label for="background">Background color</label><input type="color" id="background" value="${S.background}" style="width:100%;height:40px;border:1px solid #67627c;background:#24263c;border-radius:8px;cursor:pointer"></div>${toggle('Vertex jewels','showNodes')}${toggle('Light up rearranged neighborhoods','showChanges')}`;
 else if(active==='twin')markup=`${toggle('Enable second living pentagrid','twinEnabled')}${chooser('Twin motion law','twinMode',modes)}${field('Twin phason displacement','twinAmp',0,1.5,.01,'Independent motion through its OWN internal-space offsets.')}${field('Twin harmonic','twinFrequency',1,4,1,'Whole-number cycles per main loop; exact closure.')}${field('Twin phase shift','twinPhase',0,1,.01,'Offset where the second system starts on its orbit.')}${field('Twin transparency','twinOpacity',0,1,.02,'0 = original single-layer artwork.')}${field('Twin size','twinScale',.75,1.35,.01,'Compositional scale; does not alter tile mathematics.')}${chooser('Twin drawing style','twinStyle',{mesh:'Glowing contour mesh',glass:'Iridescent ghost glass',diagonals:'Cross-woven threads'})}${field('Twin U','twinU',-1.5,1.5,.01,'Manual perpendicular-space coordinate for twin.')}${field('Twin V','twinV',-1.5,1.5,.01,'Second twin coordinate.')}`;
-else if(active==='geometry')markup=`${field('Pentagrid radius','radius',4,14,1,'Bigger = more rhombi, heavier rendering.')}${field('Camera zoom','zoom',.65,2.5,.05,'Change framing without changing the grid.')}${chooser('Canvas composition','aspect',aspectOpts)}${field('Offset U','baseU',-1.5,1.5,.01,'Stable authored internal offset, draggable from canvas.')}${field('Offset V','baseV',-1.5,1.5,.01,'Other independent phason coordinate.')}${toggle('Pentagrid overlay','showGrid')}${field('Stitch glow','guideIntensity',0,2,.05,'Brightness of your graph-following stitched routes.')}${field('Stitch travel cycles','guideCycles',1,6,1,'Whole-number trips per animation loop; maintains closure.')}<div class="field"><label>Stitch paths <span class="value" id="stitchCount">${S.stitches.length}/8</span></label>${button('Undo last stitch','removeStitch')}${button('Clear all stitches','clearStitches')}<span class="help">Choose 〰 Stitch above and draw on the artwork. Each stroke becomes a saved path across genuine rhomb-to-rhomb connections.</span></div>${toggle('Show changing K-label boundaries','showChanges')}<div class="help" style="grid-column:1/-1">Changes are measured against frozen base U/V within the shared finite grid patch, not counted as isolated legal phason flips.</div>`;
+else if(active==='geometry')markup=`${field('Pentagrid radius','radius',4,14,1,'Bigger = more rhombi, heavier rendering.')}${field('Camera zoom','zoom',.65,2.5,.05,'Change framing without changing the grid.')}${chooser('Canvas composition','aspect',aspectOpts)}${field('Offset U','baseU',-1.5,1.5,.01,'Stable authored internal offset, draggable from canvas.')}${field('Offset V','baseV',-1.5,1.5,.01,'Other independent phason coordinate.')}${toggle('Pentagrid overlay','showGrid')}${field('Stitch glow','guideIntensity',0,2,.05,'Brightness of your graph-following stitched routes.')}${field('Stitch travel cycles','guideCycles',1,6,1,'Global integer harmonic; each route also has its own whole-number multiplier.')}${toggle('Living fork routes','guideBranching')}${field('Collision sparks','guideCollision',0,2,.05,'Nearby travelers create flashes at close approaches, not physically simulated impacts.')}<div class="field"><label>Stitch paths <span class="value" id="stitchCount">${S.stitches.length}/8</span></label>${button('Undo last stitch','removeStitch')}${button('Clear all stitches','clearStitches')}<span class="help">Draw with 〰 Stitch. Use ✎ Edit routes to drag any saved path; each path is re-projected onto genuine tile adjacency.</span></div>${stitchEditorMarkup()}${toggle('Show changing K-label boundaries','showChanges')}<div class="help" style="grid-column:1/-1">Changes are measured against frozen base U/V within the shared finite grid patch, not counted as isolated legal phason flips.</div>`;
 else if(active==='color')markup=`${chooser('Named palette','palette',Object.fromEntries(Object.keys(palettes).map(k=>[k,k])))}${paletteWidget()}${field('Chromatic beats','colorCycles',0,8,1,'Integer color cycles per full structural loop. Zero locks colors in place.')}${field('Saturation violence','neonBoost',0,2,.05,'Push pastel/intermediate colors outward from gray; zero preserves palette exactly.')}<div class="field" style="grid-column:1 / -1"><label for="paletteImport">Import named palette JSON</label><input type="file" id="paletteImport" accept="application/json,.json"><span class="help">Accepts {"My Palette":["#ff00ff","#00ffff",...]} or a single array of hex stops. Saved only to this browser.</span></div>${button('Shuffle color roles','shuffleColors')}`;
-else markup=`<div class="field"><label>Looped animated GIF</label>${chooser('GIF resolution','gifSize',{'360':'360px fast','480':'480px balanced','720':'720px detailed'})}${chooser('GIF frames per second','gifFps',{'8':'8 fps','12':'12 fps','16':'16 fps'})}${button('Render animated GIF','gifRender','primary')}<span class="help">Encodes actual GIF89a locally, no server. Higher settings need more iPhone memory. Captures exactly one structural loop without duplicating its final frame.</span></div><div class="field"><label>High resolution still</label>${button('PNG · 2048px longest edge','pngLarge','primary')}<span class="help">Uses the live artwork phase. Saves a static frame at a high resolution.</span></div><div class="field"><label>Art recipe</label>${button('Save recipe JSON','jsonLarge')}<span class="help">Reproducible seed, settings and palettes. Import below.</span></div><div class="field"><label>Load recipe</label><input type="file" id="recipeImport" accept="application/json,.json"><span class="help">Undoable and non-destructive until you select a file.</span></div><div class="field"><label>Frame sheet (loop atlas)</label>${button('Export 4 × 4 loop PNG','frameSheet')}<span class="help">16 evenly sampled phases (0 to 15/16, endpoint not duplicated).</span></div>`;
-panel.innerHTML=`<p class="description">${TABS[active]}</p><div class="controls">${markup}</div>${active==='export'?'<div class="notice" id="exportNotice">GIF export is genuine GIF89a animation (256-color dithered), not a sprite sheet. MP4 encoding is a future phase; GIFs can be large and iOS preview apps may not play them inline.</div>':''}`;
+else markup=`<div class="field"><label>Looped animated GIF</label>${chooser('GIF resolution','gifSize',{'360':'360px fast','480':'480px balanced','720':'720px detailed'})}${chooser('GIF frames per second','gifFps',{'8':'8 fps','12':'12 fps','16':'16 fps'})}${button('Render animated GIF','gifRender','primary')}<span class="help">Encodes actual GIF89a locally, no server. Higher settings need more iPhone memory. Captures exactly one structural loop without duplicating its final frame.</span></div><div class="field"><label>Native MP4 recording (browser-dependent)</label>${chooser('MP4 longest side','mp4Size',{'480':'480px preview','720':'720px HQ','1080':'1080px high res'})}${chooser('MP4 target FPS','mp4Fps',{'12':'12 FPS','16':'16 FPS','24':'24 FPS'})}${button('Record actual MP4','mp4Render','primary')}<span class="help" id="mp4Support">Probes the browser for genuine video/mp4 recording and rejects other containers. Records one loop in real time; exact timing and frame delivery are not guaranteed.</span></div><div class="field"><label>High resolution still</label>${button('PNG · 2048px longest edge','pngLarge','primary')}<span class="help">Uses the live artwork phase. Saves a static frame at a high resolution.</span></div><div class="field"><label>Art recipe</label>${button('Save recipe JSON','jsonLarge')}<span class="help">Reproducible seed, settings and palettes. Import below.</span></div><div class="field"><label>Load recipe</label><input type="file" id="recipeImport" accept="application/json,.json"><span class="help">Undoable and non-destructive until you select a file.</span></div><div class="field"><label>Frame sheet (loop atlas)</label>${button('Export 4 × 4 loop PNG','frameSheet')}<span class="help">16 evenly sampled phases (0 to 15/16, endpoint not duplicated).</span></div>`;
+panel.innerHTML=`<p class="description">${TABS[active]}</p><div class="controls">${markup}</div>${active==='export'?'<div class="notice" id="exportNotice">GIF export is genuine GIF89a animation (256-color dithered), not a sprite sheet. MP4 uses native browser encoding ONLY when video/mp4 is supported; no WebM file is renamed. Recorder FPS is best-effort, unlike exact-phase GIF frame sampling.</div>':''}`;
 for(const k of Object.keys(S)){const el=$$('#'+k);if(!el||k==='paletteImport'||k==='recipeImport')continue;let before=null; if(el.type==='range'){el.addEventListener('pointerdown',()=>before=snapshot());el.addEventListener('focus',()=>{if(before===null)before=snapshot();});el.addEventListener('input',()=>{S[k]=Number(el.value);if(k==='radius')S[k]=Math.round(S[k]);const v=$$('#value-'+k);if(v)v.textContent=String(S[k]);if(k==='radius')resetGrid();if(['radius','baseU','baseV'].includes(k))needGeom=true;});el.addEventListener('change',()=>{if(before===null)before=snapshot();addHistory(before);before=null;});}
 else if(el.type==='color')el.addEventListener('change',()=>{const old=snapshot();S[k]=el.value;addHistory(old);});
 else if(el.type==='checkbox')el.addEventListener('change',()=>{const old=snapshot();S[k]=el.checked;addHistory(old);});
 else if(el.tagName==='SELECT')el.addEventListener('change',()=>{const old=snapshot();S[k]=el.value;needGeom=true;addHistory(old);if(k==='aspect')resize();renderPanel();});}
 if($$('#shuffleColors'))bindEl('shuffleColors',()=>{const old=snapshot();const rng=rnd(S.seed+(frameNo*131));const a=palettes[S.palette].slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[a[i],a[j]]=[a[j],a[i]];}palettes[S.palette]=a;savePalettes();addHistory(old);renderPanel();});
 if($$('#paletteImport'))bindEl('paletteImport',async e=>{try{const before=snapshot();const obj=JSON.parse(await e.target.files[0].text());let n=0;if(Array.isArray(obj)){const colors=clean(obj);if(colors.length>=2){palettes['Imported Palette']=colors;S.palette='Imported Palette';n++;}}else for(const [k,v] of Object.entries(obj)){const colors=clean(v);if(colors.length>=2){palettes[k.slice(0,80)]=colors;n++;}}if(!n)throw Error('Need at least two valid #RRGGBB colors per palette.');savePalettes();addHistory(before);renderPanel();flash(`Imported ${n} palette(s).`);}catch(e){flash(e.message);}},'change');
-if($$('#recipeImport'))bindEl('recipeImport',async e=>{try{const recipe=JSON.parse(await e.target.files[0].text());const old=snapshot();if(recipe?.format!=='phason-riot-1'||!recipe.settings)throw Error('Not a PHASON RIOT recipe.');if(recipe.palettes&&typeof recipe.palettes==='object')for(const[k,v]of Object.entries(recipe.palettes)){let c=clean(v);if(c.length>=2)palettes[k.slice(0,80)]=c;}S={...defaults,...Object.fromEntries(Object.entries(recipe.settings).filter(([k])=>k in defaults))};S.seed=(S.seed|0);S.stitchSerial=Number.isInteger(S.stitchSerial)?Math.max(1,S.stitchSerial):1;S.radius=C.clamp(Number(S.radius)||9,4,14);if(!palettes[S.palette])S.palette='Acid Carnival';S.stitches=cleanStitches(S.stitches);if(!['primary','twin','stitch'].includes(S.touchMode))S.touchMode='primary';savePalettes();syncTouchMode();resetGrid();addHistory(old);renderPanel();resize();}catch(err){flash(err.message)}},'change');
-if($$('#removeStitch'))bindEl('removeStitch',()=>{if(!S.stitches.length)return;const old=snapshot();S.stitches.pop();addHistory(old);renderPanel();});if($$('#clearStitches'))bindEl('clearStitches',()=>{if(!S.stitches.length||!confirm('Clear all your stitched paths? Undo will restore them.'))return;const old=snapshot();S.stitches=[];addHistory(old);renderPanel();});
+if($$('#recipeImport'))bindEl('recipeImport',async e=>{try{const recipe=JSON.parse(await e.target.files[0].text());const old=snapshot();if(recipe?.format!=='phason-riot-1'||!recipe.settings)throw Error('Not a PHASON RIOT recipe.');if(recipe.palettes&&typeof recipe.palettes==='object')for(const[k,v]of Object.entries(recipe.palettes)){let c=clean(v);if(c.length>=2)palettes[k.slice(0,80)]=c;}S={...defaults,...Object.fromEntries(Object.entries(recipe.settings).filter(([k])=>k in defaults))};S.seed=(S.seed|0);S.stitchSerial=Number.isInteger(S.stitchSerial)?Math.max(1,S.stitchSerial):1;S.radius=C.clamp(Number(S.radius)||9,4,14);if(!palettes[S.palette])S.palette='Acid Carnival';S.stitches=cleanStitches(S.stitches);selectedStitchId=S.stitches[S.stitches.length-1]?.id||null;if(!['primary','twin','stitch','edit'].includes(S.touchMode))S.touchMode='primary';savePalettes();syncTouchMode();resetGrid();addHistory(old);renderPanel();resize();}catch(err){flash(err.message)}},'change');
+if($$('#mp4Render')){bindEl('mp4Render',saveMp4);const status=$$('#mp4Support');if(status)status.textContent=mp4Mime()? 'Real MP4 is supported here. Output is a best-effort real-time capture; no exact loop-duration guarantee.' : 'This browser cannot record true MP4 with its native encoder. Use GIF, or open in Safari with MP4 recording support.';}
+if($$('#stitchSelect'))bindEl('stitchSelect',e=>{selectedStitchId=e.target.value||null;renderPanel();syncTouchMode();},'change');
+if($$('#routeDelete'))bindEl('routeDelete',()=>{const index=S.stitches.findIndex(x=>x.id===selectedStitchId);if(index<0)return;const before=snapshot();S.stitches.splice(index,1);selectedStitchId=S.stitches[Math.min(index,S.stitches.length-1)]?.id||null;addHistory(before);renderPanel();syncTouchMode();});
+if($$('#routeName'))bindEl('routeName',e=>{const route=selectedStitch();if(!route)return;const old=snapshot();route.name=e.target.value.replace(/[<>]/g,'').slice(0,28).trim()||'Unnamed route';addHistory(old);renderPanel();},'change');
+for(const [id,prop] of [['routeEnabled','enabled'],['routeForks','forks'],['routeVelocity','velocity'],['routeHue','hue']]){const el=$$('#'+id);if(!el)continue;let initial=null;el.addEventListener('pointerdown',()=>{initial=snapshot()});el.addEventListener('focus',()=>{if(initial===null)initial=snapshot()});const apply=()=>{const route=selectedStitch();if(!route)return;route[prop]=el.type==='checkbox'?el.checked:Number(el.value);if(el.type==='range'){const v=$$('#value-'+id);if(v)v.textContent=String(route[prop]);}};el.addEventListener('input',apply);el.addEventListener('change',()=>{const before=initial??snapshot();apply();addHistory(before);initial=null;});}
+if($$('#removeStitch'))bindEl('removeStitch',()=>{if(!S.stitches.length)return;const old=snapshot();const gone=S.stitches.pop();if(gone.id===selectedStitchId)selectedStitchId=S.stitches[S.stitches.length-1]?.id||null;addHistory(old);renderPanel();syncTouchMode();});if($$('#clearStitches'))bindEl('clearStitches',()=>{if(!S.stitches.length||!confirm('Clear all your stitched paths? Undo will restore them.'))return;const old=snapshot();S.stitches=[];selectedStitchId=null;addHistory(old);renderPanel();syncTouchMode();});
 if($$('#pngLarge'))bindEl('pngLarge',savePng);if($$('#jsonLarge'))bindEl('jsonLarge',saveRecipe);if($$('#frameSheet'))bindEl('frameSheet',saveSheet);if($$('#gifRender'))bindEl('gifRender',saveGif);
 }
 function flash(s){$$('#errors').textContent=s;setTimeout(()=>{if($$('#errors').textContent===s)$$('#errors').textContent=''},7000);}
-function cleanStitches(strokes){if(!Array.isArray(strokes))return [];return strokes.slice(0,8).filter(x=>x&&Array.isArray(x.points)).map((stroke,i)=>({id:String(stroke.id||`restored-${i}`).slice(0,50),points:stroke.points.slice(0,28).filter(p=>Array.isArray(p)&&p.length===2&&p.every(v=>typeof v==='number'&&Number.isFinite(v)&&Math.abs(v)<100)).map(p=>[p[0],p[1]])})).filter(s=>s.points.length>=2);}
+function cleanStitches(strokes){
+ if(!Array.isArray(strokes))return [];
+ const used=new Set();return strokes.slice(0,8).filter(x=>x&&Array.isArray(x.points)).map((st,i)=>{
+   let id=String(st.id||`restored-${i}`).slice(0,50);if(used.has(id))id=`${id}-${i}`;used.add(id);
+   return {id,name:String(st.name||`Route ${i+1}`).replace(/[<>]/g,'').slice(0,28),enabled:st.enabled!==false,
+    velocity:C.clamp(Math.round(Number(st.velocity)||1),1,4),hue:C.clamp(Number(st.hue)||0,-1,1),forks:C.clamp(Number.isFinite(Number(st.forks))?Math.round(Number(st.forks)):2,0,3),
+    points:st.points.slice(0,28).filter(p=>Array.isArray(p)&&p.length===2&&p.every(v=>typeof v==='number'&&Number.isFinite(v)&&Math.abs(v)<100)).map(p=>[p[0],p[1]])};
+ }).filter(st=>st.points.length>=2);
+}
+function selectedStitch(){return S.stitches.find(x=>x.id===selectedStitchId)||null;}
+function stitchEditorMarkup(){
+ const st=selectedStitch()||S.stitches[S.stitches.length-1];
+ if(!st)return `<div class="field"><label>Route editor</label><span class="help">Draw a route in Stitch mode. Each one will have its own name, speed, hue and branch count.</span></div>`;
+ if(!selectedStitchId)selectedStitchId=st.id;
+ return `<div class="field" style="grid-column:1/-1"><label for="stitchSelect">SELECTED ROUTE</label><select id="stitchSelect">${S.stitches.map((x,i)=>`<option value="${esc(x.id)}" ${st.id===x.id?'selected':''}>${esc(x.name||`Route ${i+1}`)}</option>`).join('')}</select><div class="inline">${button('Delete selected route','routeDelete')}</div><span class="help">Select ✎ Edit routes, then drag the route you want to reposition. Your changes remain undoable.</span></div><div class="field"><label for="routeName">Route name</label><input id="routeName" type="text" maxlength="28" value="${esc(st.name)}" style="color:#fff;background:#24253c;border:1px solid #696782;border-radius:8px;padding:10px;width:100%"></div><div class="field"><label class="toggle"><input type="checkbox" id="routeEnabled" ${st.enabled?'checked':''}>Show and animate this route</label></div><div class="field"><label for="routeVelocity">Route speed <span class="value" id="value-routeVelocity">${st.velocity}</span></label><input type="range" id="routeVelocity" min="1" max="4" step="1" value="${st.velocity}"></div><div class="field"><label for="routeHue">Route hue offset <span class="value" id="value-routeHue">${st.hue}</span></label><input type="range" id="routeHue" min="-1" max="1" step=".05" value="${st.hue}"></div><div class="field"><label for="routeForks">Branch families <span class="value" id="value-routeForks">${st.forks}</span></label><input type="range" id="routeForks" min="0" max="3" step="1" value="${st.forks}"></div>`;
+}
+
 function savePalettes(){try{localStorage.setItem('phason_user_palettes',JSON.stringify(palettes));}catch{}}
 function resetGrid(){grid=C.makeGrid(S.radius);needGeom=true;geomStamp='';twinGeo=null;twinStamp='';}
 function getAspect(){return {square:1,portrait:9/16,wide:16/9,poster:3/4,landscape:4/3}[S.aspect]||1;}
@@ -303,20 +350,44 @@ if(S.riderCount>0 && geo.connections.length){
   }st.restore();
 }
 if(S.stitches.length && S.guideIntensity>0){
-  const paths=geo.stitchRoutesKey===JSON.stringify(S.stitches)?geo.stitchRoutes:(geo.stitchRoutes=C.stitchRoutes(geo,S.stitches),geo.stitchRoutesKey=JSON.stringify(S.stitches),geo.stitchRoutes);
+  const key=JSON.stringify(S.stitches.map(x=>[x.id,x.points]));
+  const paths=geo.stitchRoutesKey===key?geo.stitchRoutes:(geo.stitchRoutes=C.stitchRoutes(geo,S.stitches),geo.stitchRoutesKey=key,geo.stitchRoutes);
+  const voices=[];
   st.save();st.globalCompositeOperation='screen';st.lineCap='round';st.lineJoin='round';
   for(let j=0;j<paths.length;j++){
-    const route=paths[j],nodes=route.indices,color=pickColor(.1+j*.31+phase*S.colorCycles*.15);
-    if(nodes.length<2)continue;
+    const route=paths[j],settings=S.stitches.find(x=>x.id===route.id);if(!settings||!settings.enabled)continue;
+    const nodes=route.indices,color=pickColor(.1+j*.31+settings.hue+phase*S.colorCycles*.15);if(nodes.length<2)continue;
     st.beginPath();nodes.forEach((ix,i)=>{const xy=p(geo.tiles[ix].c);i?st.lineTo(xy[0],xy[1]):st.moveTo(xy[0],xy[1]);});
     st.strokeStyle=rgb(color,.16*S.guideIntensity);st.lineWidth=Math.max(1.2,sc*.3)*S.guideIntensity;st.stroke();
     st.strokeStyle=rgb(color,.83);st.lineWidth=Math.max(.55,sc*.075)*S.guideIntensity;st.stroke();
-    const z=((phase*S.guideCycles+j/Math.max(paths.length,1))%1)*nodes.length,k=Math.floor(z),f=z-k;
-    const a=p(geo.tiles[nodes[k]].c),b=p(geo.tiles[nodes[(k+1)%nodes.length]].c),x=a[0]+(b[0]-a[0])*f,y=a[1]+(b[1]-a[1])*f;
-    drawPoint(x,y,Math.max(1.5,sc*.26)*S.guideIntensity,rgb('#ffffff',.9));
-    drawPoint(x,y,Math.max(2,sc*.6)*S.guideIntensity,rgb(color,.2));
+    const pos=C.routePosition(geo,nodes,phase*S.guideCycles*settings.velocity+j/Math.max(paths.length,1));
+    if(pos){const xy=p(pos);voices.push({x:xy[0],y:xy[1],color});drawPoint(xy[0],xy[1],Math.max(1.5,sc*.26)*S.guideIntensity,rgb('#ffffff',.9));drawPoint(xy[0],xy[1],Math.max(2,sc*.6)*S.guideIntensity,rgb(color,.2));}
+    if(S.guideBranching && settings.forks>0){
+      const branches=C.branchRoutes(geo,route,S.seed,settings.forks);
+      branches.forEach((branch,k)=>{
+        st.beginPath();branch.indices.forEach((ix,i)=>{const xy=p(geo.tiles[ix].c);i?st.lineTo(...xy):st.moveTo(...xy);});
+        st.strokeStyle=rgb(color,.32*S.guideIntensity);st.lineWidth=Math.max(.6,sc*.04)*S.guideIntensity;st.stroke();
+        const node=C.routePosition(geo,branch.indices,phase*S.guideCycles*settings.velocity+(k+.25)/settings.forks);
+        if(node){const xy=p(node);voices.push({x:xy[0],y:xy[1],color});drawPoint(xy[0],xy[1],Math.max(.9,sc*.11),rgb(color,.8));}
+      });
+    }
     const origin=p(route.origin);drawPoint(origin[0],origin[1],Math.max(1.5,sc*.16),rgb(color,.95));
-  }st.restore();
+    if(target===canvas&&S.touchMode==='edit'&&route.id===selectedStitchId){
+      st.save();st.globalCompositeOperation='source-over';st.strokeStyle='#ffffff';st.lineWidth=1.8;st.setLineDash([5,5]);
+      st.beginPath();const authored=settings.points.map(p);authored.forEach((pt,i)=>i?st.lineTo(...pt):st.moveTo(...pt));st.stroke();st.setLineDash([]);
+      for(const pt of authored)drawPoint(pt[0],pt[1],Math.max(3,sc*.15),'#ffffff');st.restore();
+    }
+  }
+  if(S.guideCollision>0){
+    // Deterministic proximity flashes: not a physical collision solver or persistent reactive agent state.
+    for(let a=0;a<voices.length;a++)for(let b=a+1;b<voices.length;b++){
+      const d=Math.hypot(voices[a].x-voices[b].x,voices[a].y-voices[b].y),threshold=Math.max(3,sc*.65);
+      if(d>=threshold)continue;
+      const power=(1-d/threshold)*S.guideCollision,px=(voices[a].x+voices[b].x)/2,py=(voices[a].y+voices[b].y)/2;
+      drawPoint(px,py,Math.max(1,sc*(.12+power*.6)),rgb('#ffffff',Math.min(.95,power*.8)));
+    }
+  }
+  st.restore();
 }
 if(S.showGrid){st.save();st.strokeStyle='rgba(255,255,255,.08)';st.lineWidth=.65;for(let i=0;i<5;i++){const n=C.star[i],g=C.offsets(S.seed,...gPhase(phase))[i],max=Math.ceil(S.radius);for(let j=-max;j<=max;j++){const d=j-g,at=[n[0]*d,n[1]*d],tangent=[-n[1],n[0]];st.beginPath();st.moveTo(offX+(at[0]-tangent[0]*S.radius)*sc,offY+(at[1]-tangent[1]*S.radius)*sc);st.lineTo(offX+(at[0]+tangent[0]*S.radius)*sc,offY+(at[1]+tangent[1]*S.radius)*sc);st.stroke();}}st.restore();}
 const vignette=st.createRadialGradient(w*.5,h*.5,minSide*.08,w*.5,h*.5,Math.max(w,h)*.75);vignette.addColorStop(0,'#00000000');vignette.addColorStop(1,'#00000070');st.fillStyle=vignette;st.fillRect(0,0,w,h);
@@ -359,16 +430,86 @@ async function saveGif(){
     flash(`Saved ${frames}-frame GIF · ${w}×${h} · ${(blob.size/1048576).toFixed(1)} MB.`);
   }catch(e){flash('GIF export failed: '+e.message);}finally{worker?.terminate();if(btn){btn.disabled=false;btn.textContent=label;}exporting=false;if(wasPlaying&&!isPlaying)togglePlay();}
 }
+function mp4Mime(){
+ if(typeof MediaRecorder==='undefined'||typeof MediaRecorder.isTypeSupported!=='function')return '';
+ for(const type of ['video/mp4;codecs=avc1.42E01E','video/mp4;codecs=avc1.4D401F','video/mp4'])if(MediaRecorder.isTypeSupported(type))return type;
+ return '';
+}
+async function saveMp4(){
+ if(recordingMp4){mp4Cancel=true;return;}
+ const type=mp4Mime();if(!type){flash('True MP4 recording is not supported by this browser. Try Safari, or use GIF.');return;}
+ if(typeof HTMLCanvasElement.prototype.captureStream!=='function'){flash('Canvas capture is unavailable in this browser.');return;}
+ const size=Number(S.mp4Size)||720,fps=Number(S.mp4Fps)||16,frames=Math.ceil(S.period*fps);
+ if(!Number.isFinite(S.period)||S.period>30||size>1080||frames>720){flash('MP4 settings are outside mobile-safe limits.');return;}
+ const aspect=getAspect(),w=aspect>=1?size:Math.round(size*aspect),h=aspect>=1?Math.round(size/aspect):size;
+ if(w*h*fps>30000000){flash('Reduce MP4 resolution or FPS for device performance.');return;}
+ const btn=$$('#mp4Render');recordingMp4=true;mp4Cancel=false;let cached=[];
+ const wasPlaying=isPlaying;if(wasPlaying)togglePlay();let recorder=null,stream=null;
+ try{
+   const out=document.createElement('canvas');out.width=w;out.height=h;
+   // Pre-render a bounded frame cache: actual pixel work happens BEFORE the real-time MP4 capture.
+   // 64 MiB budget keeps modest exports smooth; large jobs fall back to live rendering.
+   if(typeof createImageBitmap==='function'&&frames*w*h*4<=64*1048576){
+     try{
+       for(let k=0;k<frames;k++){
+         if(mp4Cancel)break;
+         draw(out,w,h,k/frames);cached.push(await createImageBitmap(out));
+         if(btn)btn.textContent=`Cancel MP4 · preparing ${Math.round((k+1)*100/frames)}%`;
+         if(k%3===0)await new Promise(requestAnimationFrame);
+       }
+     }catch(err){cached.forEach(bitmap=>bitmap.close?.());cached=[];flash('MP4 frame cache unavailable; using direct live drawing.');}
+   }
+   if(mp4Cancel){flash('MP4 preparation cancelled.');return;}
+   const playback=out.getContext('2d');
+   if(cached.length){playback.drawImage(cached[0],0,0);}else draw(out,w,h,0);
+   stream=out.captureStream(fps);
+   const chunks=[];
+   recorder=new MediaRecorder(stream,{mimeType:type,videoBitsPerSecond:Math.min(24000000,Math.max(6000000,Math.round(w*h*fps*.8)))});
+   const finished=new Promise((resolve,reject)=>{
+     recorder.ondataavailable=e=>{if(e.data.size)chunks.push(e.data);};
+     recorder.onerror=e=>reject(new Error(e.error?.message||'MP4 encoder failure'));
+     recorder.onstop=()=>resolve(new Blob(chunks,{type:'video/mp4'}));
+   });
+   recorder.start(1000);
+   btn.textContent='Cancel MP4';
+   const started=performance.now();
+   for(let k=0;k<frames;k++){
+     if(mp4Cancel)break;
+     // MediaRecorder timestamps use elapsed real time; exact phase is supplied per requested frame.
+     const next=started+k*1000/fps,wait=next-performance.now();if(wait>0)await new Promise(r=>setTimeout(r,wait));
+     if(cached.length){playback.drawImage(cached[k],0,0);}else draw(out,w,h,k/frames);
+     // Some browsers ignore manual requests and capture automatically at fps. Both are legal.
+     stream.getVideoTracks()[0]?.requestFrame?.();
+     if(btn)btn.textContent=`Cancel MP4 · ${Math.round((k+1)*100/frames)}%`;
+   }
+   if(!mp4Cancel){
+     const until=started+S.period*1000-performance.now();if(until>0)await new Promise(r=>setTimeout(r,until));
+     // End at the same image as the beginning, giving MediaRecorder an endpoint timestamp.
+     if(cached.length){playback.drawImage(cached[0],0,0);}else draw(out,w,h,0);
+     stream.getVideoTracks()[0]?.requestFrame?.();
+     await new Promise(r=>setTimeout(r,Math.max(70,900/fps)));
+   }
+   if(recorder.state!=='inactive')recorder.stop();const blob=await finished;
+   if(mp4Cancel){flash('MP4 capture cancelled. Your artwork was not changed.');return;}
+   if(blob.size<128)throw Error('Native encoder returned an empty file');
+   const header=new Uint8Array(await blob.slice(0,64).arrayBuffer());
+   const tag=String.fromCharCode(...header.slice(4,8));
+   if(tag!=='ftyp')throw Error('Browser returned a non-MP4 container. No fake .mp4 will be saved.');
+   download(blob,`phason-riot-${S.seed}-${S.aspect}-${size}px.mp4`);
+   flash(`Native MP4 saved · ${w}×${h} · ${(blob.size/1048576).toFixed(1)} MB. Real-time recording; inspect playback for dropped frames and loop seam.`);
+ }catch(e){flash('MP4 recording failed: '+e.message);}
+ finally{if(recorder&&recorder.state!=='inactive')try{recorder.stop();}catch{}stream?.getTracks().forEach(t=>t.stop());cached.forEach(bitmap=>bitmap.close?.());if(btn){btn.textContent='Record actual MP4';btn.disabled=false;}recordingMp4=false;mp4Cancel=false;if(wasPlaying&&!isPlaying)togglePlay();}
+}
 function saveSheet(){try{const width=512,cols=4,rows=4,sheet=document.createElement('canvas');sheet.width=width*cols;sheet.height=width*rows;const k=sheet.getContext('2d');for(let i=0;i<16;i++){const c=frameCanvas(width,i/16);k.fillStyle='#080b18';k.fillRect((i%4)*width,Math.floor(i/4)*width,width,width);k.drawImage(c,(i%4)*width+(width-c.width)/2,Math.floor(i/4)*width+(width-c.height)/2);k.fillStyle='#ffffffbd';k.font='13px monospace';k.fillText(`${i+1}/16`,(i%4)*width+10,Math.floor(i/4)*width+24);}toBlob(sheet,b=>download(b,`phason-riot-${S.seed}-16-frame-sheet.png`));}catch(e){flash('Frame sheet export failed: '+e.message)}}
-function undoEdit(){if(!undo.length)return;redo.push(snapshot());restore(undo.pop());resetGrid();renderPanel();resize();updateHistory();syncTouchMode();}
-function redoEdit(){if(!redo.length)return;undo.push(snapshot());restore(redo.pop());resetGrid();renderPanel();resize();updateHistory();syncTouchMode();}
+function undoEdit(){if(!undo.length)return;redo.push(snapshot());restore(undo.pop());if(!selectedStitch())selectedStitchId=S.stitches[S.stitches.length-1]?.id||null;resetGrid();renderPanel();resize();updateHistory();syncTouchMode();}
+function redoEdit(){if(!redo.length)return;undo.push(snapshot());restore(redo.pop());if(!selectedStitch())selectedStitchId=S.stitches[S.stitches.length-1]?.id||null;resetGrid();renderPanel();resize();updateHistory();syncTouchMode();}
 function newDesign(){if(!confirm('Generate a different design? You can Undo to restore this one.'))return;const old=snapshot(),gen=rnd(S.seed+7919);S.seed=Math.floor(gen()*2147483647);S.material=Object.keys(mats)[Math.floor(gen()*Object.keys(mats).length)];S.palette=Object.keys(palettes)[Math.floor(gen()*Object.keys(palettes).length)];S.mode=Object.keys(modes)[Math.floor(gen()*Object.keys(modes).length)];S.amp=.4+gen()*1.1;S.baseU=(gen()-.5)*.6;S.baseV=(gen()-.5)*.6;elapsed=0;resetGrid();addHistory(old);renderPanel();}
 for(const b of document.querySelectorAll('[data-tab]'))b.addEventListener('click',()=>{active=b.dataset.tab;for(const x of document.querySelectorAll('[data-tab]'))x.classList.toggle('active',x===b);renderPanel();});
 $$('#playBtn').addEventListener('click',togglePlay);$$('#newBtn').addEventListener('click',newDesign);$$('#undoBtn').addEventListener('click',undoEdit);$$('#redoBtn').addEventListener('click',redoEdit);$$('#exportPng').addEventListener('click',savePng);$$('#exportJson').addEventListener('click',saveRecipe);
 function syncTouchMode(){
-  const selected=['primary','twin','stitch'].includes(S.touchMode)?S.touchMode:'primary';
+  const selected=['primary','twin','stitch','edit'].includes(S.touchMode)?S.touchMode:'primary';
   for(const b of document.querySelectorAll('[data-touch]')){const on=b.dataset.touch===selected;b.classList.toggle('selected',on);b.setAttribute('aria-pressed',String(on));}
-  const hint=$$('#touchHint');if(hint)hint.textContent=selected==='stitch'?`Draw a glowing graph route · ${S.stitches.length}/8 saved · pinch to zoom`:selected==='twin'?'Drag to change TWIN phason offsets · pinch to zoom':'Drag to change PRIMARY phason offsets · pinch to zoom';
+  const hint=$$('#touchHint');if(hint)hint.textContent=selected==='stitch'?`Draw a glowing graph route · ${S.stitches.length}/8 saved · pinch to zoom`:selected==='edit'?`Tap a route to select it, drag to reposition · ${S.stitches.length}/8 saved`:selected==='twin'?'Drag to change TWIN phason offsets · pinch to zoom':'Drag to change PRIMARY phason offsets · pinch to zoom';
 }
 for(const b of document.querySelectorAll('[data-touch]'))b.addEventListener('click',()=>{if(gesture)return;S.touchMode=b.dataset.touch;syncTouchMode();});
 function updateGestureControls(){
@@ -381,6 +522,16 @@ function canvasToWorld(clientX,clientY){
   const scale=Math.min(canvas.width,canvas.height)/(S.radius*2.6+5)*S.zoom;
   return [C.clamp((x-canvas.width*.5)/scale,-S.radius*2.2,S.radius*2.2),C.clamp((y-canvas.height*.5)/scale,-S.radius*2.2,S.radius*2.2)];
 }
+function nearestAuthoredStitch(world){
+ let best=null,dist=Infinity;
+ for(const route of S.stitches){for(let i=1;i<route.points.length;i++){
+   const a=route.points[i-1],b=route.points[i],dx=b[0]-a[0],dy=b[1]-a[1],den=dx*dx+dy*dy;
+   const t=den?C.clamp(((world[0]-a[0])*dx+(world[1]-a[1])*dy)/den,0,1):0;
+   const d=Math.hypot(world[0]-a[0]-t*dx,world[1]-a[1]-t*dy);
+   if(d<dist){dist=d;best=route;}
+ }}
+ return dist<=.85?best:null;
+}
 function appendStitchPoint(pt){
   const stroke=gesture?.stroke;if(!stroke)return;
   const last=stroke.points[stroke.points.length-1];
@@ -390,11 +541,13 @@ canvas.addEventListener('pointerdown',e=>{
   if(e.pointerType==='mouse'&&e.button!==0)return;
   if(!gesture)gesture={before:snapshot(),stroke:null,stitchCount:S.stitches.length,stitchSerial:S.stitchSerial};
   pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(pointers.size===1 && S.touchMode==='edit'){const selected=nearestAuthoredStitch(canvasToWorld(e.clientX,e.clientY));selectedStitchId=selected?.id||null;gesture.moveStitchId=selected?.id||null;gesture.lastWorld=canvasToWorld(e.clientX,e.clientY);if(active==='geometry')renderPanel();}
   if(pointers.size===1 && S.touchMode==='stitch'){
     if(S.stitches.length>=8)flash('Eight stitched paths maximum. Undo or remove a path before drawing another.');
-    else {const stroke={id:`stitch-${S.seed}-${S.stitchSerial++}`,points:[canvasToWorld(e.clientX,e.clientY)]};S.stitches.push(stroke);gesture.stroke=stroke;}
+    else {const stroke={id:`stitch-${S.seed}-${S.stitchSerial++}`,name:`Route ${S.stitchSerial-1}`,enabled:true,velocity:1,hue:0,forks:2,points:[canvasToWorld(e.clientX,e.clientY)]};S.stitches.push(stroke);selectedStitchId=stroke.id;gesture.stroke=stroke;}
   }
   if(pointers.size===2 && gesture.stroke){S.stitches.splice(gesture.stitchCount);S.stitchSerial=gesture.stitchSerial;gesture.stroke=null;}
+  if(pointers.size===2 && gesture.moveStitchId){const prior=JSON.parse(gesture.before).settings.stitches;S.stitches=cleanStitches(prior);gesture.moveStitchId=null;}
   try{canvas.setPointerCapture(e.pointerId)}catch{}
   syncTouchMode();
 });
@@ -403,6 +556,7 @@ canvas.addEventListener('pointermove',e=>{
   const rect=canvas.getBoundingClientRect(),dx=e.clientX-prev.x,dy=e.clientY-prev.y;
   if(pointers.size===1){
     if(S.touchMode==='stitch')appendStitchPoint(canvasToWorld(e.clientX,e.clientY));
+    else if(S.touchMode==='edit'&&gesture?.moveStitchId){const stroke=S.stitches.find(x=>x.id===gesture.moveStitchId);if(stroke){const now=canvasToWorld(e.clientX,e.clientY),prevPoint=gesture.lastWorld||now;let ax=now[0]-prevPoint[0],ay=now[1]-prevPoint[1];stroke.points=stroke.points.map(q=>[C.clamp(q[0]+ax,-S.radius*2.2,S.radius*2.2),C.clamp(q[1]+ay,-S.radius*2.2,S.radius*2.2)]);gesture.lastWorld=now;}}
     else if(S.touchMode==='twin'){S.twinU=C.clamp(S.twinU+dx/Math.max(rect.width,1)*2.1,-2,2);S.twinV=C.clamp(S.twinV+dy/Math.max(rect.height,1)*2.1,-2,2);}
     else{S.baseU=C.clamp(S.baseU+dx/Math.max(rect.width,1)*2.1,-2,2);S.baseV=C.clamp(S.baseV+dy/Math.max(rect.height,1)*2.1,-2,2);needGeom=true;}
   }else if(pointers.size===2){
