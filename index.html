@@ -3,7 +3,7 @@
 <style>
 :root{color-scheme:dark;--bg:#090a13;--panel:#131523;--panel2:#1c1e31;--line:#3b3b54;--text:#f4f2ff;--sub:#b9b4cc;--a:#e7ff72;--b:#ff63e5}*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 8% -8%,#53215a55,transparent 40%),radial-gradient(ellipse at 95% 1%,#103d5b66,transparent 42%),var(--bg);color:var(--text)}button,select,input{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--a);outline-offset:2px}button:disabled{opacity:.45;cursor:not-allowed}.shell{max-width:1120px;margin:auto;padding:14px 15px 50px}.mast{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:3px 0 12px}.brand{font-weight:950;letter-spacing:-1.3px;font-size:clamp(24px,5vw,40px);line-height:1}.brand em{font-style:normal;color:var(--a)}.smallcaps{font-size:10px;letter-spacing:2.5px;font-weight:800;color:var(--sub);margin-top:5px}.caps{font-size:10px;color:#c9bed4;letter-spacing:1.7px;text-transform:uppercase;font-weight:750}.status{display:flex;gap:8px;align-items:center;white-space:nowrap;font-size:11px;color:var(--sub);letter-spacing:1px}.dot{width:9px;height:9px;border-radius:50%;background:var(--a);box-shadow:0 0 10px var(--a)}.stage{background:#070711;border:1px solid #59526b;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 12px 50px #000b,0 0 70px #cc42e11a;display:flex;align-items:center;justify-content:center;isolation:isolate;min-height:220px}.stage canvas{display:block;max-height:66vh;max-width:100%;touch-action:none;user-select:none;-webkit-user-select:none;cursor:crosshair}.stage:before{content:'';pointer-events:none;position:absolute;z-index:2;inset:0;border:1px solid #ffffff16;border-radius:16px}.overlay{pointer-events:none;position:absolute;z-index:3;top:10px;left:12px;font-size:10px;line-height:1.6;text-shadow:0 2px 5px #000;letter-spacing:1px;color:#fff9}.overlay.right{left:auto;right:12px;text-align:right}.toolbar{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 12px;align-items:center}.btn{border:1px solid #615d7c;background:#202238;border-radius:10px;color:white;padding:10px 12px;font-weight:700;min-height:40px}.btn:hover{border-color:#cbb7f7}.btn.primary{background:var(--a);border-color:var(--a);color:#16151c}.btn.pink{background:#803777;border-color:#dc79d3}.btn.tiny{min-height:34px;padding:7px 10px;font-size:12px}.grow{flex:1}.tabs{display:flex;overflow-x:auto;gap:5px;padding:3px;border-radius:12px;background:#171824;scrollbar-width:thin}.tab{border:0;border-radius:9px;background:transparent;color:#b9b4cc;font-size:13px;font-weight:800;padding:11px 16px;white-space:nowrap}.tab.active{background:#343049;color:var(--a)}.panel{background:linear-gradient(160deg,#181a2c,#10111f);border:1px solid #3a3b58;border-radius:0 0 16px 16px;padding:16px;margin-top:-4px;min-height:205px}.description{font-size:13px;line-height:1.55;color:#c1bad2;max-width:750px;margin:1px 0 14px}.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 18px}.field{display:flex;flex-direction:column;gap:8px;min-width:0}.field label{font-weight:750;font-size:12px;display:flex;justify-content:space-between;gap:8px}.value{color:var(--a);font-variant-numeric:tabular-nums}.field input[type=range]{width:100%;accent-color:var(--a);height:20px}.field select{width:100%;color:#faf7ff;background:#25253c;border:1px solid #62627c;border-radius:8px;padding:10px;min-height:42px}.field option{background:#23223a}.help{font-size:11px;color:#a6a1bc;line-height:1.4}.swatches{display:flex;gap:6px;margin-top:7px}.swatches span{display:block;height:18px;flex:1;border-radius:4px;border:1px solid #ffffff2a}.inline{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.toggle{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;cursor:pointer}.toggle input{accent-color:var(--a);width:18px;height:18px}.notice{margin-top:15px;background:#242439;border-left:3px solid #c2ee6a;padding:10px 12px;color:#c7c5d4;font-size:12px;line-height:1.5}.footer{font-size:11px;color:#8986a3;line-height:1.6;margin-top:16px}.foot-em{color:#bfea80}.pill{border:1px solid #6d547d;border-radius:30px;padding:6px 10px;color:#e0d3e8;background:#201c32;font-size:11px}.summary{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 8px}.badge{border:1px solid #4f4d69;padding:5px 9px;border-radius:20px;font-size:11px;color:#e4deef}#errors{color:#ff9bba;font-size:12px;white-space:pre-wrap} .viewer-warning{position:absolute;z-index:4;inset:auto 12px 14px 12px;background:#29233c;border:1px solid #e7ff72;border-radius:14px;padding:14px;font-size:13px;line-height:1.55;color:#fff4fa;box-shadow:0 6px 28px #000a}.viewer-warning strong{display:block;color:#e7ff72;margin-bottom:3px}.phason-ready .viewer-warning{display:none} .metrics{font-size:11px;line-height:1.4;letter-spacing:.5px;color:#b9b4cc;padding:6px 3px 3px;overflow-wrap:anywhere}.touchbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:9px 0 1px}.touchlabel{font-size:10px;font-weight:850;letter-spacing:2px;color:#bdafd0;margin-right:3px}.touchchip{border:1px solid #514960;border-radius:99px;color:#d4c9ec;background:#171626;font-size:12px;font-weight:800;padding:7px 11px;min-height:36px}.touchchip.selected{background:#e7ff72;color:#161624;border-color:#e7ff72}.touchchip:focus-visible{outline:2px solid #ff61d8;outline-offset:2px}.touchhint{color:#a6a1bc;font-size:11px;flex-basis:100%;line-height:1.4;padding:0 0 3px 4px}.hidden{display:none!important}@media(max-width:620px){.shell{padding:10px 10px 32px}.controls{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 12px}.panel{padding:13px}.brand{letter-spacing:-.6px}.stage canvas{max-height:55vh}.status{font-size:10px}.mast{margin-bottom:9px}.tab{padding:11px 12px}.toolbar{gap:5px}.btn{padding:9px 10px;font-size:12px}.overlay{font-size:9px}}@media(max-width:360px){.controls{grid-template-columns:1fr}.stage canvas{max-height:52vh}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style></head><body><main class="shell">
-<header class="mast"><div><div class="brand">PHASON <em>RIOT</em></div><div class="smallcaps">LIVING QUASICRYSTAL STUDIO · 005</div></div><div class="status"><span class="dot" id="liveDot"></span><span id="liveText">STRUCTURAL MOTION</span></div></header>
+<header class="mast"><div><div class="brand">PHASON <em>RIOT</em></div><div class="smallcaps">LIVING QUASICRYSTAL STUDIO · 006</div></div><div class="status"><span class="dot" id="liveDot"></span><span id="liveText">STRUCTURAL MOTION</span></div></header>
 <section class="stage" id="stage"><canvas id="art" aria-label="Interactive animated Penrose-style quasicrystal. Drag to shift phason offsets."></canvas><div class="overlay"><div>⊹ PENTAGRID / 05</div><div id="tileStats">GENERATING…</div></div><div class="overlay right"><div id="motionStats">U 0.00 · V 0.00</div></div><div class="viewer-warning"><strong>⚠ PREVIEW ONLY — JAVASCRIPT IS NOT RUNNING</strong>This preview cannot run the JavaScript engine. Open the published GitHub Pages site in Safari, or load this file into a JavaScript-enabled HTML editor. GitHub's code/file preview and iPhone Files Quick Look are NOT the running app.</div></section><div class="metrics" id="loopStats" aria-live="off">LOOP 08.0s</div>
 <div class="touchbar" aria-label="Artwork touch tool"><span class="touchlabel">TOUCH</span><button class="touchchip selected" id="touchPrimary" data-touch="primary" aria-pressed="true">✧ Primary</button><button class="touchchip" id="touchTwin" data-touch="twin" aria-pressed="false">◇ Twin</button><button class="touchchip" id="touchStitch" data-touch="stitch" aria-pressed="false">〰 Stitch</button><button class="touchchip" id="touchEdit" data-touch="edit" aria-pressed="false">✎ Edit</button><span class="touchhint" id="touchHint">Drag to change PRIMARY phason offsets · pinch to zoom</span></div>
 <nav class="toolbar" aria-label="Artwork actions"><button class="btn primary" id="playBtn">Ⅱ Pause</button><button class="btn" id="newBtn">✦ New Design</button><button class="btn" id="undoBtn">↶ Undo</button><button class="btn" id="redoBtn">↷ Redo</button><span class="grow"></span><button class="btn" id="exportPng">↓ PNG</button><button class="btn" id="exportJson">↓ Recipe</button></nav>
@@ -146,21 +146,57 @@ const PhasonCore = (() => {
     while(head<tail){const v=q[head++];for(const a of neighbors[v])if(dist[a]===-1){dist[a]=dist[v]+1;q[tail++]=a;}}
     return dist;
   }
+  // Independent, closed spatial color-phase fields. Styling only: does NOT displace rhombi.
+  function colorTerritory(x,y,phase,mode='off',scale=1,cycles=1){
+    if(mode==='off')return 0;
+    const q=TAU*phase*Math.max(0,Math.round(cycles)),u=x/Math.max(.3,scale),v=y/Math.max(.3,scale);
+    if(mode==='fronts')return .5+.5*Math.sin(u*.56+v*.32-q);
+    if(mode==='islands'){
+      const cx=4.1*Math.cos(q),cy=3.4*Math.sin(q),dx=u-cx,dy=v-cy;
+      const ax=u+3.5*Math.cos(2*q+1.2),ay=v+3*Math.sin(2*q+1.2);
+      return clamp(.9*Math.exp(-(dx*dx+dy*dy)/16)+.75*Math.exp(-(ax*ax+ay*ay)/10),0,1);
+    }
+    if(mode==='spirals'){
+      const a=Math.atan2(v-2*Math.sin(q),u-2*Math.cos(q));
+      const r=Math.hypot(u-2*Math.cos(q),v-2*Math.sin(q));
+      return .5+.5*Math.sin(3*a-1.2*r+q*2);
+    }
+    return 0;
+  }
   // Deterministic out-and-back side paths from an authored route; never traverse a non-edge.
-  function branchRoutes(geo,route,seed,count=2){
+  // Species change the graph routing rule, not merely a stroke color.
+  function branchRoutes(geo,route,seed,count=2,species='wander'){
     if(!route||!route.indices||route.indices.length<2||!geo.connections.length)return [];
     const neighbors=Array.from({length:geo.tiles.length},()=>[]);
     for(const e of geo.connections){neighbors[e.a].push(e.b);neighbors[e.b].push(e.a);}
     const hash=String(route.id).split('').reduce((h,c)=>Math.imul(h^c.charCodeAt(0),16777619)|0,2166136261);
     const random=seeded(seed^hash^geo.tiles.length);const out=[];
+    species=['wander','fan','reef'].includes(species)?species:'wander';
     const main=new Set(route.indices);
     for(let k=0;k<Math.min(3,count);k++){
       const start=route.indices[Math.floor((k+.5)*route.indices.length/Math.min(3,count))];
       let at=start,prev=-1,forward=[start];
-      for(let t=0;t<Math.min(8,3+k*2);t++){
+      const visited=new Set([start]),targetSteps=species==='fan'?5+k*2:species==='reef'?8:3+k*2;
+      const root=geo.tiles[start].c;
+      const dir=TAU*k/Math.max(1,Math.min(3,count))+.57;
+      for(let t=0;t<Math.min(12,targetSteps);t++){
         const options=neighbors[at].filter(x=>x!==prev),off=options.filter(x=>!main.has(x));
         const choices=off.length?off:options;if(!choices.length)break;
-        const next=choices[Math.floor(random()*choices.length)];prev=at;at=next;forward.push(at);
+        let next;
+        if(species==='wander')next=choices[Math.floor(random()*choices.length)];
+        else {
+          let best=-Infinity;
+          for(const candidate of choices){
+            const pos=geo.tiles[candidate].c;
+            const dist=Math.hypot(pos[0]-root[0],pos[1]-root[1]);
+            const degree=neighbors[candidate].length;
+            const direction=(pos[0]-root[0])*Math.cos(dir)+(pos[1]-root[1])*Math.sin(dir);
+            const score=(species==='fan'?direction*.95+dist*.14:degree*.52+dist*.13)
+              -(visited.has(candidate)?2.5:0)+random()*.14;
+            if(score>best){best=score;next=candidate;}
+          }
+        }
+        prev=at;at=next;visited.add(at);forward.push(at);
       }
       if(forward.length>1)out.push({id:`${route.id}:branch${k}`,indices:forward.concat(forward.slice(1,-1).reverse()),parentId:route.id});
     }
@@ -177,7 +213,7 @@ const PhasonCore = (() => {
     for(const t of b.tiles) if(m.has(t.id)){shared++;if(m.get(t.id)!==t.label)changed++;}
     return {changed,shared};
   }
-  return {TAU,star,internal,clamp,seeded,offsets,makeGrid,generate,phasonAt,compare,walks,stitchRoutes,graphDepths,branchRoutes,routePosition};
+  return {TAU,star,internal,clamp,seeded,offsets,makeGrid,generate,phasonAt,compare,walks,stitchRoutes,graphDepths,branchRoutes,routePosition,colorTerritory};
 })();
 </script><script>
 (()=>{'use strict';
@@ -193,11 +229,11 @@ const palettes={
 'Ink & Gold':['#e5ae53','#ffc9a4','#c4d6ff','#faf0d7','#8656af','#ef8469']};
 const clean=(s)=>Array.isArray(s)?s.filter(x=>/^#[0-9a-fA-F]{6}$/.test(x)).slice(0,24):[];
 try{const loaded=JSON.parse(localStorage.getItem('phason_user_palettes')||'{}');for(const [k,v] of Object.entries(loaded))if(clean(v).length>=2)palettes[k]=clean(v);}catch{}
-const defaults={seed:1931,radius:8,zoom:1,mode:'orbit',period:8,amp:.82,baseU:0,baseV:0,material:'opal',palette:'Acid Carnival',intensity:1.1,glow:.65,edge:.7,comets:1,wave:1,speed:1,colorCycles:2,threadCycles:3,network:.6,structureSteps:96,showChanges:false,neonBoost:0,background:'#080b18',aspect:'square',showGrid:false,showNodes:true,twinEnabled:true,twinMode:'gyre',twinAmp:.56,twinPhase:.23,twinFrequency:2,twinOpacity:.36,twinScale:1.02,twinU:.08,twinV:-.12,twinStyle:'mesh',riderCount:14,riderSpeed:2,riderGlow:1,gifSize:'480',gifFps:'12',touchMode:'primary',stitches:[],stitchSerial:1,guideIntensity:1.3,guideCycles:2,linkStyle:'flow',previewFps:18,guideBranching:true,guideCollision:0.85,mp4Size:'720',mp4Fps:'16'};
-let S={...defaults},undo=[],redo=[],lastDraw=0,isPlaying=!window.matchMedia('(prefers-reduced-motion:reduce)').matches,elapsed=0,lastTime=0,current=null,grid=[],needGeom=true,geomStamp='',frameNo=0,reference=null,referenceStamp='',referenceLabels=null,twinGeo=null,twinStamp='',pointers=new Map(),gesture=null,selectedStitchId=null,mp4Cancel=false,recordingMp4=false;
-const TABS={motion:'Seven structural phason paths and real graph-linked filaments, now with individually named stitch voices, side branches and collision sparks. Use the TOUCH chips to manipulate the artwork.',material:'Choose an entirely different visual behavior, from opal surfaces to connected filament networks and phason fault flashes. All optical looks are stylized.',twin:'Touch ◇ Twin above the controls to directly manipulate this second field. Two real pentagrid fields run their own internal-space orbits. Off restores the single-layer image. These are overlaid finite patches, NOT a magically seamless Penrose wallpaper.',geometry:'Use 〰 Stitch to draw a new graph route, then ✎ Edit routes to select, drag and reshape its placement. Each route has its own animation voice and branches. Actual five-family dual grid. Inspect changed K-label neighborhoods relative to the frozen base offset; this is NOT a certified count of local tile flips.',color:'Chromatic waves advance at an independently chosen integer harmonic for exact loop closure. Neon boost is optional. Import any of your named palette JSON lists.',export:'Recipe, PNG and looped GIF preserve all route settings. Experimental native MP4 is offered ONLY when this browser reports real MP4 recording support; recording timing is real-time and can drop frames under load.'};
+const defaults={seed:1931,radius:8,zoom:1,mode:'orbit',period:8,amp:.82,baseU:0,baseV:0,material:'opal',palette:'Acid Carnival',intensity:1.1,glow:.65,edge:.7,comets:1,wave:1,speed:1,colorCycles:2,threadCycles:3,network:.6,structureSteps:96,showChanges:false,neonBoost:0,background:'#080b18',aspect:'square',showGrid:false,showNodes:true,twinEnabled:true,twinMode:'gyre',twinAmp:.56,twinPhase:.23,twinFrequency:2,twinOpacity:.36,twinScale:1.02,twinU:.08,twinV:-.12,twinStyle:'mesh',riderCount:14,riderSpeed:2,riderGlow:1,gifSize:'480',gifFps:'12',touchMode:'primary',stitches:[],stitchSerial:1,guideIntensity:1.3,guideCycles:2,linkStyle:'flow',previewFps:18,guideBranching:true,guideCollision:0.85,territoryMode:'fronts',territoryStrength:.65,territoryCycles:2,territoryScale:1.1,lamellarShine:.9,mp4Size:'720',mp4Fps:'16'};
+let S={...defaults},undo=[],redo=[],lastDraw=0,isPlaying=!window.matchMedia('(prefers-reduced-motion:reduce)').matches,elapsed=0,lastTime=0,current=null,grid=[],needGeom=true,geomStamp='',frameNo=0,reference=null,referenceStamp='',referenceLabels=null,twinGeo=null,twinStamp='',pointers=new Map(),gesture=null,selectedStitchId=null,selectedPointIndex=-1,mp4Cancel=false,recordingMp4=false;
+const TABS={motion:'Seven structural phason paths and real graph-linked filaments, now with individually named stitch voices, side branches and collision sparks. Use the TOUCH chips to manipulate the artwork.',material:'Try Lamellar Opal: phase-driven nacre-like bands and oriented faceting. This is stylized Canvas lighting, not a physical spectral optics solver.',twin:'Touch ◇ Twin above the controls to directly manipulate this second field. Two real pentagrid fields run their own internal-space orbits. Off restores the single-layer image. These are overlaid finite patches, NOT a magically seamless Penrose wallpaper.',geometry:'Use 〰 Stitch to draw. In ✎ Edit, drag a WHITE control point to reshape the route, or drag its line to move it. Select a point to insert/delete other points. Each route retains its own branch species. Actual five-family dual grid. Inspect changed K-label neighborhoods relative to the frozen base offset; this is NOT a certified count of local tile flips.',color:'Color territories move according to their own closed field: traveling fronts, drifting islands or spiral domains. They do not fake phason flips. Palette stops are unchanged and your colors are still yours.',export:'Recipe, PNG and looped GIF preserve all route settings. Experimental native MP4 is offered ONLY when this browser reports real MP4 recording support; recording timing is real-time and can drop frames under load.'};
 const modes={orbit:'Orbit — smooth structural change',choir:'Choir — 2:3 Lissajous counterpoint',saw:'Riot — multi-frequency phason jumps',tide:'Tidal — stretched orbit',braid:'Braid — fivefold harmonic crossing',gyre:'Gyre — double-wound internal orbit',quake:'Quake — sharp structural transitions'};
-const mats={opal:'Opal cathedral',neon:'Electric circuitry',velvet:'Velvet brocade',mineral:'Mineral glass',ink:'Ink constellation',filament:'Living filament network',fault:'Phason faultlines',prism:'Prism faceted glass'};
+const mats={lamellar:'Lamellar Opal — living nacre',opal:'Opal cathedral',neon:'Electric circuitry',velvet:'Velvet brocade',mineral:'Mineral glass',ink:'Ink constellation',filament:'Living filament network',fault:'Phason faultlines',prism:'Prism faceted glass'};
 const aspectOpts={square:'1:1 Square',portrait:'9:16 Portrait',wide:'16:9 Wide',poster:'3:4 Poster',landscape:'4:3 Landscape'};
 let active='motion';
 function esc(t){return String(t).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));}
@@ -210,10 +246,10 @@ function toggle(label,k){return `<label class="toggle"><input type="checkbox" id
 function button(label,id,cls=''){return `<button class="btn tiny ${cls}" id="${id}">${label}</button>`;}
 function paletteWidget(){return `<div class="field" style="grid-column:1 / -1"><label>Current palette</label><div class="swatches">${(palettes[S.palette]||palettes['Acid Carnival']).map(x=>`<span style="background:${x}"></span>`).join('')}</div></div>`;}
 function renderPanel(){let markup='';if(active==='motion')markup=`${chooser('Phason choreography','mode',modes)}${field('Phason amplitude','amp',0,1.6,.01,'How far internal offsets travel; larger values cause more neighborhood changes.')}${field('Cycle duration / seconds','period',2,30,.5,'Seven periodic paths; all return to their starting coordinates.')}${field('Structural steps / loop','structureSteps',32,192,16,'More steps for fluid rearrangement, fewer for sharp quasicrystal clicks. Art lights stay smooth.')}${field('Light wave motion','wave',0,2,.01,'Color and luminous ripples travel across rhombi.')}${field('Thread comets','comets',0,2,.01,'Moving edge highlights following tile-edge geometry.')}${field('Signal connections','network',0,1.6,.05,'Actual shared-edge adjacency: glowing travel along the tile graph.')}${chooser('Signal anatomy','linkStyle',{flow:'Flowing nerve signals',branch:'Branching graph wavefronts',braid:'Triple-strand braided circuitry'})}${field('Signal rhythm','threadCycles',1,8,1,'Integer loops per structural cycle, guaranteed to close.')}${field('Living travelers','riderCount',0,28,1,'Actual graph walkers; zero switches off traveling particles.')}${field('Travel cycles','riderSpeed',1,6,1,'Complete non-teleporting out-and-back routes per loop.')}${field('Traveler halo','riderGlow',0,2,.05,'Light around graph-running pulses.')}${field('Motion rate multiplier','speed',.1,3,.05,'Preview speed; exports use exact phase.')}${field('Preview frame cap','previewFps',8,30,1,'Phone performance control; GIF exports use their independent frame rate.')}`;
-else if(active==='material')markup=`${chooser('Surface character','material',mats)}${field('Luminous intensity','intensity',0,2,.02,'Raise to neon chaos or lower for subtle dye.')}${field('Halo / softness','glow',0,1,.02,'Bright bloom on strokes and highlights.')}${field('Visible geometry','edge',0,1,.02,'Tile-edge definition.')}<div class="field"><label for="background">Background color</label><input type="color" id="background" value="${S.background}" style="width:100%;height:40px;border:1px solid #67627c;background:#24263c;border-radius:8px;cursor:pointer"></div>${toggle('Vertex jewels','showNodes')}${toggle('Light up rearranged neighborhoods','showChanges')}`;
+else if(active==='material')markup=`${chooser('Surface character','material',mats)}${field('Luminous intensity','intensity',0,2,.02,'Raise to neon chaos or lower for subtle dye.')}${field('Halo / softness','glow',0,1,.02,'Bright bloom on strokes and highlights.')}${field('Visible geometry','edge',0,1,.02,'Tile-edge definition.')}${field('Lamellar sparkle','lamellarShine',0,2,.05,'Band contrast in Mother-of-Pearl surface; artistic, not true thin-film interference.')}<div class="field"><label for="background">Background color</label><input type="color" id="background" value="${S.background}" style="width:100%;height:40px;border:1px solid #67627c;background:#24263c;border-radius:8px;cursor:pointer"></div>${toggle('Vertex jewels','showNodes')}${toggle('Light up rearranged neighborhoods','showChanges')}`;
 else if(active==='twin')markup=`${toggle('Enable second living pentagrid','twinEnabled')}${chooser('Twin motion law','twinMode',modes)}${field('Twin phason displacement','twinAmp',0,1.5,.01,'Independent motion through its OWN internal-space offsets.')}${field('Twin harmonic','twinFrequency',1,4,1,'Whole-number cycles per main loop; exact closure.')}${field('Twin phase shift','twinPhase',0,1,.01,'Offset where the second system starts on its orbit.')}${field('Twin transparency','twinOpacity',0,1,.02,'0 = original single-layer artwork.')}${field('Twin size','twinScale',.75,1.35,.01,'Compositional scale; does not alter tile mathematics.')}${chooser('Twin drawing style','twinStyle',{mesh:'Glowing contour mesh',glass:'Iridescent ghost glass',diagonals:'Cross-woven threads'})}${field('Twin U','twinU',-1.5,1.5,.01,'Manual perpendicular-space coordinate for twin.')}${field('Twin V','twinV',-1.5,1.5,.01,'Second twin coordinate.')}`;
 else if(active==='geometry')markup=`${field('Pentagrid radius','radius',4,14,1,'Bigger = more rhombi, heavier rendering.')}${field('Camera zoom','zoom',.65,2.5,.05,'Change framing without changing the grid.')}${chooser('Canvas composition','aspect',aspectOpts)}${field('Offset U','baseU',-1.5,1.5,.01,'Stable authored internal offset, draggable from canvas.')}${field('Offset V','baseV',-1.5,1.5,.01,'Other independent phason coordinate.')}${toggle('Pentagrid overlay','showGrid')}${field('Stitch glow','guideIntensity',0,2,.05,'Brightness of your graph-following stitched routes.')}${field('Stitch travel cycles','guideCycles',1,6,1,'Global integer harmonic; each route also has its own whole-number multiplier.')}${toggle('Living fork routes','guideBranching')}${field('Collision sparks','guideCollision',0,2,.05,'Nearby travelers create flashes at close approaches, not physically simulated impacts.')}<div class="field"><label>Stitch paths <span class="value" id="stitchCount">${S.stitches.length}/8</span></label>${button('Undo last stitch','removeStitch')}${button('Clear all stitches','clearStitches')}<span class="help">Draw with 〰 Stitch. Use ✎ Edit routes to drag any saved path; each path is re-projected onto genuine tile adjacency.</span></div>${stitchEditorMarkup()}${toggle('Show changing K-label boundaries','showChanges')}<div class="help" style="grid-column:1/-1">Changes are measured against frozen base U/V within the shared finite grid patch, not counted as isolated legal phason flips.</div>`;
-else if(active==='color')markup=`${chooser('Named palette','palette',Object.fromEntries(Object.keys(palettes).map(k=>[k,k])))}${paletteWidget()}${field('Chromatic beats','colorCycles',0,8,1,'Integer color cycles per full structural loop. Zero locks colors in place.')}${field('Saturation violence','neonBoost',0,2,.05,'Push pastel/intermediate colors outward from gray; zero preserves palette exactly.')}<div class="field" style="grid-column:1 / -1"><label for="paletteImport">Import named palette JSON</label><input type="file" id="paletteImport" accept="application/json,.json"><span class="help">Accepts {"My Palette":["#ff00ff","#00ffff",...]} or a single array of hex stops. Saved only to this browser.</span></div>${button('Shuffle color roles','shuffleColors')}`;
+else if(active==='color')markup=`${chooser('Named palette','palette',Object.fromEntries(Object.keys(palettes).map(k=>[k,k])))}${paletteWidget()}${field('Chromatic beats','colorCycles',0,8,1,'Integer color cycles per full structural loop. Zero locks colors in place.')}${field('Saturation violence','neonBoost',0,2,.05,'Push pastel/intermediate colors outward from gray; zero preserves palette exactly.')}${chooser('Moving color territories','territoryMode',{off:'Off — original color mapping',fronts:'Traveling chromatic fronts',islands:'Drifting color islands',spirals:'Countertwisting spiral regions'})}${field('Territory contrast','territoryStrength',0,1.5,.05,'Blend local color domains into rhomb, filament, and twin colors.')}${field('Territory rhythm','territoryCycles',0,6,1,'Integer territory cycles per one structural loop; 0 freezes regions.')}${field('Territory size','territoryScale',.4,2.8,.05,'Spatial scale of the colored regions.')}<div class="field" style="grid-column:1 / -1"><label for="paletteImport">Import named palette JSON</label><input type="file" id="paletteImport" accept="application/json,.json"><span class="help">Accepts {"My Palette":["#ff00ff","#00ffff",...]} or a single array of hex stops. Saved only to this browser.</span></div>${button('Shuffle color roles','shuffleColors')}`;
 else markup=`<div class="field"><label>Looped animated GIF</label>${chooser('GIF resolution','gifSize',{'360':'360px fast','480':'480px balanced','720':'720px detailed'})}${chooser('GIF frames per second','gifFps',{'8':'8 fps','12':'12 fps','16':'16 fps'})}${button('Render animated GIF','gifRender','primary')}<span class="help">Encodes actual GIF89a locally, no server. Higher settings need more iPhone memory. Captures exactly one structural loop without duplicating its final frame.</span></div><div class="field"><label>Native MP4 recording (browser-dependent)</label>${chooser('MP4 longest side','mp4Size',{'480':'480px preview','720':'720px HQ','1080':'1080px high res'})}${chooser('MP4 target FPS','mp4Fps',{'12':'12 FPS','16':'16 FPS','24':'24 FPS'})}${button('Record actual MP4','mp4Render','primary')}<span class="help" id="mp4Support">Probes the browser for genuine video/mp4 recording and rejects other containers. Records one loop in real time; exact timing and frame delivery are not guaranteed.</span></div><div class="field"><label>High resolution still</label>${button('PNG · 2048px longest edge','pngLarge','primary')}<span class="help">Uses the live artwork phase. Saves a static frame at a high resolution.</span></div><div class="field"><label>Art recipe</label>${button('Save recipe JSON','jsonLarge')}<span class="help">Reproducible seed, settings and palettes. Import below.</span></div><div class="field"><label>Load recipe</label><input type="file" id="recipeImport" accept="application/json,.json"><span class="help">Undoable and non-destructive until you select a file.</span></div><div class="field"><label>Frame sheet (loop atlas)</label>${button('Export 4 × 4 loop PNG','frameSheet')}<span class="help">16 evenly sampled phases (0 to 15/16, endpoint not duplicated).</span></div>`;
 panel.innerHTML=`<p class="description">${TABS[active]}</p><div class="controls">${markup}</div>${active==='export'?'<div class="notice" id="exportNotice">GIF export is genuine GIF89a animation (256-color dithered), not a sprite sheet. MP4 uses native browser encoding ONLY when video/mp4 is supported; no WebM file is renamed. Recorder FPS is best-effort, unlike exact-phase GIF frame sampling.</div>':''}`;
 for(const k of Object.keys(S)){const el=$$('#'+k);if(!el||k==='paletteImport'||k==='recipeImport')continue;let before=null; if(el.type==='range'){el.addEventListener('pointerdown',()=>before=snapshot());el.addEventListener('focus',()=>{if(before===null)before=snapshot();});el.addEventListener('input',()=>{S[k]=Number(el.value);if(k==='radius')S[k]=Math.round(S[k]);const v=$$('#value-'+k);if(v)v.textContent=String(S[k]);if(k==='radius')resetGrid();if(['radius','baseU','baseV'].includes(k))needGeom=true;});el.addEventListener('change',()=>{if(before===null)before=snapshot();addHistory(before);before=null;});}
@@ -224,8 +260,11 @@ if($$('#shuffleColors'))bindEl('shuffleColors',()=>{const old=snapshot();const r
 if($$('#paletteImport'))bindEl('paletteImport',async e=>{try{const before=snapshot();const obj=JSON.parse(await e.target.files[0].text());let n=0;if(Array.isArray(obj)){const colors=clean(obj);if(colors.length>=2){palettes['Imported Palette']=colors;S.palette='Imported Palette';n++;}}else for(const [k,v] of Object.entries(obj)){const colors=clean(v);if(colors.length>=2){palettes[k.slice(0,80)]=colors;n++;}}if(!n)throw Error('Need at least two valid #RRGGBB colors per palette.');savePalettes();addHistory(before);renderPanel();flash(`Imported ${n} palette(s).`);}catch(e){flash(e.message);}},'change');
 if($$('#recipeImport'))bindEl('recipeImport',async e=>{try{const recipe=JSON.parse(await e.target.files[0].text());const old=snapshot();if(recipe?.format!=='phason-riot-1'||!recipe.settings)throw Error('Not a PHASON RIOT recipe.');if(recipe.palettes&&typeof recipe.palettes==='object')for(const[k,v]of Object.entries(recipe.palettes)){let c=clean(v);if(c.length>=2)palettes[k.slice(0,80)]=c;}S={...defaults,...Object.fromEntries(Object.entries(recipe.settings).filter(([k])=>k in defaults))};S.seed=(S.seed|0);S.stitchSerial=Number.isInteger(S.stitchSerial)?Math.max(1,S.stitchSerial):1;S.radius=C.clamp(Number(S.radius)||9,4,14);if(!palettes[S.palette])S.palette='Acid Carnival';S.stitches=cleanStitches(S.stitches);selectedStitchId=S.stitches[S.stitches.length-1]?.id||null;if(!['primary','twin','stitch','edit'].includes(S.touchMode))S.touchMode='primary';savePalettes();syncTouchMode();resetGrid();addHistory(old);renderPanel();resize();}catch(err){flash(err.message)}},'change');
 if($$('#mp4Render')){bindEl('mp4Render',saveMp4);const status=$$('#mp4Support');if(status)status.textContent=mp4Mime()? 'Real MP4 is supported here. Output is a best-effort real-time capture; no exact loop-duration guarantee.' : 'This browser cannot record true MP4 with its native encoder. Use GIF, or open in Safari with MP4 recording support.';}
-if($$('#stitchSelect'))bindEl('stitchSelect',e=>{selectedStitchId=e.target.value||null;renderPanel();syncTouchMode();},'change');
-if($$('#routeDelete'))bindEl('routeDelete',()=>{const index=S.stitches.findIndex(x=>x.id===selectedStitchId);if(index<0)return;const before=snapshot();S.stitches.splice(index,1);selectedStitchId=S.stitches[Math.min(index,S.stitches.length-1)]?.id||null;addHistory(before);renderPanel();syncTouchMode();});
+if($$('#stitchSelect'))bindEl('stitchSelect',e=>{selectedStitchId=e.target.value||null;selectedPointIndex=-1;renderPanel();syncTouchMode();},'change');
+if($$('#routeSpecies'))bindEl('routeSpecies',e=>{const route=selectedStitch();if(!route)return;const before=snapshot();route.branchSpecies=['wander','fan','reef'].includes(e.target.value)?e.target.value:'wander';addHistory(before);},'change');
+if($$('#pointInsert'))bindEl('pointInsert',()=>{const route=selectedStitch();if(!route||route.points.length>=28)return;const before=snapshot(),i=selectedPointIndex>=0?Math.min(selectedPointIndex,route.points.length-2):Math.floor((route.points.length-1)/2),a=route.points[i],b=route.points[i+1];route.points.splice(i+1,0,[(a[0]+b[0])/2,(a[1]+b[1])/2]);selectedPointIndex=i+1;addHistory(before);renderPanel();});
+if($$('#pointDelete'))bindEl('pointDelete',()=>{const route=selectedStitch();if(!route||route.points.length<=2||selectedPointIndex<0)return;const before=snapshot();route.points.splice(selectedPointIndex,1);selectedPointIndex=Math.min(selectedPointIndex,route.points.length-1);addHistory(before);renderPanel();});
+if($$('#routeDelete'))bindEl('routeDelete',()=>{const index=S.stitches.findIndex(x=>x.id===selectedStitchId);if(index<0)return;const before=snapshot();S.stitches.splice(index,1);selectedStitchId=S.stitches[Math.min(index,S.stitches.length-1)]?.id||null;selectedPointIndex=-1;addHistory(before);renderPanel();syncTouchMode();});
 if($$('#routeName'))bindEl('routeName',e=>{const route=selectedStitch();if(!route)return;const old=snapshot();route.name=e.target.value.replace(/[<>]/g,'').slice(0,28).trim()||'Unnamed route';addHistory(old);renderPanel();},'change');
 for(const [id,prop] of [['routeEnabled','enabled'],['routeForks','forks'],['routeVelocity','velocity'],['routeHue','hue']]){const el=$$('#'+id);if(!el)continue;let initial=null;el.addEventListener('pointerdown',()=>{initial=snapshot()});el.addEventListener('focus',()=>{if(initial===null)initial=snapshot()});const apply=()=>{const route=selectedStitch();if(!route)return;route[prop]=el.type==='checkbox'?el.checked:Number(el.value);if(el.type==='range'){const v=$$('#value-'+id);if(v)v.textContent=String(route[prop]);}};el.addEventListener('input',apply);el.addEventListener('change',()=>{const before=initial??snapshot();apply();addHistory(before);initial=null;});}
 if($$('#removeStitch'))bindEl('removeStitch',()=>{if(!S.stitches.length)return;const old=snapshot();const gone=S.stitches.pop();if(gone.id===selectedStitchId)selectedStitchId=S.stitches[S.stitches.length-1]?.id||null;addHistory(old);renderPanel();syncTouchMode();});if($$('#clearStitches'))bindEl('clearStitches',()=>{if(!S.stitches.length||!confirm('Clear all your stitched paths? Undo will restore them.'))return;const old=snapshot();S.stitches=[];selectedStitchId=null;addHistory(old);renderPanel();syncTouchMode();});
@@ -237,7 +276,7 @@ function cleanStitches(strokes){
  const used=new Set();return strokes.slice(0,8).filter(x=>x&&Array.isArray(x.points)).map((st,i)=>{
    let id=String(st.id||`restored-${i}`).slice(0,50);if(used.has(id))id=`${id}-${i}`;used.add(id);
    return {id,name:String(st.name||`Route ${i+1}`).replace(/[<>]/g,'').slice(0,28),enabled:st.enabled!==false,
-    velocity:C.clamp(Math.round(Number(st.velocity)||1),1,4),hue:C.clamp(Number(st.hue)||0,-1,1),forks:C.clamp(Number.isFinite(Number(st.forks))?Math.round(Number(st.forks)):2,0,3),
+    velocity:C.clamp(Math.round(Number(st.velocity)||1),1,4),branchSpecies:['wander','fan','reef'].includes(st.branchSpecies)?st.branchSpecies:'wander',hue:C.clamp(Number(st.hue)||0,-1,1),forks:C.clamp(Number.isFinite(Number(st.forks))?Math.round(Number(st.forks)):2,0,3),
     points:st.points.slice(0,28).filter(p=>Array.isArray(p)&&p.length===2&&p.every(v=>typeof v==='number'&&Number.isFinite(v)&&Math.abs(v)<100)).map(p=>[p[0],p[1]])};
  }).filter(st=>st.points.length>=2);
 }
@@ -246,7 +285,7 @@ function stitchEditorMarkup(){
  const st=selectedStitch()||S.stitches[S.stitches.length-1];
  if(!st)return `<div class="field"><label>Route editor</label><span class="help">Draw a route in Stitch mode. Each one will have its own name, speed, hue and branch count.</span></div>`;
  if(!selectedStitchId)selectedStitchId=st.id;
- return `<div class="field" style="grid-column:1/-1"><label for="stitchSelect">SELECTED ROUTE</label><select id="stitchSelect">${S.stitches.map((x,i)=>`<option value="${esc(x.id)}" ${st.id===x.id?'selected':''}>${esc(x.name||`Route ${i+1}`)}</option>`).join('')}</select><div class="inline">${button('Delete selected route','routeDelete')}</div><span class="help">Select ✎ Edit routes, then drag the route you want to reposition. Your changes remain undoable.</span></div><div class="field"><label for="routeName">Route name</label><input id="routeName" type="text" maxlength="28" value="${esc(st.name)}" style="color:#fff;background:#24253c;border:1px solid #696782;border-radius:8px;padding:10px;width:100%"></div><div class="field"><label class="toggle"><input type="checkbox" id="routeEnabled" ${st.enabled?'checked':''}>Show and animate this route</label></div><div class="field"><label for="routeVelocity">Route speed <span class="value" id="value-routeVelocity">${st.velocity}</span></label><input type="range" id="routeVelocity" min="1" max="4" step="1" value="${st.velocity}"></div><div class="field"><label for="routeHue">Route hue offset <span class="value" id="value-routeHue">${st.hue}</span></label><input type="range" id="routeHue" min="-1" max="1" step=".05" value="${st.hue}"></div><div class="field"><label for="routeForks">Branch families <span class="value" id="value-routeForks">${st.forks}</span></label><input type="range" id="routeForks" min="0" max="3" step="1" value="${st.forks}"></div>`;
+ return `<div class="field" style="grid-column:1/-1"><label for="stitchSelect">SELECTED ROUTE</label><select id="stitchSelect">${S.stitches.map((x,i)=>`<option value="${esc(x.id)}" ${st.id===x.id?'selected':''}>${esc(x.name||`Route ${i+1}`)}</option>`).join('')}</select><div class="inline">${button('Delete selected route','routeDelete')}${button('Insert control point','pointInsert')}${button('Delete selected point','pointDelete')}</div><span class="help">In ✎ Edit, drag a white node to reshape ONE point. Drag a route line to move the whole route. Insert adds a midpoint near the selected node. Each gesture is undoable.</span></div><div class="field"><label for="routeName">Route name</label><input id="routeName" type="text" maxlength="28" value="${esc(st.name)}" style="color:#fff;background:#24253c;border:1px solid #696782;border-radius:8px;padding:10px;width:100%"></div><div class="field"><label class="toggle"><input type="checkbox" id="routeEnabled" ${st.enabled?'checked':''}>Show and animate this route</label></div><div class="field"><label for="routeVelocity">Route speed <span class="value" id="value-routeVelocity">${st.velocity}</span></label><input type="range" id="routeVelocity" min="1" max="4" step="1" value="${st.velocity}"></div><div class="field"><label for="routeHue">Route hue offset <span class="value" id="value-routeHue">${st.hue}</span></label><input type="range" id="routeHue" min="-1" max="1" step=".05" value="${st.hue}"></div><div class="field"><label for="routeSpecies">Branch species</label><select id="routeSpecies"><option value="wander" ${st.branchSpecies==='wander'?'selected':''}>Wander — random foraging</option><option value="fan" ${st.branchSpecies==='fan'?'selected':''}>Fan — directed rays</option><option value="reef" ${st.branchSpecies==='reef'?'selected':''}>Reef — high-connectivity colonies</option></select></div><div class="field"><label for="routeForks">Branch families <span class="value" id="value-routeForks">${st.forks}</span></label><input type="range" id="routeForks" min="0" max="3" step="1" value="${st.forks}"></div>`;
 }
 
 function savePalettes(){try{localStorage.setItem('phason_user_palettes',JSON.stringify(palettes));}catch{}}
@@ -258,6 +297,7 @@ function colorMix(a,b,t){const A=hx(a),B=hx(b);return '#'+A.map((v,i)=>Math.roun
 function rgb(hex,alpha){const a=hx(hex);return `rgba(${a[0]},${a[1]},${a[2]},${alpha})`;}
 function shade(hex,s){const A=hx(hex);return `rgb(${A.map(v=>Math.round(C.clamp(v*s,0,255))).join(',')})`;}
 function saturate(hex,amount){if(amount<=0)return hex;const a=hx(hex),lo=Math.min(...a),hi=Math.max(...a),mid=(hi+lo)/2;const factor=1+amount*1.45;return '#'+a.map(v=>Math.round(C.clamp(mid+(v-mid)*factor,0,255)).toString(16).padStart(2,'0')).join('');}
+function territoryShift(point,phase){return S.territoryStrength*C.colorTerritory(point[0],point[1],phase,S.territoryMode,S.territoryScale,S.territoryCycles);}
 function pickColor(t){const a=palettes[S.palette]||palettes['Acid Carnival'];let z=(((t%1)+1)%1)*a.length,i=Math.floor(z);return saturate(colorMix(a[i],a[(i+1)%a.length],z-i),S.neonBoost);}
 function baseReference(){const key=[S.seed,S.radius,S.baseU.toFixed(4),S.baseV.toFixed(4)].join('|');if(!reference||referenceStamp!==key){reference=C.generate(S.radius,S.seed,S.baseU,S.baseV,grid);referenceLabels=new Map(reference.tiles.map(t=>[t.id,t.label]));referenceStamp=key;}return reference;}
 function gPhase(phase){return C.phasonAt(phase,S.mode,S.amp,S.baseU,S.baseV);}
@@ -278,12 +318,29 @@ for(const t of geo.tiles){let coords=t.p.map(p);const xs=coords.map(q=>q[0]),ys=
 const [cx,cy]=p(t.c),dist=Math.hypot(t.c[0],t.c[1]),spin=t.orient;
 const travelling=Math.sin(t.c[0]*.76+t.c[1]*.43-omega*2)+.44*Math.sin(t.c[0]*.12-t.c[1]*.91+omega*3);const wave=travelling*S.wave;
 const role=(t.i*1.618+t.j*.57+(t.thick?.08:.38)+(.25+.22*S.wave)*Math.sin(omega*S.colorCycles+t.c[0]*.31+t.c[1]*.19))*.17;
-const col=pickColor(role),col2=pickColor(role+.24+wave*.09),changed=referenceLabels.has(t.id)&&referenceLabels.get(t.id)!==t.label;
+const chroma=territoryShift(t.c,phase),col=pickColor(role+chroma*.36),col2=pickColor(role+.24+wave*.09+chroma*.36),changed=referenceLabels.has(t.id)&&referenceLabels.get(t.id)!==t.label;
 st.beginPath();coords.forEach((q,i)=>i?st.lineTo(q[0],q[1]):st.moveTo(q[0],q[1]));st.closePath();
 if(S.material==='neon'){st.fillStyle=`rgba(8,7,22,${.88})`;st.fill();if(S.intensity>0){st.fillStyle=rgb((palettes[S.palette]||[])[(t.i+t.j)%palettes[S.palette].length],.14*S.intensity);st.fill();}}
 else if(S.material==='ink'){st.fillStyle=shade(col,t.thick?.7:.45);st.globalAlpha=.65;st.fill();st.globalAlpha=1;}
 else if(S.material==='velvet'){const g=st.createLinearGradient(coords[0][0],coords[0][1],coords[2][0],coords[2][1]);g.addColorStop(0,shade(col,.18));g.addColorStop(.55,shade(col,.55+.12*wave));g.addColorStop(1,shade(col2,.24));st.fillStyle=g;st.fill();}
 else if(S.material==='mineral'){let r=Math.max(1,sc*.85),g=st.createRadialGradient(cx-sc*.2,cy-sc*.3,0,cx,cy,r);g.addColorStop(0,shade(col2,1.14));g.addColorStop(.55,shade(col,.67));g.addColorStop(1,shade(col,.24));st.fillStyle=g;st.fill();}
+else if(S.material==='lamellar'){
+  const str=S.lamellarShine,glint=.5+.5*Math.sin(omega*2+t.orient*3+dist*.43);
+  const grad=st.createLinearGradient(coords[0][0],coords[0][1],coords[2][0],coords[2][1]);
+  grad.addColorStop(0,shade(col,.16+.15*str));
+  grad.addColorStop(.22,shade(col2,.45+.35*str*glint));
+  grad.addColorStop(.45,shade(pickColor(role+.35+chroma*.36),.5+.6*str*glint));
+  grad.addColorStop(.57,shade(col,1.15+.32*str));
+  grad.addColorStop(.78,shade(col2,.24+.2*str));
+  grad.addColorStop(1,shade(col,.12+.13*str));
+  st.fillStyle=grad;st.fill();
+  if(str>.05 && (t.i*7+t.j*3+Math.floor(dist))%3===0){
+    const q0=coords[0],q1=coords[1],q2=coords[2],q3=coords[3];
+    st.beginPath();st.moveTo(q0[0]*.38+q3[0]*.62,q0[1]*.38+q3[1]*.62);
+    st.lineTo(q1[0]*.38+q2[0]*.62,q1[1]*.38+q2[1]*.62);
+    st.strokeStyle=rgb(col2,Math.min(.65,.15+.25*str*glint));st.lineWidth=Math.max(.4,sc*.045);st.stroke();
+  }
+}
 else if(S.material==='prism'){const g=st.createLinearGradient(coords[1][0],coords[1][1],coords[3][0],coords[3][1]);g.addColorStop(0,shade(col2,.23));g.addColorStop(.29,shade(col,1.25));g.addColorStop(.55,shade(col2,.75));g.addColorStop(.78,shade(col,.22));g.addColorStop(1,shade(col2,.92));st.fillStyle=g;st.fill();st.beginPath();st.moveTo(...coords[0]);st.lineTo(...coords[2]);st.strokeStyle=rgb(col2,.18);st.lineWidth=Math.max(.45,sc*.025);st.stroke();}
 else if(S.material==='filament'){st.fillStyle=shade(col,.08);st.fill();st.strokeStyle=rgb(col2,.27);st.lineWidth=Math.max(.5,sc*.07);st.beginPath();st.moveTo(...coords[0]);st.lineTo(...coords[2]);st.stroke();}
 else if(S.material==='fault'){st.fillStyle=changed?shade(col2,.58+.25*Math.sin(omega*2+dist)):shade(col,.12);st.fill();}
@@ -299,7 +356,7 @@ if(S.twinEnabled && S.twinOpacity>0){
   const drawTwin=p=>[offX+p[0]*sc*scale,offY+p[1]*sc*scale];
   for(const tile of second.tiles){const points=tile.p.map(drawTwin),c=drawTwin(tile.c);
     if(c[0]<-sc*3||c[0]>w+sc*3||c[1]<-sc*3||c[1]>h+sc*3)continue;
-    const clr=pickColor((tile.i*.33+tile.j*.19+(tile.thick?.12:.33)+phase*S.colorCycles*.3)%1+.31);
+    const clr=pickColor((tile.i*.33+tile.j*.19+(tile.thick?.12:.33)+phase*S.colorCycles*.3)%1+.31+territoryShift(tile.c,phase)*.36);
     st.beginPath();points.forEach((pt,k)=>k?st.lineTo(...pt):st.moveTo(...pt));st.closePath();
     if(S.twinStyle==='glass'){st.fillStyle=rgb(clr,.13);st.fill();st.lineWidth=Math.max(.55,sc*.06);st.strokeStyle=rgb(clr,.9);st.stroke();}
     else if(S.twinStyle==='diagonals'){st.strokeStyle=rgb(clr,.86);st.lineWidth=Math.max(.6,sc*.055);st.beginPath();st.moveTo(...points[0]);st.lineTo(...points[2]);st.moveTo(...points[1]);st.lineTo(...points[3]);st.stroke();}
@@ -320,7 +377,7 @@ if(S.network>0){
   for(let k=0;k<geo.connections.length;k+=step){const link=geo.connections[k],a=geo.tiles[link.a],b=geo.tiles[link.b];if(!a||!b)continue;
     const p1=p(a.c),mid=p(link.mid),p2=p(b.c),signal=.5+.5*Math.sin(omega*S.threadCycles+link.mid[0]*1.2+link.mid[1]*.68);
     const depth=S.linkStyle==='branch'?geo.networkDepth[link.a]:0;const pulse=S.linkStyle==='branch'&&depth>=0?.5+.5*Math.cos(omega*S.threadCycles-depth*.52):signal;
-    const pigment=pickColor((a.i*.31+a.j*.51+pulse*.7)*.33);st.beginPath();st.moveTo(...p1);st.lineTo(...mid);st.lineTo(...p2);
+    const pigment=pickColor((a.i*.31+a.j*.51+pulse*.7)*.33+territoryShift(link.mid,phase)*.36);st.beginPath();st.moveTo(...p1);st.lineTo(...mid);st.lineTo(...p2);
     st.strokeStyle=rgb(pigment,S.network*(.06+.18*pulse));st.lineWidth=Math.max(.6,sc*.075)*S.network;st.stroke();
      if(S.linkStyle==='braid'){
        const dx=p2[0]-p1[0],dy=p2[1]-p1[1],len=Math.hypot(dx,dy)||1,nx=-dy/len,ny=dx/len;
@@ -356,14 +413,14 @@ if(S.stitches.length && S.guideIntensity>0){
   st.save();st.globalCompositeOperation='screen';st.lineCap='round';st.lineJoin='round';
   for(let j=0;j<paths.length;j++){
     const route=paths[j],settings=S.stitches.find(x=>x.id===route.id);if(!settings||!settings.enabled)continue;
-    const nodes=route.indices,color=pickColor(.1+j*.31+settings.hue+phase*S.colorCycles*.15);if(nodes.length<2)continue;
+    const nodes=route.indices,color=pickColor(.1+j*.31+settings.hue+phase*S.colorCycles*.15+territoryShift(route.origin,phase)*.36);if(nodes.length<2)continue;
     st.beginPath();nodes.forEach((ix,i)=>{const xy=p(geo.tiles[ix].c);i?st.lineTo(xy[0],xy[1]):st.moveTo(xy[0],xy[1]);});
     st.strokeStyle=rgb(color,.16*S.guideIntensity);st.lineWidth=Math.max(1.2,sc*.3)*S.guideIntensity;st.stroke();
     st.strokeStyle=rgb(color,.83);st.lineWidth=Math.max(.55,sc*.075)*S.guideIntensity;st.stroke();
     const pos=C.routePosition(geo,nodes,phase*S.guideCycles*settings.velocity+j/Math.max(paths.length,1));
     if(pos){const xy=p(pos);voices.push({x:xy[0],y:xy[1],color});drawPoint(xy[0],xy[1],Math.max(1.5,sc*.26)*S.guideIntensity,rgb('#ffffff',.9));drawPoint(xy[0],xy[1],Math.max(2,sc*.6)*S.guideIntensity,rgb(color,.2));}
     if(S.guideBranching && settings.forks>0){
-      const branches=C.branchRoutes(geo,route,S.seed,settings.forks);
+      const branches=C.branchRoutes(geo,route,S.seed,settings.forks,settings.branchSpecies);
       branches.forEach((branch,k)=>{
         st.beginPath();branch.indices.forEach((ix,i)=>{const xy=p(geo.tiles[ix].c);i?st.lineTo(...xy):st.moveTo(...xy);});
         st.strokeStyle=rgb(color,.32*S.guideIntensity);st.lineWidth=Math.max(.6,sc*.04)*S.guideIntensity;st.stroke();
@@ -375,7 +432,7 @@ if(S.stitches.length && S.guideIntensity>0){
     if(target===canvas&&S.touchMode==='edit'&&route.id===selectedStitchId){
       st.save();st.globalCompositeOperation='source-over';st.strokeStyle='#ffffff';st.lineWidth=1.8;st.setLineDash([5,5]);
       st.beginPath();const authored=settings.points.map(p);authored.forEach((pt,i)=>i?st.lineTo(...pt):st.moveTo(...pt));st.stroke();st.setLineDash([]);
-      for(const pt of authored)drawPoint(pt[0],pt[1],Math.max(3,sc*.15),'#ffffff');st.restore();
+      authored.forEach((pt,i)=>{const r=Math.max(5,sc*.21);drawPoint(pt[0],pt[1],r,'#121026');drawPoint(pt[0],pt[1],r*.7,i===selectedPointIndex?'#e7ff72':'#ffffff');});st.restore();
     }
   }
   if(S.guideCollision>0){
@@ -509,7 +566,7 @@ $$('#playBtn').addEventListener('click',togglePlay);$$('#newBtn').addEventListen
 function syncTouchMode(){
   const selected=['primary','twin','stitch','edit'].includes(S.touchMode)?S.touchMode:'primary';
   for(const b of document.querySelectorAll('[data-touch]')){const on=b.dataset.touch===selected;b.classList.toggle('selected',on);b.setAttribute('aria-pressed',String(on));}
-  const hint=$$('#touchHint');if(hint)hint.textContent=selected==='stitch'?`Draw a glowing graph route · ${S.stitches.length}/8 saved · pinch to zoom`:selected==='edit'?`Tap a route to select it, drag to reposition · ${S.stitches.length}/8 saved`:selected==='twin'?'Drag to change TWIN phason offsets · pinch to zoom':'Drag to change PRIMARY phason offsets · pinch to zoom';
+  const hint=$$('#touchHint');if(hint)hint.textContent=selected==='stitch'?`Draw a glowing graph route · ${S.stitches.length}/8 saved · pinch to zoom`:selected==='edit'?`Drag a white point to reshape, or a line to move the route · ${S.stitches.length}/8 saved`:selected==='twin'?'Drag to change TWIN phason offsets · pinch to zoom':'Drag to change PRIMARY phason offsets · pinch to zoom';
 }
 for(const b of document.querySelectorAll('[data-touch]'))b.addEventListener('click',()=>{if(gesture)return;S.touchMode=b.dataset.touch;syncTouchMode();});
 function updateGestureControls(){
@@ -532,6 +589,14 @@ function nearestAuthoredStitch(world){
  }}
  return dist<=.85?best:null;
 }
+function nearestHandle(world){
+ let nearest=null,dist=Infinity;
+ for(const route of S.stitches){for(let i=0;i<route.points.length;i++){
+   const pt=route.points[i],d=Math.hypot(world[0]-pt[0],world[1]-pt[1]);
+   if(d<dist){nearest={id:route.id,index:i};dist=d;}
+ }}
+ return dist<=.58?nearest:null;
+}
 function appendStitchPoint(pt){
   const stroke=gesture?.stroke;if(!stroke)return;
   const last=stroke.points[stroke.points.length-1];
@@ -541,13 +606,18 @@ canvas.addEventListener('pointerdown',e=>{
   if(e.pointerType==='mouse'&&e.button!==0)return;
   if(!gesture)gesture={before:snapshot(),stroke:null,stitchCount:S.stitches.length,stitchSerial:S.stitchSerial};
   pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
-  if(pointers.size===1 && S.touchMode==='edit'){const selected=nearestAuthoredStitch(canvasToWorld(e.clientX,e.clientY));selectedStitchId=selected?.id||null;gesture.moveStitchId=selected?.id||null;gesture.lastWorld=canvasToWorld(e.clientX,e.clientY);if(active==='geometry')renderPanel();}
+  if(pointers.size===1 && S.touchMode==='edit'){
+ const world=canvasToWorld(e.clientX,e.clientY),handle=nearestHandle(world),selected=handle?S.stitches.find(x=>x.id===handle.id):nearestAuthoredStitch(world);
+ selectedStitchId=selected?.id||null;selectedPointIndex=handle?handle.index:-1;
+ gesture.moveStitchId=selected?.id||null;gesture.movePointIndex=handle?handle.index:-1;gesture.lastWorld=world;
+ if(active==='geometry')renderPanel();
+}
   if(pointers.size===1 && S.touchMode==='stitch'){
     if(S.stitches.length>=8)flash('Eight stitched paths maximum. Undo or remove a path before drawing another.');
-    else {const stroke={id:`stitch-${S.seed}-${S.stitchSerial++}`,name:`Route ${S.stitchSerial-1}`,enabled:true,velocity:1,hue:0,forks:2,points:[canvasToWorld(e.clientX,e.clientY)]};S.stitches.push(stroke);selectedStitchId=stroke.id;gesture.stroke=stroke;}
+    else {const stroke={id:`stitch-${S.seed}-${S.stitchSerial++}`,name:`Route ${S.stitchSerial-1}`,enabled:true,velocity:1,hue:0,forks:2,branchSpecies:'wander',points:[canvasToWorld(e.clientX,e.clientY)]};S.stitches.push(stroke);selectedStitchId=stroke.id;gesture.stroke=stroke;}
   }
   if(pointers.size===2 && gesture.stroke){S.stitches.splice(gesture.stitchCount);S.stitchSerial=gesture.stitchSerial;gesture.stroke=null;}
-  if(pointers.size===2 && gesture.moveStitchId){const prior=JSON.parse(gesture.before).settings.stitches;S.stitches=cleanStitches(prior);gesture.moveStitchId=null;}
+  if(pointers.size===2 && gesture.moveStitchId){const prior=JSON.parse(gesture.before).settings.stitches;S.stitches=cleanStitches(prior);gesture.moveStitchId=null;gesture.movePointIndex=-1;}
   try{canvas.setPointerCapture(e.pointerId)}catch{}
   syncTouchMode();
 });
@@ -556,7 +626,9 @@ canvas.addEventListener('pointermove',e=>{
   const rect=canvas.getBoundingClientRect(),dx=e.clientX-prev.x,dy=e.clientY-prev.y;
   if(pointers.size===1){
     if(S.touchMode==='stitch')appendStitchPoint(canvasToWorld(e.clientX,e.clientY));
-    else if(S.touchMode==='edit'&&gesture?.moveStitchId){const stroke=S.stitches.find(x=>x.id===gesture.moveStitchId);if(stroke){const now=canvasToWorld(e.clientX,e.clientY),prevPoint=gesture.lastWorld||now;let ax=now[0]-prevPoint[0],ay=now[1]-prevPoint[1];stroke.points=stroke.points.map(q=>[C.clamp(q[0]+ax,-S.radius*2.2,S.radius*2.2),C.clamp(q[1]+ay,-S.radius*2.2,S.radius*2.2)]);gesture.lastWorld=now;}}
+    else if(S.touchMode==='edit'&&gesture?.moveStitchId){const stroke=S.stitches.find(x=>x.id===gesture.moveStitchId);if(stroke){const now=canvasToWorld(e.clientX,e.clientY),prevPoint=gesture.lastWorld||now;let ax=now[0]-prevPoint[0],ay=now[1]-prevPoint[1];if(gesture.movePointIndex>=0){const p=stroke.points[gesture.movePointIndex];if(p)stroke.points[gesture.movePointIndex]=[C.clamp(p[0]+ax,-S.radius*2.2,S.radius*2.2),C.clamp(p[1]+ay,-S.radius*2.2,S.radius*2.2)];}
+      else stroke.points=stroke.points.map(q=>[C.clamp(q[0]+ax,-S.radius*2.2,S.radius*2.2),C.clamp(q[1]+ay,-S.radius*2.2,S.radius*2.2)]);
+      gesture.lastWorld=now;}}
     else if(S.touchMode==='twin'){S.twinU=C.clamp(S.twinU+dx/Math.max(rect.width,1)*2.1,-2,2);S.twinV=C.clamp(S.twinV+dy/Math.max(rect.height,1)*2.1,-2,2);}
     else{S.baseU=C.clamp(S.baseU+dx/Math.max(rect.width,1)*2.1,-2,2);S.baseV=C.clamp(S.baseV+dy/Math.max(rect.height,1)*2.1,-2,2);needGeom=true;}
   }else if(pointers.size===2){
