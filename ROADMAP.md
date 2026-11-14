@@ -1,36 +1,27 @@
-# PHASON RIOT — development roadmap
+# PHASON RIOT · Forward map
 
-## 001 — baseline (complete)
-- True fivefold dual pentagrid, internal-space U/V motion, deterministic seed
-- Flat/glowing material families, PNG/recipe/frame-sheet outputs
-- Mobile-first artwork above grouped tabs
+## Shipped · 003
+- Independent **Twin Field** phason coordinates and harmonic motion (different seed, true second pentagrid, transparent overlaid mesh/glass/threads).
+- Deterministic closed graph walks; glowing particles traverse only verified shared-edge neighbors. Re-route when the tiling changes.
+- First **real looping animated GIF** (GIF89a local encoder with worker, 360/480/720 px, 8–16 fps). Validated frame decoding and exact playback duration on Chromium.
+- Original settings and palettes maintained; exports, Undo/Redo, responsive canvas preserved.
 
-## 002 — Riot graph, fault highlights, touch editing (implemented)
-- Seven periodic phason paths, including Braid / Gyre / Quake
-- Shared-edge adjacency graph traced by independent rhythmic light, without faking local phason kinetics
-- Frozen baseline K-label comparison and colored structural-change highlights
-- Living Filament / Phason Faultlines / Prism Facets materials
-- Independent chromatic integer beat and optional neon saturation boost
-- One-finger U/V authoring, pinch zoom, Undo/Redo, cancellation rollback
-- Structural sampling steps and conservative frame budgets for mobile
-- Source hosted in artist's GitHub repository; GitHub Pages still needs to be enabled in Settings
+## Phase 004 · Texture and navigation
+- A **brushable phason influence field** must be mathematically specified before claiming local legal flips: classify as a displacement *visualization* until matching-rule-safe local flip updates are actually implemented.
+- Connection styles: flowing paths, reticulation, rafter beams, braided textile and cellular track shapes.
+- Touch mode selection: manipulate primary phason, twin phason, or walker sources separately; Undo/Redo each gesture.
+- Spatial composition: asymmetric center, islands and framing, 9:16 composition tuning.
+- Animation optimization and live FPS diagnostics for Safari.
 
-## 003 — visual species
-- Real path-stitching and persistent edge-strand identity with explicit graph continuity tests
-- Region-based compositional masks, foci, and negative space (non-destructive)
-- Deep material optics with opt-in approximations clearly distinguished from physical thin-film simulations
-- Palette vault integration **from actual verified source**, per-stop shuffle and named duplicates
-- Pin/brush gesture that alters a VALIDATED graph operation, not decorative paint masquerading as phason topology
+## Phase 005 · MP4 export
+- Separate deterministic offscreen export clock and worker/codec backends.
+- **Real MP4** encoding via a supported platform/codec only, with correct MIME and playback QA, or explicitly say unsupported. No fake file extension, no silent WebM swap.
+- Higher-resolution GIF optimizations: proper palette quantizer, alpha/transparency rules, worker progress/cancel, reliable 9:16 exports.
 
-## 004 — export forge
-- High-resolution GIF/MP4 on mobile, subject to supported encoders/benchmarks
-- Deterministic frame-clock capture with exact closure tests, 1:1 and 9:16 prioritized
-- Separate boomerang option for a genuinely non-closing stateful system, with explicit label
-- Bitrate, frame rate, duration, alpha, and memory-budget checks; no false claims until Safari validated
+## Phase 006+ · Strange organisms
+- Structural defect memory and independent causal layers (requires a genuine state model, not fake time noise).
+- Tile-aware neural veins, moving optical materials, phased embroidered caustics.
+- More pentagrid experimental families with objective geometry audit before calling them quasicrystals.
+- Full user palette-vault adapter after receiving the canonical palette source.
 
-## 005 — alternate mathematical worlds
-- Penrose matching-rule validated local tile moves: separate engine with actual legal flips
-- Optional 3D field representation / projection onto curved surfaces, with seam diagnostics
-- Branch into other aperiodic cut-and-project systems (Ammann-Beenker, icosahedral projection) only with documented algorithms and tests
-
-**Invariants:** preserve art and undo history, keep rendering separate from mathematical state, no surprise GitHub merges/deploys, never consume Netlify credits.
+**Non-negotiables:** no Netlify, no paid APIs, no destructive scene resets; preserve named palettes, seed determinism, and the ability to disable every experimental layer.
