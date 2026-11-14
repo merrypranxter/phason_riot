@@ -1,43 +1,30 @@
-# PHASON RIOT — Living Quasicrystal Studio · Phase 002
+# PHASON RIOT — Living Quasicrystal Studio · Phase 003
 
-**Offline-capable, touch-first, animated mathematical art.** This repository is the source; it does not need Netlify, paid APIs, npm, React, or external libraries. `index.html` is the full working application.
+A touch-first, offline-capable generative-art app based on an actual **five-family de Bruijn dual pentagrid**, with structural phason animation, a second independent tiling field, closed-route walkers through verified rhomb adjacency, animated color, and a locally encoded looping GIF.
 
-## Open on iPhone (important)
+**Play:** open `index.html` through a real browser or enable GitHub Pages from the `main` branch / root folder. GitHub's HTML file viewer and iPhone Files preview do not run the app. No build tools, backend, paid API, or Netlify needed.
 
-The GitHub source-code preview, ChatGPT attachment preview and Apple Files Quick Look **do not execute the app**. Host the repository on **GitHub Pages** to get a real Safari URL:
+## Features
+- Seven periodic phason motion trajectories with deterministic seeds. Each changes *perpendicular-space offsets*, not just camera rotation.
+- True dual pentagrid thick/thin rhombi with measured changed five-dimensional K labels. The changed-label count is **not** an elementary local phason-flip count.
+- **Twin Field:** independently seeded, independently moving second pentagrid, with its own motion law, integer harmonic, internal-space U/V offsets, amplitude, phase, opacity, scale, and three overlay materials. Disable it to return to the original single-field output.
+- **Living Travelers:** bright particles follow seeded out-and-back paths through the real shared-edge tile adjacency graph. Routes are deterministic, closed, and continuously connected *within a particular generated patch*; they can reroute when the global phason state changes. This is art-directed traversal, not a physical particle simulation.
+- Eight materials, color timing, neon boost, named palette imports, adjustable intensity, editable background, touch drag, pinch zoom, Undo/Redo, seed-confirmed New Design.
+- Responsive 1:1, 9:16, 16:9, 3:4, 4:3 compositions.
+- **Actual GIF89a animation** encoded inside a Web Worker, using a fixed dithered 256-color palette. Loop frames are sampled at k/N without duplicating the endpoint and frame delays sum to the chosen cycle duration. Current options: 360/480/720 longest-edge pixels, 8/12/16 fps. Long and large exports have a mobile memory guard. Real iPhone testing is still needed.
+- PNG longest edge 2048, reproducible JSON recipe import/export, and 4×4 frame atlas.
 
-1. On GitHub open this repo → **Settings** → **Pages**.
-2. Under **Build and deployment**, choose **Deploy from a branch**; select `main`, directory `/(root)`, then **Save**.
-3. When the deployment finishes, open `https://merrypranxter.github.io/phason_riot/` in Safari. If GitHub reports this Pages address is not ready, follow the URL shown in Pages settings. Pages configuration needs to be enabled by the repository owner; code being pushed does not itself make the site live.
+## Export truth
+GIF is an actual animation. GIF's format is **8-bit indexed color**, so it cannot preserve full 24-bit RGB, exact gradients, or high-bitrate MP4 appearance. This version uses 3-3-2 quantization with ordered dithering. Browser memory/performance limits apply. MP4 is **not implemented yet**; renaming WebM to MP4 would not be acceptable. The GIF closes by its deterministic finite phase sampling. Global phason reassignments are discrete, so individual tile changes can appear as snapping.
 
-A standalone copy of `index.html` can also run in a JavaScript-enabled HTML editor/preview on iOS. Do not try to *preview the source* in the Files viewer.
+## Mathematical integrity
+Five star vectors `(cos(2πj/5),sin(2πj/5))`, `j=0…4`, define grid families `x·v_j + γ_j = integer`. The second harmonic `γ_j = b_j + u cos(4πj/5) + v sin(4πj/5)` controls genuine perpendicular-space offsets with `sum γ=0`. The twin uses the same construction independently, with `seed+104729`.
 
-## Real mathematics vs visual effects
+A finite patch is **not square-periodic**. No local phason dynamics, simulated thermal relaxation, or verified global Penrose matching-rule decorations are claimed. The base palette/lighting are artistic, not spectral ray tracing.
 
-This app generates a finite dual of five equally spaced de Bruijn grid families. Each regular pairwise intersection generates a thick 72° or thin 36° rhomb based on 5D integer data. Its offsets are
+## Development and testing
+- `node test.cjs`: deterministic geometry, shared-edge adjacency, exact closed out-and-back graph walkers, primary and twin harmonic closure.
+- Phase 003 local browser checks: Chromium at 390px and 1280px, Twin tab interaction, control render, GIF downloaded and all frames decoded with Pillow, exact summed delay 2000 ms for a 2-second/16-frame GIF. These tests do **not** establish physical iPhone Safari performance.
+- `index.html` is a standalone file with no imports/CDNs and can be opened directly from GitHub Pages.
 
-`gamma_j = seededZeroSum_j + u*cos(4πj/5) + v*sin(4πj/5)`.
-
-The two `u,v` phason controls are internal-space modes orthogonal to physical translations. Seven **closed periodic paths** evolve them: Orbit, Choir, Riot, Tidal, Braid, Gyre, Quake. Their changing K-label assignments affect tiling neighborhoods, unlike a wallpaper rotation.
-
-The new edge graph connects tile centers *only across actual shared polygon edges*. Traveling graph lights, opalescent/glass treatments, faux thread filaments, glow, and color waves are artistic visualizations, **not** thermodynamic local phason kinetics or spectrally accurate optics. The `CHANGED` display compares K-tuples on shared grid-line IDs with the fixed base-U/V patch; it is **not** a certified elementary-flip count. Finite Penrose patches are not seamless square tiles.
-
-## Controls
-
-- **Touch artwork:** one finger drags authored phason coordinates; two fingers pinch to zoom the artwork. A gesture commits as one Undo step; cancellation restores the previous state.
-- **Motion:** seven genuine phason paths, period, amplitude, structural update steps per loop (separate from color/lights), network signal intensity/rhythm, traveling light wave and edge comets.
-- **Materials:** Opal cathedral, Electric circuitry, Velvet brocade, Mineral glass, Ink constellation, Living filament network, Phason faultlines, Prism faceted glass.
-- **Geometry:** pentagrid radius, zoom, aspect ratio (1:1, 9:16, 16:9, 3:4, 4:3), U/V, inspect highlights and pentagrid grid overlay.
-- **Color:** seven built-in palettes plus named JSON import, neon boost, integer chromatic cycles; palette shuffle changes only currently selected palette's order. Imported palettes persist in this browser.
-- **Export:** static 2048px PNG, reproducible JSON art recipe, and 16-frame 4×4 PNG atlas. **Animated GIF/MP4 encoding not implemented yet**. A 16-frame atlas is *not* a GIF. Animated loops sample phases `k/N` and omit the repeated endpoint.
-- **Artwork safety:** Undo/Redo, confirmed New Design, no silent resetting when controls change.
-
-## Verification
-
-`node test.cjs` checks geometry, shared-edge graph and phase closure with no dependencies.
-
-Phase 002 was also run in headless Chromium with 390×844 and 1220×850 viewports. Verified: app initialization, visible non-black rendered artwork, seven motion/material controls, one-finger gesture and Undo, 9:16 portrait framing, exported PNG dimensions (1152×2048), and absence of browser JavaScript exceptions. **This is not an actual iPhone Safari device test**.
-
-## Resource policy
-
-Everything renders in the user's browser. Structural updates are quantized to a selectable number of steps per loop, independent of smoother color/light frames, with conservative preview frame rates. Heavy settings can still slow older phones. **No Netlify calls or credits used.**
+See `ROADMAP.md` for the next phase.
