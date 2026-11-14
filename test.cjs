@@ -37,3 +37,21 @@ assert.equal(Math.min(...depths),0,'branching propagation has a real source');
 for(const e of A.connections)if(depths[e.a]>=0&&depths[e.b]>=0)assert(Math.abs(depths[e.a]-depths[e.b])<=1,'BFS neighboring depths differ by at most one');
 assert.equal(C.stitchRoutes(A,[]).length,0,'no authored guides produce no guide routes');
 console.log('PASS: Phase 004 stitched rhomb graph routes, deterministic replay, branching network depths.');
+
+
+// Phase 005: forked guides traverse actual neighboring tile edges, replay and close.
+for(const item of guided){
+ const x=C.branchRoutes(A,item,1931,3),y=C.branchRoutes(A,item,1931,3);
+ assert.equal(JSON.stringify(x),JSON.stringify(y),'branch determinism');
+ assert(x.length>0,'branch generation yields paths');
+ for(const branch of x){
+  assert(branch.indices.length>=3,'branch returns along its path');
+  for(let i=0;i<branch.indices.length;i++){
+   const a=branch.indices[i],b=branch.indices[(i+1)%branch.indices.length];
+   assert(edges.has([Math.min(a,b),Math.max(a,b)].join(':')),'branch traverses a real edge');
+  }
+  const first=C.routePosition(A,branch.indices,0),last=C.routePosition(A,branch.indices,1);
+  assert(Math.hypot(first[0]-last[0],first[1]-last[1])<1e-9,'branch closes at a repeated phase');
+ }
+}
+console.log('PASS: Phase 005 branching graph routes, closed motion, deterministic replay.');
