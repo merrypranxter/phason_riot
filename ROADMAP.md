@@ -1,26 +1,25 @@
-# PHASON RIOT — Roadmap after Phase 004
+# PHASON RIOT — Roadmap after Phase 005
 
-## Implemented / verified so far
+## Verified and implemented through 005
 
-- Actual dual pentagrid phason offset motion and a second independent overlay with distinct seed and harmonic.
-- Actual shared-edge adjacency graph pulses and moving closed walkers.
-- **Phase 004:** Primary/Twin/Stitch gesture instruments, 8 saved world-space scribbles → shortest-path graph walks, undoable edits, stitched light travelers, branching propagation from real tile graph distance, and three-lane artistic braid optic.
-- PNG/recipe/16-cell sheet export, and true locally encoded looping GIF (256-color GIF89a) at configurable size/FPS.
-- Mobile and desktop Chromium smoke testing, Node deterministic geometry tests. Physical iPhone Safari remains to be tested.
+- Two independently orbiting, genuine finite pentagrids; seven closed phason laws.
+- Real shared-edge rhomb graph with guided hand-drawn paths, connected out-and-back side branches, colored branching signal wavefronts and braided light.
+- Four artwork touch tools: primary, twin, stitch, edit. Route identities, names, per-route activation, speed, hue, fork count, selection, drag and deletion. Atomic Undo/Redo.
+- Deterministic collision-proximity flares (artistic only, not collision simulation).
+- Real GIF loop encoder with closed-phase capture; native MP4 recorder gated by actual MP4 MIME capability and validated MP4 file header, optional bounded pre-rendered frame cache.
+- Verified Node math/regression tests, desktop Chromium (390px and 1280px) browser tests, 2-second 16-frame GIF decode, and 480×480 H.264 MP4 playback metadata through ffprobe.
 
-## Phase 005 — physically expressive tracks and export
+## Phase 006 — deeper mechanical life
 
-- Make hand-authored routes more editable: named paths, selected-curve movement and protected landmarks (Undo/Redo preserved).
-- Give travelers **different causal behaviors**: collision-aware or graph-distance flocking; preserve actual graph connectivity.
-- Move from global structural offset changes toward an explicitly validated *local legal flip mechanism* if feasible. Do not mislabel arbitrary distortion as local phason kinetics.
-- Real MP4 codec detection and true MP4 file, with quality/bitrate options and verified Safari compatibility. If unsupported, provide honest fallback; never rename WebM to `.mp4`.
-- Higher-resolution GIF quality/worker progress/cancel and chroma quantization improvements.
+- Branch walker route presets: split/rejoin, degree-seeking, echo/duet, current-biased and conductor-led, each with a *specific* graph algorithm.
+- Selected-node editing rather than whole-stroke translation; protected/frozen anchor points, real undoable handle coordinates and per-route independent editing.
+- Export integrity: empirical MP4 frame-timing report, optional audio-free H.264 quality settings, stronger chroma, and cancelled export recovery; never claim mathematically exact MP4 loops without a verified timestamp-controlled muxer.
+- Optional `Art Direction`: focal territories, dense/quiet areas, elegant asymmetric framing and plotter-style path tracing. Respect original presets.
 
-## Phase 006 — stranger materials
+## Phase 007 — optical and structural mutations
 
-- Thin-film-inspired interference with clearly separated model from spectral physical optics.
-- Multiple color territories that travel along graph-generated paths and independent rhythm tracks.
-- Dense/quiet composition presets, viewport-safe adaptive layers, world-space export composition per aspect ratio.
-- Optional lawful stateful growth systems that seed from the tiling graph; do not substitute shader time noise for actual state.
+- Film/opal/prismatic materials with clear distinction between stylized hue effects and physically modeled spectral behavior.
+- True local phason mechanics ONLY if a verified local legal tiling flip model is built and audited; do not call arbitrary field warps "legal" or "physical".
+- Additional higher-dimensional cut-and-project families tested for valid rhomb/shape invariants, not cosmetic substitutions.
 
-**Always:** no Netlify unless requested; no paid API dependency; default presets and work protected; named palette library never overwritten; New Design asks; mobile controls reachable; strict distinction between real topology and visual ornament.
+**Rules:** no Netlify or paid APIs; preserve user artwork and prior features; all palette imports reversible; transparent export limitations; device-specific claims require actual device tests.
