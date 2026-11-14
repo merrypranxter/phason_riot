@@ -1,47 +1,50 @@
-# PHASON RIOT — Living Quasicrystal Studio · Phase 005
+# PHASON RIOT — Living Quasicrystal Studio · Phase 006
 
-PHASON RIOT is a fully self-contained, touch-first animated art instrument. It uses an actual finite **de Bruijn five-family dual pentagrid** to build thick/thin rhombus geometry, not a kaleidoscopic wallpaper masquerading as one. The primary and twin pentagrid layers each have independent phason orbits. No server, build system, paid API, or Netlify is used.
+A **zero-dependency**, touch-first, offline generative-art studio. `index.html` is the entire app, with a finite de Bruijn five-family dual pentagrid, two independently animated phason fields, glowing adjacency networks, interactive stitched circuits, animated palettes, PNG, GIF, recipe JSON and browser-capability-checked MP4.
 
-## Open and play
+## Play
 
-Open the GitHub Pages site in Safari after enabling **Settings → Pages → Deploy from a branch → main → /(root)**. GitHub's source/file viewer or the iPhone Files app's HTML preview cannot execute the app's JavaScript. The repository `index.html` is the entire app; it needs no additional scripts or CDN assets.
+To run on iPhone, enable GitHub Pages in **Settings → Pages → Deploy from a branch → main → /(root)**, then visit `https://merrypranxter.github.io/phason_riot/` in Safari. GitHub's HTML preview and iPhone Files Quick Look display the page but do **not** execute its interactive JavaScript. A real browser or JavaScript-capable HTML preview is required. No Netlify or paid API.
 
-## Phase 005 — routes become editable living instruments
+## Newly added in Phase 006
 
-Select a touch instrument above the art:
+### Surgical route editing — the Gesture Witch
 
-- **✧ Primary** changes the first pentagrid's internal-space U/V offsets by dragging.
-- **◇ Twin** changes the second pentagrid's internal-space U/V offsets independently.
-- **〰 Stitch** draws a new world-coordinate guide through the artwork. Its points are projected onto rhomb centers and connected through valid tile-to-tile shared edges.
-- **✎ Edit** taps a saved guide to select it and lets the artist drag the guide to a new place. This changes its authored coordinates, so its shortest-path projection can legitimately reroute. Undo/Redo records one completed drag, and pinching cancels an in-progress guide move.
+1. Choose **〰 Stitch** and draw a route on the artwork.
+2. Choose **✎ Edit**. Tap a route and drag its **white control nodes** to move individual points, *or* drag between nodes to translate the entire path.
+3. In **Geometry**, use **Insert control point** or **Delete selected point**. The app preserves at least two nodes and at most 28 per stitch, with at most eight stitches.
+4. Undo/Redo treats a finger gesture as one reversible edit. `pointercancel` rolls back. The route reprojects through actual shared-edge rhomb adjacency after edits; the fingertip's authored polyline is a **guide**, not a guarantee of a fixed rhomb path as phason offsets change.
 
-Under **Geometry**, each of the eight possible saved routes has an editable **name**, on/off switch, **integer movement speed**, **palette offset**, and **0–3 side branches**. Select any route from the drop-down or directly on the canvas. **Delete selected**, **Undo last stitch** and **Clear all** are distinct actions; Clear asks for confirmation. Saved recipe JSON contains the route identities and settings; GIF, PNG and MP4 capture route visuals.
+### Three genuine branch behaviors
 
-**Forked travelers** branch from the actual route network and return along their route; each segment is a real shared-edge adjacency in the generated tile patch. **Collision sparks** respond deterministically when two rendered travelers approach within a local radius. The sparks are a proximity visualization, *not a physical collision solver or kinetic simulation*. The guided routes can change abruptly at global phason reassignment points. This is not local legal-flip kinetics or an exact physical quasicrystal experiment.
+Routes can have independently selected **Wander**, **Fan**, or **Reef** branch species. Wander selects reproducible neighboring tiles; Fan favors outward directions; Reef favors highly connected nearby tiles. Every fork follows shared edges and returns along its path for loop closure. These are deterministic graph navigation styles, **not** biological growth or thermal physics.
 
-## Native MP4: new and honest
+### Independent living color territories
 
-The Export tab now offers a **native real MP4** recorder (480 / 720 / 1080 longest edge; 12 / 16 / 24 target FPS). It uses `MediaRecorder` only when the browser reports an actual `video/mp4` capability, and then checks the output's `ftyp` box before saving. It **never renames WebM as MP4**.
+Under **Color**, select:
 
-A bounded pre-rendered frame cache (at most 64 MiB raw) can improve the regularity of recording on modest resolutions. When the cache would exceed budget, MP4 falls back to drawing live. Video timestamps are set by the *real-time* browser encoder, **not** a frame-perfect offline MP4 muxer: the result may drop frames or vary slightly in duration if the device is overloaded. The recorder has a Cancel action and doesn't overwrite the artwork. MediaRecorder may be unavailable in some browsers. GIF remains the most reproducible local exact-phase loop export.
+- **Traveling fronts**: directional moving wavebands.
+- **Drifting islands**: two orbiting localized chromatic sources.
+- **Spiral regions**: rotating angular color domains.
+- **Off**: restore the Phase 005 color mapping.
 
-**Verified on local desktop Chromium (not physical iPhone):** a requested 2-second, 480×480, 12 FPS MP4 produced a genuine **H.264 video** with an MP4 container and an observed ~**2.005 s** duration (`ffprobe`). This does not certify all settings or device-specific iOS recording. High-resolution settings are explicitly memory/performance-dependent.
+Territories have independent **strength, harmonic and scale**. Their phase formulas close exactly for whole-number harmonic settings; they are used by tile, twin, signal, and stitched-route colors. This is a mathematically varying *color-field layer*, not colored pigment motion or a phason displacement.
 
-## Preserved from earlier phases
+### Lamellar Opal material
 
-- Seven mathematically closed phason trajectories; a second independent pentagrid, seven starter palettes and imported palette JSON, eight materials, animated color cycles and saturation boost.
-- Genuine shared-edge signal graph, guided strokes, braided circuitry, thickness-aware geometry, non-physical optical materials.
-- PNG at 2048px, reproducible recipe JSON import/export, 4×4 loop frame atlas, genuine dithered **GIF89a** (360/480/720px, 8/12/16FPS), and aspect ratios 1:1, 9:16, 16:9, 3:4, 4:3.
-- Undo/Redo, New Design confirmation, preview FPS setting, responsive tabs and an artwork-first layout.
+A stylized nacre-like finish with oriented, phase-shifting band highlights and optional glint strokes. Control **Lamellar sparkle** under Materials. This is artistic interference-inspired shading in Canvas2D, **not** measured spectral reflectance or thin-film simulation.
 
-## Numerical provenance and limits
+## Preserved
 
-Five unit vectors `v_j=(cos(2πj/5),sin(2πj/5))`, `j=0…4`, define the grid families `x·v_j + γ_j = integer`. The zero-sum base offsets and the perpendicular-space `u cos(4πj/5) + v sin(4πj/5)` component change the finite dual rhomb neighborhoods. Elementary isolated local flips, Penrose edge-matching enforcement and square-periodic wallpaper seams are **not** implemented. Branches use the dual rhomb adjacency graph, not invented visual nearest-neighbor guesses.
+The old settings, seed/determinism, built-in named palette stops and palette JSON imports, phason motion, twin field, stitches, GIF/PNG, recipe JSON, native MP4 capability checks, export clocks, 1:1/9:16/16:9/3:4/4:3 artwork ratios, and Undo/Redo all remain available. Existing recipes load with new fields defaulted; old routes gain the default `wander` species.
 
-## Tests
+## Truth and limits
 
-Run `node test.cjs` with Node.js; it checks unit-edge rhombi, deterministic dual-graph route paths, graph-distance propagation, and closed guided/forked branches. Desktop Chromium smoke tests at 390px and 1280px verified editable named route controls, touch-style movement, recipe export, original canvas, and no JavaScript page exceptions. A 16-frame, 2-second exported GIF decoded with **exact 2000ms summed frame duration**. Native MP4 was checked with `ffprobe` in desktop Chromium only. **Physical iPhone Safari testing remains outstanding**.
+- The underlying pentagrid is a *finite patch*, not a periodic seamless square texture. Its global phason offsets cause **actual rhomb-neighborhood changes**, not a certified count of individual legal local phason flips.
+- GIF89a is genuine animated, indexed-color GIF. MP4 uses native browser encoding only when real `video/mp4` capture is supported; its real-time timestamps may drift, and iPhone Safari playback/encoding still needs on-device verification.
+- User's larger palette vault is not silently loaded from other apps. Import a named JSON palette archive if desired.
+- No Netlify calls, no remote image/font/audio fetches, no paid API, no build step.
 
-## Running costs
+## Validation
 
-No Netlify, backend, subscription API or paid service is required. Site hosting through GitHub Pages must be enabled in repository settings if not already active.
+Run `node test.cjs` for mathematical geometry, closed branch paths, color phase closure and deterministic branching. Chromium tests exercised desktop (1280px) and mobile-sized (390px) screen layouts, drawing a route, point-specific drag, Undo/Redo, inserting/deleting nodes, choosing a branch species, switching material and color territories, valid PNG output, and a 16-frame/2.000s looped GIF. **Physical iPhone Safari has not been tested.**
