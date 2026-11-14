@@ -1,30 +1,49 @@
-# PHASON RIOT — Living Quasicrystal Studio · Phase 003
+# PHASON RIOT — Living Quasicrystal Studio · Phase 004
 
-A touch-first, offline-capable generative-art app based on an actual **five-family de Bruijn dual pentagrid**, with structural phason animation, a second independent tiling field, closed-route walkers through verified rhomb adjacency, animated color, and a locally encoded looping GIF.
+A colorful, touch-first, offline-capable art studio based on a genuine finite **de Bruijn five-family dual pentagrid**. Two independently animated quasicrystal layers, opt-in graph-native luminous tracks, touch gestures, and a real looping GIF encoder. No build system, external assets, paid API, or Netlify.
 
-**Play:** open `index.html` through a real browser or enable GitHub Pages from the `main` branch / root folder. GitHub's HTML file viewer and iPhone Files preview do not run the app. No build tools, backend, paid API, or Netlify needed.
+## Play
 
-## Features
-- Seven periodic phason motion trajectories with deterministic seeds. Each changes *perpendicular-space offsets*, not just camera rotation.
-- True dual pentagrid thick/thin rhombi with measured changed five-dimensional K labels. The changed-label count is **not** an elementary local phason-flip count.
-- **Twin Field:** independently seeded, independently moving second pentagrid, with its own motion law, integer harmonic, internal-space U/V offsets, amplitude, phase, opacity, scale, and three overlay materials. Disable it to return to the original single-field output.
-- **Living Travelers:** bright particles follow seeded out-and-back paths through the real shared-edge tile adjacency graph. Routes are deterministic, closed, and continuously connected *within a particular generated patch*; they can reroute when the global phason state changes. This is art-directed traversal, not a physical particle simulation.
-- Eight materials, color timing, neon boost, named palette imports, adjustable intensity, editable background, touch drag, pinch zoom, Undo/Redo, seed-confirmed New Design.
-- Responsive 1:1, 9:16, 16:9, 3:4, 4:3 compositions.
-- **Actual GIF89a animation** encoded inside a Web Worker, using a fixed dithered 256-color palette. Loop frames are sampled at k/N without duplicating the endpoint and frame delays sum to the chosen cycle duration. Current options: 360/480/720 longest-edge pixels, 8/12/16 fps. Long and large exports have a mobile memory guard. Real iPhone testing is still needed.
-- PNG longest edge 2048, reproducible JSON recipe import/export, and 4×4 frame atlas.
+GitHub Pages: enable **Deploy from branch → main → /(root)** in repository Settings → Pages. Open the published website in Safari. Opening an `.html` source file in iPhone Files Quick Look or GitHub's code preview does **not** run JavaScript.
 
-## Export truth
-GIF is an actual animation. GIF's format is **8-bit indexed color**, so it cannot preserve full 24-bit RGB, exact gradients, or high-bitrate MP4 appearance. This version uses 3-3-2 quantization with ordered dithering. Browser memory/performance limits apply. MP4 is **not implemented yet**; renaming WebM to MP4 would not be acceptable. The GIF closes by its deterministic finite phase sampling. Global phason reassignments are discrete, so individual tile changes can appear as snapping.
+## Phase 004 — new
 
-## Mathematical integrity
-Five star vectors `(cos(2πj/5),sin(2πj/5))`, `j=0…4`, define grid families `x·v_j + γ_j = integer`. The second harmonic `γ_j = b_j + u cos(4πj/5) + v sin(4πj/5)` controls genuine perpendicular-space offsets with `sum γ=0`. The twin uses the same construction independently, with `seed+104729`.
+### Direct touch instruments
 
-A finite patch is **not square-periodic**. No local phason dynamics, simulated thermal relaxation, or verified global Penrose matching-rule decorations are claimed. The base palette/lighting are artistic, not spectral ray tracing.
+Three persistent buttons above the controls select what one finger does:
 
-## Development and testing
-- `node test.cjs`: deterministic geometry, shared-edge adjacency, exact closed out-and-back graph walkers, primary and twin harmonic closure.
-- Phase 003 local browser checks: Chromium at 390px and 1280px, Twin tab interaction, control render, GIF downloaded and all frames decoded with Pillow, exact summed delay 2000 ms for a 2-second/16-frame GIF. These tests do **not** establish physical iPhone Safari performance.
-- `index.html` is a standalone file with no imports/CDNs and can be opened directly from GitHub Pages.
+- **✧ Primary:** finger drags adjust the *primary* global perpendicular-space phason coordinates `baseU/baseV`.
+- **◇ Twin:** finger drags adjust the *independent second pentagrid's* phason coordinates `twinU/twinV`.
+- **〰 Stitch:** draw a persistent world-space guide stroke onto the artwork. Every sampled point snaps to a nearby rhomb center and successive centers connect through a shortest-path search on actual tile shared-edge adjacency. The resulting **luminous route** contains no non-neighbor jumps. A bright pulse travels each route on a deterministic **out-and-back closed path**. Up to 8 strokes, 28 sampled points each; Undo last stroke and Clear stitches are in Geometry.
 
-See `ROADMAP.md` for the next phase.
+Two-finger pinch zooms in every instrument. Each finger action becomes one Undo/Redo step; cancellation rolls back the operation. Stitch routes remain in the artwork recipe JSON and are drawn into GIF/PNG. A global phason change can cause the shortest path to **re-route** abruptly; this is not a physically simulated local tile flip.
+
+### New network styles
+
+Choose **Signal anatomy** in Motion:
+
+- **Flowing nerve signals**: existing traveling edge pulses.
+- **Branching graph wavefronts**: BFS distance across real rhomb adjacency, computed from the first stitch origin (or the center if no strokes), controls traveling illumination.
+- **Triple-strand braided circuitry**: three stylized strands are drawn for each selected genuine tile adjacency link. The offsets are optical ornament; they do not create extra connections.
+
+Control **Stitch glow**, **Stitch travel cycles**, **Signal rhythm**, and **Preview frame cap (8–30 FPS)** separately.
+
+### Mobile layout
+
+The live geometry statistics now sit *below* the artwork rather than fighting with the top overlay. Long slider decimals are displayed to two places. Touch modes remain visible above tabbed controls.
+
+## Previous features remain
+
+Seven periodic global phason paths, original eight materials, independent twin material overlays, living shared-edge graph travelers, color animation, seven named starter palettes, imported named palette JSON, aspect ratios 1:1 / 9:16 / 16:9 / 3:4 / 4:3, reversible artwork settings, confirmed New Design, PNG, JSON recipe import/export, four-by-four frame atlas, real local dithered GIF89a loop encoding at 360/480/720 px and 8/12/16 FPS. MP4 is **not yet available**.
+
+## Technical truth
+
+Dual rhombs are derived from five line families `x·v_j + γ_j = n` using fivefold star vectors. Changing `u,v` in the second harmonic of `γ` changes rhomb neighborhood assignments of a *global* finite patch. This is not yet a local phason kinetics solver, a square-seamless wallpaper, nor a universal Penrose matching-rule checker. Stitch paths and signal propagation are graph-theoretically exact within each rendered patch; the moving lights and braided optical strands are an artistic visualization.
+
+GIF animation is true GIF89a with a 256-color palette and ordered dithering; it cannot provide true 24-bit color or the quality/bitrate of MP4. Export uses a deterministic timeline. iPhone Safari performance remains unverified on a physical device.
+
+## Test
+
+Run `node test.cjs` (no dependencies) for basic rhomb integrity, graph adjacency, closed motion, deterministic stitch shortest paths and BFS propagation. Desktop Chromium testing at 390px and 1280px verified rendering, independent Twin dragging, Stitch creation, Undo and Redo. A sample 16-frame 2-second GIF decoded successfully with exact 2000ms duration. These are **browser simulations**, not physical iPhone QA.
+
+See `ROADMAP.md` for the next phase. All work is on GitHub only: **no Netlify deployments, no API charges**.
