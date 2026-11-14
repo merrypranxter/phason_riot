@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#080911"><title>PHASON RIOT — Living Quasicrystal Studio</title>
+<style>
+:root{color-scheme:dark;--bg:#090a13;--panel:#131523;--panel2:#1c1e31;--line:#3b3b54;--text:#f4f2ff;--sub:#b9b4cc;--a:#e7ff72;--b:#ff63e5}*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 8% -8%,#53215a55,transparent 40%),radial-gradient(ellipse at 95% 1%,#103d5b66,transparent 42%),var(--bg);color:var(--text)}button,select,input{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--a);outline-offset:2px}button:disabled{opacity:.45;cursor:not-allowed}.shell{max-width:1120px;margin:auto;padding:14px 15px 50px}.mast{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:3px 0 12px}.brand{font-weight:950;letter-spacing:-1.3px;font-size:clamp(24px,5vw,40px);line-height:1}.brand em{font-style:normal;color:var(--a)}.smallcaps{font-size:10px;letter-spacing:2.5px;font-weight:800;color:var(--sub);margin-top:5px}.caps{font-size:10px;color:#c9bed4;letter-spacing:1.7px;text-transform:uppercase;font-weight:750}.status{display:flex;gap:8px;align-items:center;white-space:nowrap;font-size:11px;color:var(--sub);letter-spacing:1px}.dot{width:9px;height:9px;border-radius:50%;background:var(--a);box-shadow:0 0 10px var(--a)}.stage{background:#070711;border:1px solid #59526b;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 12px 50px #000b,0 0 70px #cc42e11a;display:flex;align-items:center;justify-content:center;isolation:isolate;min-height:220px}.stage canvas{display:block;max-height:66vh;max-width:100%;touch-action:none;user-select:none;-webkit-user-select:none;cursor:crosshair}.stage:before{content:'';pointer-events:none;position:absolute;z-index:2;inset:0;border:1px solid #ffffff16;border-radius:16px}.overlay{pointer-events:none;position:absolute;z-index:3;top:10px;left:12px;font-size:10px;line-height:1.6;text-shadow:0 2px 5px #000;letter-spacing:1px;color:#fff9}.overlay.right{left:auto;right:12px;text-align:right}.toolbar{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 12px;align-items:center}.btn{border:1px solid #615d7c;background:#202238;border-radius:10px;color:white;padding:10px 12px;font-weight:700;min-height:40px}.btn:hover{border-color:#cbb7f7}.btn.primary{background:var(--a);border-color:var(--a);color:#16151c}.btn.pink{background:#803777;border-color:#dc79d3}.btn.tiny{min-height:34px;padding:7px 10px;font-size:12px}.grow{flex:1}.tabs{display:flex;overflow-x:auto;gap:5px;padding:3px;border-radius:12px;background:#171824;scrollbar-width:thin}.tab{border:0;border-radius:9px;background:transparent;color:#b9b4cc;font-size:13px;font-weight:800;padding:11px 16px;white-space:nowrap}.tab.active{background:#343049;color:var(--a)}.panel{background:linear-gradient(160deg,#181a2c,#10111f);border:1px solid #3a3b58;border-radius:0 0 16px 16px;padding:16px;margin-top:-4px;min-height:205px}.description{font-size:13px;line-height:1.55;color:#c1bad2;max-width:750px;margin:1px 0 14px}.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 18px}.field{display:flex;flex-direction:column;gap:8px;min-width:0}.field label{font-weight:750;font-size:12px;display:flex;justify-content:space-between;gap:8px}.value{color:var(--a);font-variant-numeric:tabular-nums}.field input[type=range]{width:100%;accent-color:var(--a);height:20px}.field select{width:100%;color:#faf7ff;background:#25253c;border:1px solid #62627c;border-radius:8px;padding:10px;min-height:42px}.field option{background:#23223a}.help{font-size:11px;color:#a6a1bc;line-height:1.4}.swatches{display:flex;gap:6px;margin-top:7px}.swatches span{display:block;height:18px;flex:1;border-radius:4px;border:1px solid #ffffff2a}.inline{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.toggle{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;cursor:pointer}.toggle input{accent-color:var(--a);width:18px;height:18px}.notice{margin-top:15px;background:#242439;border-left:3px solid #c2ee6a;padding:10px 12px;color:#c7c5d4;font-size:12px;line-height:1.5}.footer{font-size:11px;color:#8986a3;line-height:1.6;margin-top:16px}.foot-em{color:#bfea80}.pill{border:1px solid #6d547d;border-radius:30px;padding:6px 10px;color:#e0d3e8;background:#201c32;font-size:11px}.summary{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 8px}.badge{border:1px solid #4f4d69;padding:5px 9px;border-radius:20px;font-size:11px;color:#e4deef}#errors{color:#ff9bba;font-size:12px;white-space:pre-wrap} .viewer-warning{position:absolute;z-index:4;inset:auto 12px 14px 12px;background:#29233c;border:1px solid #e7ff72;border-radius:14px;padding:14px;font-size:13px;line-height:1.55;color:#fff4fa;box-shadow:0 6px 28px #000a}.viewer-warning strong{display:block;color:#e7ff72;margin-bottom:3px}.phason-ready .viewer-warning{display:none} .hidden{display:none!important}@media(max-width:620px){.shell{padding:10px 10px 32px}.controls{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 12px}.panel{padding:13px}.brand{letter-spacing:-.6px}.stage canvas{max-height:55vh}.status{font-size:10px}.mast{margin-bottom:9px}.tab{padding:11px 12px}.toolbar{gap:5px}.btn{padding:9px 10px;font-size:12px}.overlay{font-size:9px}}@media(max-width:360px){.controls{grid-template-columns:1fr}.stage canvas{max-height:52vh}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style></head><body><main class="shell">
+<header class="mast"><div><div class="brand">PHASON <em>RIOT</em></div><div class="smallcaps">LIVING QUASICRYSTAL STUDIO · 002</div></div><div class="status"><span class="dot" id="liveDot"></span><span id="liveText">STRUCTURAL MOTION</span></div></header>
+<section class="stage" id="stage"><canvas id="art" aria-label="Interactive animated Penrose-style quasicrystal. Drag to shift phason offsets."></canvas><div class="overlay"><div>⊹ PENTAGRID / 05</div><div id="tileStats">GENERATING…</div></div><div class="overlay right"><div id="motionStats">U 0.00 · V 0.00</div><div id="loopStats">LOOP 08.0s</div></div><div class="viewer-warning"><strong>⚠ PREVIEW ONLY — JAVASCRIPT IS NOT RUNNING</strong>This preview cannot run the JavaScript engine. Open the published GitHub Pages site in Safari, or load this file into a JavaScript-enabled HTML editor. GitHub's code/file preview and iPhone Files Quick Look are NOT the running app.</div></section>
+<nav class="toolbar" aria-label="Artwork actions"><button class="btn primary" id="playBtn">Ⅱ Pause</button><button class="btn" id="newBtn">✦ New Design</button><button class="btn" id="undoBtn">↶ Undo</button><button class="btn" id="redoBtn">↷ Redo</button><span class="grow"></span><button class="btn" id="exportPng">↓ PNG</button><button class="btn" id="exportJson">↓ Recipe</button></nav>
+<nav class="tabs" aria-label="Editor sections"><button class="tab active" data-tab="motion">Motion</button><button class="tab" data-tab="material">Materials</button><button class="tab" data-tab="geometry">Geometry</button><button class="tab" data-tab="color">Color</button><button class="tab" data-tab="export">Export</button></nav>
+<div class="panel" id="panel"></div><div id="errors" role="status"></div>
+<footer class="footer">REAL GEOMETRY: de Bruijn five-family dual pentagrid · RHOMBI: 36° / 72° · PHASON: global perpendicular-space offset path. GRAPH: actual shared-edge adjacency trails. Light waves, luminous filaments and fault highlights are artistic render layers, not physical particle or local phason simulations. <span class="foot-em">No paid APIs. No Netlify. Works offline.</span></footer>
+</main><script id="mathcore">
+const PhasonCore = (() => {
+  'use strict';
+  const TAU=2*Math.PI;
+  const star=Array.from({length:5},(_,i)=>[Math.cos(TAU*i/5),Math.sin(TAU*i/5)]);
+  const internal=Array.from({length:5},(_,i)=>[Math.cos(2*TAU*i/5),Math.sin(2*TAU*i/5)]);
+  const clamp=(v,lo,hi)=>Math.max(lo,Math.min(hi,v));
+  function seeded(seed) { let a=(seed|0)>>>0; return ()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return((t^(t>>>14))>>>0)/4294967296;}; }
+  function offsets(seed,u,v) {
+    let rand=seeded(seed), b=Array.from({length:5},()=>.16*(rand()-.5));
+    const avg=b.reduce((a,c)=>a+c,0)/5;
+    return b.map((x,i)=>x-avg+u*internal[i][0]+v*internal[i][1]);
+  }
+  function makeGrid(radius) {
+    radius=clamp(Math.round(radius),3,16);
+    const lines=Math.ceil(radius)+2, points=[];
+    for(let i=0;i<5;i++)for(let j=i+1;j<5;j++){
+      const a=star[i],b=star[j],det=a[0]*b[1]-a[1]*b[0];
+      for(let m=-lines;m<=lines;m++)for(let n=-lines;n<=lines;n++)points.push({i,j,m,n,det});
+    }
+    return points;
+  }
+  function generate(radius,seed,u,v,grid) {
+    radius=clamp(Math.round(radius),3,16);
+    const gamma=offsets(seed,u,v), tiles=[], near=0, R2=radius*radius;
+    const src=grid||makeGrid(radius);
+    for(const q of src) {
+      const {i,j,m,n,det}=q;
+      const ai=star[i],aj=star[j], d0=m-gamma[i],d1=n-gamma[j];
+      const x=(d0*aj[1]-d1*ai[1])/det, y=(ai[0]*d1-aj[0]*d0)/det;
+      if(x*x+y*y>R2)continue;
+      const k=[0,0,0,0,0];k[i]=m;k[j]=n;
+      let proximity=1;
+      for(let h=0;h<5;h++)if(h!==i&&h!==j){
+        const z=x*star[h][0]+y*star[h][1]+gamma[h];
+        k[h]=Math.ceil(z);
+        proximity=Math.min(proximity,Math.abs(z-Math.round(z)));
+      }
+      if(proximity<1e-7)near++;
+      let bx=0,by=0;for(let h=0;h<5;h++){bx+=k[h]*star[h][0];by+=k[h]*star[h][1];}
+      const p0=[bx,by],p1=[bx+ai[0],by+ai[1]],p2=[bx+ai[0]+aj[0],by+ai[1]+aj[1]],p3=[bx+aj[0],by+aj[1]];
+      const isThick=((j-i)%5===1||(j-i)%5===4); // adjacent star-vector families => 72-degree acute rhomb
+      const center=[bx+(ai[0]+aj[0])*.5,by+(ai[1]+aj[1])*.5];
+      tiles.push({p:[p0,p1,p2,p3],c:center,thick:isThick,i,j,id:`${i}:${j}:${m}:${n}`,label:k.join(','),orient:Math.atan2(ai[1]+aj[1],ai[0]+aj[0])});
+    }
+    // Dual graph: ONLY actual shared rhomb edges are connected.
+    // Stable world-coordinate quantization tolerates sin/cos floating-point noise.
+    const edgeOwners=new Map(),connections=[];
+    const pointKey=p=>`${Math.round(p[0]*100000)},${Math.round(p[1]*100000)}`;
+    for(let ti=0;ti<tiles.length;ti++){
+      const tile=tiles[ti];
+      for(let e=0;e<4;e++){
+        const a=tile.p[e],b=tile.p[(e+1)%4];
+        const ka=pointKey(a),kb=pointKey(b),key=ka<kb?`${ka}|${kb}`:`${kb}|${ka}`;
+        const other=edgeOwners.get(key);
+        if(other){
+          if(!other.matched){connections.push({a:other.t,b:ti,mid:[(a[0]+b[0])/2,(a[1]+b[1])/2]});other.matched=true;}
+        } else edgeOwners.set(key,{t:ti,matched:false});
+      }
+    }
+    return {tiles, connections, near, gamma, thick:tiles.reduce((n,t)=>n+Number(t.thick),0), thin:tiles.reduce((n,t)=>n+Number(!t.thick),0)};
+  }
+  function phasonAt(phase,mode,amplitude,baseU=0,baseV=0) {
+    let q=TAU*phase,a=amplitude,u=0,v=0;
+    if(mode==='choir') {u=.68*Math.cos(2*q)+.32*Math.cos(3*q+.5);v=.7*Math.sin(3*q)+.3*Math.sin(2*q+.8);}
+    else if(mode==='saw') {u=.55*Math.cos(q)+.45*Math.cos(4*q+.4);v=.6*Math.sin(q)+.4*Math.sin(3*q);}
+    else if(mode==='tide'){u=Math.cos(q);v=.65*Math.sin(q)+.2*Math.sin(2*q);}
+    else if(mode==='braid'){u=.54*Math.cos(q)+.46*Math.cos(5*q+.35);v=.58*Math.sin(2*q)+.42*Math.sin(5*q+.9);}
+    else if(mode==='gyre'){const r=.72+.28*Math.cos(5*q);u=r*Math.cos(2*q);v=r*Math.sin(2*q);}
+    else if(mode==='quake'){u=.85*Math.tanh(3.1*Math.sin(3*q))+.15*Math.cos(q);v=.8*Math.tanh(3.1*Math.cos(2*q))+.2*Math.sin(q);}
+    else {u=.72*Math.cos(q)+.28*Math.cos(3*q+.45);v=.72*Math.sin(q)+.28*Math.sin(2*q+.6);}
+    return [baseU+a*u,baseV+a*v];
+  }
+  function compare(a,b) {
+    const m=new Map(a.tiles.map(t=>[t.id,t.label]));let changed=0,shared=0;
+    for(const t of b.tiles) if(m.has(t.id)){shared++;if(m.get(t.id)!==t.label)changed++;}
+    return {changed,shared};
+  }
+  return {TAU,star,internal,clamp,seeded,offsets,makeGrid,generate,phasonAt,compare};
+})();
+</script><script>
+(()=>{'use strict';
+const C=PhasonCore,canvas=document.querySelector('#art'),ctx=canvas.getContext('2d'),stage=document.querySelector('#stage'),panel=document.querySelector('#panel');
+const $$=s=>document.querySelector(s),rnd=C.seeded;
+const palettes={
+'Acid Carnival':['#ff2dd1','#fef651','#28f2fa','#9759ff','#46ff74','#ff6226'],
+'Opal Riot':['#dbfaff','#81f8e3','#e99dff','#ff6eb7','#92a8ff','#fdf49d'],
+'Toxic Velvet':['#ddfb43','#b1ff00','#d70dff','#380e67','#fa488e','#2df7bd'],
+'Plasma Cathedral':['#ff4700','#ffe35c','#b526ff','#00edfa','#ff2284','#6a66ff'],
+'Boreal Glass':['#103a81','#17e8db','#a7e3f7','#72edb0','#5e7fe2','#d1c9ff'],
+'Ultraviolet Fever':['#ff2eea','#6534ff','#353df3','#12e3ec','#ffca17','#ef557f'],
+'Ink & Gold':['#e5ae53','#ffc9a4','#c4d6ff','#faf0d7','#8656af','#ef8469']};
+const clean=(s)=>Array.isArray(s)?s.filter(x=>/^#[0-9a-fA-F]{6}$/.test(x)).slice(0,24):[];
+try{const loaded=JSON.parse(localStorage.getItem('phason_user_palettes')||'{}');for(const [k,v] of Object.entries(loaded))if(clean(v).length>=2)palettes[k]=clean(v);}catch{}
+const defaults={seed:1931,radius:8,zoom:1,mode:'orbit',period:8,amp:.82,baseU:0,baseV:0,material:'opal',palette:'Acid Carnival',intensity:1.1,glow:.65,edge:.7,comets:1,wave:1,speed:1,colorCycles:2,threadCycles:3,network:.6,structureSteps:96,showChanges:false,neonBoost:0,background:'#080b18',aspect:'square',showGrid:false,showNodes:true};
+let S={...defaults},undo=[],redo=[],lastDraw=0,isPlaying=!window.matchMedia('(prefers-reduced-motion:reduce)').matches,elapsed=0,lastTime=0,current=null,grid=[],needGeom=true,geomStamp='',frameNo=0,reference=null,referenceStamp='',referenceLabels=null,pointers=new Map(),gesture=null;
+const TABS={motion:'Real structural changes across seven closed paths. Colored light and shared-edge signals have their own rhythm. One finger changes phason U/V; pinch with two fingers to zoom.',material:'Choose an entirely different visual behavior, from opal surfaces to connected filament networks and phason fault flashes. All optical looks are stylized.',geometry:'Actual five-family dual grid. Inspect changed K-label neighborhoods relative to the frozen base offset; this is NOT a certified count of local tile flips.',color:'Chromatic waves advance at an independently chosen integer harmonic for exact loop closure. Neon boost is optional. Import any of your named palette JSON lists.',export:'Save a still or a reproducible recipe. Exact GIF/MP4 encoding is not part of this first offline build; the engine does support mathematically closed frame sampling.'};
+const modes={orbit:'Orbit — smooth structural change',choir:'Choir — 2:3 Lissajous counterpoint',saw:'Riot — multi-frequency phason jumps',tide:'Tidal — stretched orbit',braid:'Braid — fivefold harmonic crossing',gyre:'Gyre — double-wound internal orbit',quake:'Quake — sharp structural transitions'};
+const mats={opal:'Opal cathedral',neon:'Electric circuitry',velvet:'Velvet brocade',mineral:'Mineral glass',ink:'Ink constellation',filament:'Living filament network',fault:'Phason faultlines',prism:'Prism faceted glass'};
+const aspectOpts={square:'1:1 Square',portrait:'9:16 Portrait',wide:'16:9 Wide',poster:'3:4 Poster',landscape:'4:3 Landscape'};
+let active='motion';
+function esc(t){return String(t).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));}
+function snapshot(){return JSON.stringify({settings:S,palettes});}function restore(before){const state=JSON.parse(before);S=state.settings;for(const k of Object.keys(palettes))delete palettes[k];Object.assign(palettes,state.palettes);savePalettes();}function addHistory(before){if(before!==snapshot()){undo.push(before);if(undo.length>80)undo.shift();redo=[];updateHistory();}}
+function updateHistory(){$$('#undoBtn').disabled=!undo.length;$$('#redoBtn').disabled=!redo.length;}
+function bindEl(id,fn,evt='click'){const el=$$('#'+id);if(el)el.addEventListener(evt,fn);}
+function field(name,k,min,max,step,desc){return `<div class="field"><label for="${k}">${name}<span class="value" id="value-${k}">${S[k]}</span></label><input type="range" id="${k}" min="${min}" max="${max}" step="${step}" value="${S[k]}"><span class="help">${desc}</span></div>`;}
+function chooser(label,k,opts){return `<div class="field"><label for="${k}">${label}</label><select id="${k}">${Object.entries(opts).map(([v,l])=>`<option value="${esc(v)}" ${S[k]===v?'selected':''}>${esc(l)}</option>`).join('')}</select></div>`;}
+function toggle(label,k){return `<label class="toggle"><input type="checkbox" id="${k}" ${S[k]?'checked':''}>${label}</label>`;}
+function button(label,id,cls=''){return `<button class="btn tiny ${cls}" id="${id}">${label}</button>`;}
+function paletteWidget(){return `<div class="field" style="grid-column:1 / -1"><label>Current palette</label><div class="swatches">${(palettes[S.palette]||palettes['Acid Carnival']).map(x=>`<span style="background:${x}"></span>`).join('')}</div></div>`;}
+function renderPanel(){let markup='';if(active==='motion')markup=`${chooser('Phason choreography','mode',modes)}${field('Phason amplitude','amp',0,1.6,.01,'How far internal offsets travel; larger values cause more neighborhood changes.')}${field('Cycle duration / seconds','period',2,30,.5,'Exact mathematical closure for these four periodic paths.')}${field('Structural steps / loop','structureSteps',32,192,16,'More steps for fluid rearrangement, fewer for sharp quasicrystal clicks. Art lights stay smooth.')}${field('Light wave motion','wave',0,2,.01,'Color and luminous ripples travel across rhombi.')}${field('Thread comets','comets',0,2,.01,'Moving edge highlights following tile-edge geometry.')}${field('Signal connections','network',0,1.6,.05,'Actual shared-edge adjacency: glowing travel along the tile graph.')}${field('Signal rhythm','threadCycles',1,8,1,'Integer loops per structural cycle, guaranteed to close.')}${field('Motion rate multiplier','speed',.1,3,.05,'Preview speed; exports use exact phase.')}`;
+else if(active==='material')markup=`${chooser('Surface character','material',mats)}${field('Luminous intensity','intensity',0,2,.02,'Raise to neon chaos or lower for subtle dye.')}${field('Halo / softness','glow',0,1,.02,'Bright bloom on strokes and highlights.')}${field('Visible geometry','edge',0,1,.02,'Tile-edge definition.')}<div class="field"><label for="background">Background color</label><input type="color" id="background" value="${S.background}" style="width:100%;height:40px;border:1px solid #67627c;background:#24263c;border-radius:8px;cursor:pointer"></div>${toggle('Vertex jewels','showNodes')}${toggle('Light up rearranged neighborhoods','showChanges')}`;
+else if(active==='geometry')markup=`${field('Pentagrid radius','radius',4,14,1,'Bigger = more rhombi, heavier rendering.')}${field('Camera zoom','zoom',.65,2.5,.05,'Change framing without changing the grid.')}${chooser('Canvas composition','aspect',aspectOpts)}${field('Offset U','baseU',-1.5,1.5,.01,'Stable authored internal offset, draggable from canvas.')}${field('Offset V','baseV',-1.5,1.5,.01,'Other independent phason coordinate.')}${toggle('Pentagrid overlay','showGrid')}${toggle('Show changing K-label boundaries','showChanges')}<div class="help" style="grid-column:1/-1">Changes are measured against frozen base U/V within the shared finite grid patch, not counted as isolated legal phason flips.</div>`;
+else if(active==='color')markup=`${chooser('Named palette','palette',Object.fromEntries(Object.keys(palettes).map(k=>[k,k])))}${paletteWidget()}${field('Chromatic beats','colorCycles',0,8,1,'Integer color cycles per full structural loop. Zero locks colors in place.')}${field('Saturation violence','neonBoost',0,2,.05,'Push pastel/intermediate colors outward from gray; zero preserves palette exactly.')}<div class="field" style="grid-column:1 / -1"><label for="paletteImport">Import named palette JSON</label><input type="file" id="paletteImport" accept="application/json,.json"><span class="help">Accepts {"My Palette":["#ff00ff","#00ffff",...]} or a single array of hex stops. Saved only to this browser.</span></div>${button('Shuffle color roles','shuffleColors')}`;
+else markup=`<div class="field"><label>High resolution still</label>${button('PNG · 2048px longest edge','pngLarge','primary')}<span class="help">Uses the live artwork phase. Saves a static frame at a high resolution.</span></div><div class="field"><label>Art recipe</label>${button('Save recipe JSON','jsonLarge')}<span class="help">Reproducible seed, settings and palettes. Import below.</span></div><div class="field"><label>Load recipe</label><input type="file" id="recipeImport" accept="application/json,.json"><span class="help">Undoable and non-destructive until you select a file.</span></div><div class="field"><label>Frame sheet (loop atlas)</label>${button('Export 4 × 4 loop PNG','frameSheet')}<span class="help">16 evenly sampled phases (0 to 15/16, endpoint not duplicated).</span></div>`;
+panel.innerHTML=`<p class="description">${TABS[active]}</p><div class="controls">${markup}</div>${active==='export'?'<div class="notice">Animated GIF/MP4 needs an encoder and frame-accurate export path. This prototype exports a 16-frame loop atlas instead; do not mistake it for a playable GIF.</div>':''}`;
+for(const k of Object.keys(S)){const el=$$('#'+k);if(!el||k==='paletteImport'||k==='recipeImport')continue;let before=null; if(el.type==='range'){el.addEventListener('pointerdown',()=>before=snapshot());el.addEventListener('focus',()=>{if(before===null)before=snapshot();});el.addEventListener('input',()=>{S[k]=Number(el.value);if(k==='radius')S[k]=Math.round(S[k]);const v=$$('#value-'+k);if(v)v.textContent=String(S[k]);if(k==='radius')resetGrid();if(['radius','baseU','baseV'].includes(k))needGeom=true;});el.addEventListener('change',()=>{if(before===null)before=snapshot();addHistory(before);before=null;});}
+else if(el.type==='color')el.addEventListener('change',()=>{const old=snapshot();S[k]=el.value;addHistory(old);});
+else if(el.type==='checkbox')el.addEventListener('change',()=>{const old=snapshot();S[k]=el.checked;addHistory(old);});
+else if(el.tagName==='SELECT')el.addEventListener('change',()=>{const old=snapshot();S[k]=el.value;needGeom=true;addHistory(old);if(k==='aspect')resize();renderPanel();});}
+if($$('#shuffleColors'))bindEl('shuffleColors',()=>{const old=snapshot();const rng=rnd(S.seed+(frameNo*131));const a=palettes[S.palette].slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[a[i],a[j]]=[a[j],a[i]];}palettes[S.palette]=a;savePalettes();addHistory(old);renderPanel();});
+if($$('#paletteImport'))bindEl('paletteImport',async e=>{try{const before=snapshot();const obj=JSON.parse(await e.target.files[0].text());let n=0;if(Array.isArray(obj)){const colors=clean(obj);if(colors.length>=2){palettes['Imported Palette']=colors;S.palette='Imported Palette';n++;}}else for(const [k,v] of Object.entries(obj)){const colors=clean(v);if(colors.length>=2){palettes[k.slice(0,80)]=colors;n++;}}if(!n)throw Error('Need at least two valid #RRGGBB colors per palette.');savePalettes();addHistory(before);renderPanel();flash(`Imported ${n} palette(s).`);}catch(e){flash(e.message);}},'change');
+if($$('#recipeImport'))bindEl('recipeImport',async e=>{try{const recipe=JSON.parse(await e.target.files[0].text());const old=snapshot();if(recipe?.format!=='phason-riot-1'||!recipe.settings)throw Error('Not a PHASON RIOT recipe.');if(recipe.palettes&&typeof recipe.palettes==='object')for(const[k,v]of Object.entries(recipe.palettes)){let c=clean(v);if(c.length>=2)palettes[k.slice(0,80)]=c;}S={...defaults,...Object.fromEntries(Object.entries(recipe.settings).filter(([k])=>k in defaults))};S.seed=(S.seed|0);S.radius=C.clamp(Number(S.radius)||9,4,14);if(!palettes[S.palette])S.palette='Acid Carnival';savePalettes();resetGrid();addHistory(old);renderPanel();resize();}catch(err){flash(err.message)}},'change');
+if($$('#pngLarge'))bindEl('pngLarge',savePng);if($$('#jsonLarge'))bindEl('jsonLarge',saveRecipe);if($$('#frameSheet'))bindEl('frameSheet',saveSheet);
+}
+function flash(s){$$('#errors').textContent=s;setTimeout(()=>{if($$('#errors').textContent===s)$$('#errors').textContent=''},7000);}
+function savePalettes(){try{localStorage.setItem('phason_user_palettes',JSON.stringify(palettes));}catch{}}
+function resetGrid(){grid=C.makeGrid(S.radius);needGeom=true;geomStamp='';}
+function getAspect(){return {square:1,portrait:9/16,wide:16/9,poster:3/4,landscape:4/3}[S.aspect]||1;}
+function resize(){const a=getAspect(),maxW=stage.clientWidth;let w=maxW,h=w/a;const maxH=window.innerHeight*(window.innerWidth<620?.55:.66);if(h>maxH){h=maxH;w=h*a;}w=Math.max(150,Math.floor(w));h=Math.max(150,Math.floor(h));const dpr=Math.min(window.devicePixelRatio||1,1.7,Math.sqrt(2000000/(w*h)));canvas.style.width=w+'px';canvas.style.height=h+'px';canvas.width=Math.floor(w*dpr);canvas.height=Math.floor(h*dpr);}
+function hx(hex){const s=hex.slice(1);return [parseInt(s.slice(0,2),16),parseInt(s.slice(2,4),16),parseInt(s.slice(4,6),16)];}
+function colorMix(a,b,t){const A=hx(a),B=hx(b);return '#'+A.map((v,i)=>Math.round(v+(B[i]-v)*t).toString(16).padStart(2,'0')).join('');}
+function rgb(hex,alpha){const a=hx(hex);return `rgba(${a[0]},${a[1]},${a[2]},${alpha})`;}
+function shade(hex,s){const A=hx(hex);return `rgb(${A.map(v=>Math.round(C.clamp(v*s,0,255))).join(',')})`;}
+function saturate(hex,amount){if(amount<=0)return hex;const a=hx(hex),lo=Math.min(...a),hi=Math.max(...a),mid=(hi+lo)/2;const factor=1+amount*1.45;return '#'+a.map(v=>Math.round(C.clamp(mid+(v-mid)*factor,0,255)).toString(16).padStart(2,'0')).join('');}
+function pickColor(t){const a=palettes[S.palette]||palettes['Acid Carnival'];let z=(((t%1)+1)%1)*a.length,i=Math.floor(z);return saturate(colorMix(a[i],a[(i+1)%a.length],z-i),S.neonBoost);}
+function baseReference(){const key=[S.seed,S.radius,S.baseU.toFixed(4),S.baseV.toFixed(4)].join('|');if(!reference||referenceStamp!==key){reference=C.generate(S.radius,S.seed,S.baseU,S.baseV,grid);referenceLabels=new Map(reference.tiles.map(t=>[t.id,t.label]));referenceStamp=key;}return reference;}
+function gPhase(phase){return C.phasonAt(phase,S.mode,S.amp,S.baseU,S.baseV);}
+function computed(phase){const steps=S.structureSteps||96,structuralPhase=Math.floor(phase*steps)/steps,[u,v]=gPhase(structuralPhase);const key=[S.radius,S.seed,u.toFixed(4),v.toFixed(4)].join('|');if(!current||needGeom||geomStamp!==key){current=C.generate(S.radius,S.seed,u,v,grid);geomStamp=key;needGeom=false;}return current;}
+function draw(target, w, h, phase, actual){
+const st=target.getContext('2d'),pw=w,ph=h,geo=actual||C.generate(S.radius,S.seed,...gPhase(Math.floor(phase*(S.structureSteps||96))/(S.structureSteps||96)),grid);if(!st)return; const ref=baseReference();const structural=C.compare(ref,geo);
+st.clearRect(0,0,pw,ph);const dark=S.material==='ink'?'#080813':S.material==='velvet'?'#10091d':S.background;st.fillStyle=dark;st.fillRect(0,0,pw,ph);
+const minSide=Math.min(w,h),sc=(minSide/((S.radius*2.6+5)))*S.zoom,offX=w*.5,offY=h*.5,omega=C.TAU*phase;
+const p=(pt)=>[offX+pt[0]*sc,offY+pt[1]*sc];
+let shown=0;const drawPoint=(x,y,r,fill)=>{st.beginPath();st.arc(x,y,r,0,C.TAU);st.fillStyle=fill;st.fill();};
+for(const t of geo.tiles){let coords=t.p.map(p);const xs=coords.map(q=>q[0]),ys=coords.map(q=>q[1]);if(Math.max(...xs)<-3||Math.min(...xs)>w+3||Math.max(...ys)<-3||Math.min(...ys)>h+3)continue;shown++;
+const [cx,cy]=p(t.c),dist=Math.hypot(t.c[0],t.c[1]),spin=t.orient;
+const travelling=Math.sin(t.c[0]*.76+t.c[1]*.43-omega*2)+.44*Math.sin(t.c[0]*.12-t.c[1]*.91+omega*3);const wave=travelling*S.wave;
+const role=(t.i*1.618+t.j*.57+(t.thick?.08:.38)+(.25+.22*S.wave)*Math.sin(omega*S.colorCycles+t.c[0]*.31+t.c[1]*.19))*.17;
+const col=pickColor(role),col2=pickColor(role+.24+wave*.09),changed=referenceLabels.has(t.id)&&referenceLabels.get(t.id)!==t.label;
+st.beginPath();coords.forEach((q,i)=>i?st.lineTo(q[0],q[1]):st.moveTo(q[0],q[1]));st.closePath();
+if(S.material==='neon'){st.fillStyle=`rgba(8,7,22,${.88})`;st.fill();if(S.intensity>0){st.fillStyle=rgb((palettes[S.palette]||[])[(t.i+t.j)%palettes[S.palette].length],.14*S.intensity);st.fill();}}
+else if(S.material==='ink'){st.fillStyle=shade(col,t.thick?.7:.45);st.globalAlpha=.65;st.fill();st.globalAlpha=1;}
+else if(S.material==='velvet'){const g=st.createLinearGradient(coords[0][0],coords[0][1],coords[2][0],coords[2][1]);g.addColorStop(0,shade(col,.18));g.addColorStop(.55,shade(col,.55+.12*wave));g.addColorStop(1,shade(col2,.24));st.fillStyle=g;st.fill();}
+else if(S.material==='mineral'){let r=Math.max(1,sc*.85),g=st.createRadialGradient(cx-sc*.2,cy-sc*.3,0,cx,cy,r);g.addColorStop(0,shade(col2,1.14));g.addColorStop(.55,shade(col,.67));g.addColorStop(1,shade(col,.24));st.fillStyle=g;st.fill();}
+else if(S.material==='prism'){const g=st.createLinearGradient(coords[1][0],coords[1][1],coords[3][0],coords[3][1]);g.addColorStop(0,shade(col2,.23));g.addColorStop(.29,shade(col,1.25));g.addColorStop(.55,shade(col2,.75));g.addColorStop(.78,shade(col,.22));g.addColorStop(1,shade(col2,.92));st.fillStyle=g;st.fill();st.beginPath();st.moveTo(...coords[0]);st.lineTo(...coords[2]);st.strokeStyle=rgb(col2,.18);st.lineWidth=Math.max(.45,sc*.025);st.stroke();}
+else if(S.material==='filament'){st.fillStyle=shade(col,.08);st.fill();st.strokeStyle=rgb(col2,.27);st.lineWidth=Math.max(.5,sc*.07);st.beginPath();st.moveTo(...coords[0]);st.lineTo(...coords[2]);st.stroke();}
+else if(S.material==='fault'){st.fillStyle=changed?shade(col2,.58+.25*Math.sin(omega*2+dist)):shade(col,.12);st.fill();}
+else {const g=st.createLinearGradient(coords[0][0],coords[0][1],coords[2][0],coords[2][1]);g.addColorStop(0,shade(col,.43+S.intensity*.15));g.addColorStop(.5,shade(col2,.8+S.intensity*.27));g.addColorStop(1,shade(col,.30));st.fillStyle=g;st.fill();}
+if(S.edge>0){st.lineWidth=Math.max(.36,sc*.045)*(S.material==='neon'?1.3:1);st.strokeStyle=S.material==='ink'?rgb('#fff8cc',.3*S.edge):S.material==='velvet'?rgb(col2,.5*S.edge):rgb(col,.52*S.edge);st.stroke();}
+if(changed&&(S.showChanges||S.material==='fault')){st.save();st.globalCompositeOperation='screen';st.strokeStyle=rgb(pickColor(role+.5),.55+.35*Math.sin(omega*2)**2);st.lineWidth=Math.max(.7,sc*(S.material==='fault'?.14:.08));st.stroke();st.restore();}
+if(S.comets>0){const ang=omega*2+(t.i*.91+t.j*.3+dist*.11),seg=((ang/C.TAU)%1+1)%1*4,k=Math.floor(seg),f=seg-k,a=coords[k],b=coords[(k+1)%4],px=a[0]+(b[0]-a[0])*f,py=a[1]+(b[1]-a[1])*f;
+const rad=Math.max(.5,sc*.08)*S.comets;drawPoint(px,py,rad,rgb(col2,C.clamp(S.intensity*.72,0,1)));if(S.glow>0){st.save();st.globalCompositeOperation='screen';drawPoint(px,py,rad*(2+S.glow*4),rgb(col2,.12*S.glow));st.restore();}}
+if(S.showNodes && (t.i+t.j+Math.round(dist))%3===0){const pulse=.6+.4*Math.sin(omega*2+t.c[0]*.75+t.c[1]*.63);drawPoint(cx,cy,Math.max(.55,sc*.07)*pulse,rgb(col2,.56*S.intensity));}
+}
+if(S.network>0){
+  // True dual adjacency graph: centers join only across a verified shared rhomb edge.
+  // Luminous pulses are an artistic layer, not matter moving through the tiling.
+  st.save();st.globalCompositeOperation='screen';st.lineCap='round';
+  const step=Math.max(1,Math.ceil(geo.connections.length/(Math.min(w,h)<900?520:1000)));
+  for(let k=0;k<geo.connections.length;k+=step){const link=geo.connections[k],a=geo.tiles[link.a],b=geo.tiles[link.b];if(!a||!b)continue;
+    const p1=p(a.c),mid=p(link.mid),p2=p(b.c),signal=.5+.5*Math.sin(omega*S.threadCycles+link.mid[0]*1.2+link.mid[1]*.68);
+    const pigment=pickColor((a.i*.31+a.j*.51+signal*.7)*.33);st.beginPath();st.moveTo(...p1);st.lineTo(...mid);st.lineTo(...p2);
+    st.strokeStyle=rgb(pigment,S.network*(.06+.18*signal));st.lineWidth=Math.max(.6,sc*.075)*S.network;st.stroke();
+    if(signal>.92){const f=(signal-.92)/.08;drawPoint(mid[0],mid[1],Math.max(.5,sc*.09)*f*S.network,rgb(pigment,.66*f));}
+  }st.restore();
+}
+if(S.showGrid){st.save();st.strokeStyle='rgba(255,255,255,.08)';st.lineWidth=.65;for(let i=0;i<5;i++){const n=C.star[i],g=C.offsets(S.seed,...gPhase(phase))[i],max=Math.ceil(S.radius);for(let j=-max;j<=max;j++){const d=j-g,at=[n[0]*d,n[1]*d],tangent=[-n[1],n[0]];st.beginPath();st.moveTo(offX+(at[0]-tangent[0]*S.radius)*sc,offY+(at[1]-tangent[1]*S.radius)*sc);st.lineTo(offX+(at[0]+tangent[0]*S.radius)*sc,offY+(at[1]+tangent[1]*S.radius)*sc);st.stroke();}}st.restore();}
+const vignette=st.createRadialGradient(w*.5,h*.5,minSide*.08,w*.5,h*.5,Math.max(w,h)*.75);vignette.addColorStop(0,'#00000000');vignette.addColorStop(1,'#00000070');st.fillStyle=vignette;st.fillRect(0,0,w,h);
+return {shown,structural,connections:geo.connections.length};
+}
+function animate(ms){if(!lastTime)lastTime=ms;const dt=Math.min(.08,(ms-lastTime)/1000);lastTime=ms;if(isPlaying)elapsed+=dt*S.speed;const phase=((elapsed/S.period)%1+1)%1;if(ms-lastDraw<(window.innerWidth<630?1000/18:1000/24)){requestAnimationFrame(animate);return;}lastDraw=ms;
+try{const geo=computed(phase);const result=draw(canvas,canvas.width,canvas.height,phase,geo);if(frameNo++%10===0){const [u,v]=gPhase(phase);$$('#tileStats').textContent=`${geo.thick} THICK · ${geo.thin} THIN`;$$('#motionStats').textContent=`U ${u.toFixed(2)} · V ${v.toFixed(2)}`;$$('#loopStats').textContent=`LOOP ${S.period.toFixed(1)}s · ${result.shown} TILES · ${result.structural.changed}/${result.structural.shared} CHANGED · ${result.connections} LINKS${geo.near?' · GRID DEGENERACY':''}`;}}catch(err){flash('Render issue: '+err.message)}requestAnimationFrame(animate);}
+function togglePlay(){isPlaying=!isPlaying;$$('#playBtn').textContent=isPlaying?'Ⅱ Pause':'▶ Play';$$('#liveDot').style.background=isPlaying?'#e7ff72':'#ff62e5';$$('#liveText').textContent=isPlaying?'STRUCTURAL MOTION':'PAUSED';}
+function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),12000);}
+function frameCanvas(maxEdge,phase){const a=getAspect();let w,h;if(a>=1){w=maxEdge;h=Math.round(maxEdge/a);}else{h=maxEdge;w=Math.round(maxEdge*a);}const output=document.createElement('canvas');output.width=w;output.height=h;draw(output,w,h,phase);return output;}
+function toBlob(canvas,cb){canvas.toBlob(b=>b?cb(b):flash('PNG export unavailable in this browser.'),'image/png');}
+function savePng(){const phase=((elapsed/S.period)%1+1)%1;try{const out=frameCanvas(2048,phase);toBlob(out,b=>download(b,`phason-riot-${S.seed}-${S.aspect}.png`));}catch(e){flash('PNG export failed: '+e.message)}}
+function saveRecipe(){const recipe={format:'phason-riot-1',created:new Date().toISOString(),settings:S,palettes:{[S.palette]:palettes[S.palette]},phase:((elapsed/S.period)%1+1)%1,notes:'True dual pentagrid; global periodic internal phason offsets, independent color and edge animation.'};download(new Blob([JSON.stringify(recipe,null,2)],{type:'application/json'}),`phason-riot-${S.seed}.json`);}
+function saveSheet(){try{const width=512,cols=4,rows=4,sheet=document.createElement('canvas');sheet.width=width*cols;sheet.height=width*rows;const k=sheet.getContext('2d');for(let i=0;i<16;i++){const c=frameCanvas(width,i/16);k.fillStyle='#080b18';k.fillRect((i%4)*width,Math.floor(i/4)*width,width,width);k.drawImage(c,(i%4)*width+(width-c.width)/2,Math.floor(i/4)*width+(width-c.height)/2);k.fillStyle='#ffffffbd';k.font='13px monospace';k.fillText(`${i+1}/16`,(i%4)*width+10,Math.floor(i/4)*width+24);}toBlob(sheet,b=>download(b,`phason-riot-${S.seed}-16-frame-sheet.png`));}catch(e){flash('Frame sheet export failed: '+e.message)}}
+function undoEdit(){if(!undo.length)return;redo.push(snapshot());restore(undo.pop());resetGrid();renderPanel();resize();updateHistory();}
+function redoEdit(){if(!redo.length)return;undo.push(snapshot());restore(redo.pop());resetGrid();renderPanel();resize();updateHistory();}
+function newDesign(){if(!confirm('Generate a different design? You can Undo to restore this one.'))return;const old=snapshot(),gen=rnd(S.seed+7919);S.seed=Math.floor(gen()*2147483647);S.material=Object.keys(mats)[Math.floor(gen()*Object.keys(mats).length)];S.palette=Object.keys(palettes)[Math.floor(gen()*Object.keys(palettes).length)];S.mode=Object.keys(modes)[Math.floor(gen()*Object.keys(modes).length)];S.amp=.4+gen()*1.1;S.baseU=(gen()-.5)*.6;S.baseV=(gen()-.5)*.6;elapsed=0;resetGrid();addHistory(old);renderPanel();}
+for(const b of document.querySelectorAll('[data-tab]'))b.addEventListener('click',()=>{active=b.dataset.tab;for(const x of document.querySelectorAll('[data-tab]'))x.classList.toggle('active',x===b);renderPanel();});
+$$('#playBtn').addEventListener('click',togglePlay);$$('#newBtn').addEventListener('click',newDesign);$$('#undoBtn').addEventListener('click',undoEdit);$$('#redoBtn').addEventListener('click',redoEdit);$$('#exportPng').addEventListener('click',savePng);$$('#exportJson').addEventListener('click',saveRecipe);
+function updateGestureControls(){if(active==='geometry')for(const key of ['baseU','baseV','zoom']){const el=$$('#'+key);if(el){el.value=S[key];const v=$$('#value-'+key);if(v)v.textContent=Number(S[key]).toFixed(2);}}}
+canvas.addEventListener('pointerdown',e=>{
+  if(e.pointerType==='mouse'&&e.button!==0)return;
+  if(!gesture)gesture={before:snapshot()};
+  pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  try{canvas.setPointerCapture(e.pointerId)}catch{}
+});
+canvas.addEventListener('pointermove',e=>{
+  const prev=pointers.get(e.pointerId);if(!prev)return;
+  const rect=canvas.getBoundingClientRect(),dx=e.clientX-prev.x,dy=e.clientY-prev.y;
+  if(pointers.size===1){S.baseU=C.clamp(S.baseU+dx/Math.max(rect.width,1)*2.1,-2,2);S.baseV=C.clamp(S.baseV+dy/Math.max(rect.height,1)*2.1,-2,2);needGeom=true;}
+  else if(pointers.size===2){
+    const other=[...pointers.entries()].find(([id])=>id!==e.pointerId)?.[1];
+    if(other){const before=Math.hypot(prev.x-other.x,prev.y-other.y),after=Math.hypot(e.clientX-other.x,e.clientY-other.y);
+      if(before>12&&after>12)S.zoom=C.clamp(S.zoom*after/before,.65,2.5);}
+  }
+  pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});updateGestureControls();
+});
+canvas.addEventListener('pointerup',e=>{if(!pointers.has(e.pointerId))return;pointers.delete(e.pointerId);if(!pointers.size&&gesture){addHistory(gesture.before);gesture=null;}});
+function abortGesture(){if(gesture){restore(gesture.before);gesture=null;pointers.clear();needGeom=true;renderPanel();}}
+canvas.addEventListener('pointercancel',abortGesture);
+canvas.addEventListener('lostpointercapture',e=>{if(pointers.has(e.pointerId))abortGesture();});
+window.addEventListener('blur',abortGesture);
+window.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='z'){e.preventDefault();if(e.shiftKey)redoEdit();else undoEdit();}});
+window.addEventListener('resize',resize);if('ResizeObserver'in window)new ResizeObserver(()=>resize()).observe(stage);
+renderPanel();resetGrid();resize();updateHistory();document.documentElement.classList.add('phason-ready');if(!isPlaying)togglePlay(),togglePlay();requestAnimationFrame(animate);
+})();
+</script></body></html>
