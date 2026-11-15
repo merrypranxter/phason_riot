@@ -1,29 +1,26 @@
-# PHASON RIOT — Roadmap after Phase 009
+# PHASON RIOT — After Phase 010
 
-## Delivered · Species War
+## Verified Phase 010
 
-- Four true graph-dynamics genes **per source**: thick/thin affinity, rival inhibition, stamina and recovery.
-- Completely reversible ON/OFF genetic law adapter; OFF matches original Phase 008 simulation exactly under matching starting conditions.
-- Seeded mutation and two-parent breeding with source identities, genome inheritance, bounded changes, source capacity guards and one-step Undo/Redo.
-- Actual adjacency-based competition frontiers and live per-colony owner census; adjustable visual strength, separate from simulation law toggle.
-- Backward-compatible JSON recipes and frozen history state; existing pentagrid, materials, palettes, strokes and exports preserved.
-- Node and Chromium browser checks; GIF test decoded and timing verified.
+- Real, stateful, pairwise relationship scores built from tile co-occupation and actual shared-edge frontier contacts.
+- Positive partnership / negative territorial-exclusion energy terms; ON/OFF toggles and matched-seed causal tests.
+- Per-pair Adaptive, Truce and Feud learning modes; no instantaneous forced bond.
+- Optional pair history in old-compatible `signal-memory-v2` snapshots; imported older artwork keeps Long Memory OFF.
+- Grow +120 history steps with one Undo checkpoint, live pair census and animated relationship annotations.
+- Preserved Phase 007/008/009 Node regression tests, Chromium desktop/mobile controls, deterministic GIF export.
 
-## Phase 010 · The Long Memory
+## Phase 011 — Biological-looking construction (not fictionalized physics)
 
-- Genomic **expression** from accumulated state (not automatic random mutation): tile-local thresholds and source-specific metabolic allocation; instrument causal change and OFF comparisons.
-- Three distinct ecology regimes: coexistence, territorial exclusion, symbiosis, each with explicit coupled transport equations and saved deterministic history. Do not rename simple color changes as different physics.
-- Contested-border formation and retreat histories, explicit dominance time series and simple colony census visualization.
-- More striking art materials linked to regimes: microscopic opal vein lace, electrochemical blooms, fossilized boundary scar tissue, all stylized until actual physical optics exist.
-- Source-aware touch brushes to inject stimulation into a chosen colony without moving the entire global pentagrid.
+1. Couple learned alliances to existing **authored stitched paths** using a precise graph-routing adapter. Keep an OFF-only validation and visualize which legal adjacency edges are affected.
+2. Give colony *pairs*, not merely individuals, trait inheritance during breeding. First define a bounded inheritance model and proof that genetic edits change the evolution.
+3. Improve art direction: spatially distinct living-fabric, nervy-glass, opaline conductor, and mineral colony surfaces rather than one universal neon mosaic.
+4. Provide independently movable source and boundary handles with direct manipulation and reversible changes.
 
-## Phase 011 · Export / mobile reliability
+## Phase 012 — Reliable creation / export
 
-- Physical iPhone Safari test matrix for Pointer Events, paused/resumed state, memory, file downloads and true MP4 browser support.
-- Time-controlled encoder path where platform offers it. Do not fake MP4 or claim temporal precision from a real-time capture alone.
-- Animated evolving-memory video export as a separate **nonperiodic** mode, with deterministic fixed-tick video sampling and honest loop labels.
-- Larger true GIF exports with improved per-frame quantization and worker cancellation/progress.
+- Verify physical iPhone Safari pointer handling, multi-touch, performance and backgrounding.
+- Test real MP4 capability and frame duration on device; no rename hacks.
+- Improve GIF palette quantization and worker progress/cancel for long clips and portrait sizes.
+- Save named artwork checkpoints and A/B differences without corrupting existing recipes.
 
-## Invariants
-
-Artist-owned immutable seed and undoable edits. Preserve all user-defined palettes and source documents. No Netlify, no paid API, no destructive resets, no unverified Penrose-periodic seams, and no claim of physical or biological fidelity from this speculative synthetic ecology.
+**Truth constraints:** phase paths close but living ecology does not automatically loop; pair chords are annotations, not tile edges; global perpendicular-space motion is not a simulation of isolated Penrose flips. No deploy, paid API or Netlify usage without explicit request.
