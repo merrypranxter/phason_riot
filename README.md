@@ -1,33 +1,52 @@
-# PHASON RIOT — Living Quasicrystal Studio · Phase 008
+# PHASON RIOT — Living Quasicrystal Studio · Phase 009
 
-PHASON RIOT is an offline-capable, zero-dependency animated generative art studio using genuine finite five-family de Bruijn pentagrid geometry. Its main artifact is `index.html`; no Netlify deployment, paid API, server logic, or build system is needed. Serve `index.html` in a JavaScript-enabled webpage (e.g. GitHub Pages), **not** an iPhone Files/HTML preview.
+PHASON RIOT is a **touch-first, zero-dependency art application** built around a genuine finite de Bruijn five-family dual pentagrid. Open `index.html` through GitHub Pages (or another JavaScript-enabled local HTTP server), not a GitHub code view or iPhone Files preview. The application does not require Netlify, a paid API, remote backend, or build system.
 
-## Phase 008: The Cultivation Chamber
+## Phase 009: The Species War
 
-Real tile-by-tile life cycles evolve on the existing **shared-edge rhombus adjacency graph**, driven by accumulated signal energy and fatigue. This is an original artist-designed dynamical model, *not* scientifically validated neural/biological kinetics, nor a local phason-flip simulation.
+Synthetic electric colonies now carry individual, bounded **genomes**. This is a mathematical art ecology, not biological genetics or a claim that these are actual physical quasicrystal defects. The new **Species War** tab has a master ON/OFF switch and four editable genes for whichever source is selected:
 
-The three regimes alter the **signal-transfer operator itself**, not just the tile colors:
+| Trait | Range | What actually changes |
+| --- | --- | --- |
+| **Tile preference** (`affinity`) | −1..+1 | Source-specific neighbor edge weights: positive favors **thick** rhombi, negative **thin**. The neighbor-weighted mean is normalized to preserve boundedness. |
+| **Sabotage** (`inhibition`) | 0..2 | A colony inhibits its *rival* owners through local concentration. Every rival contributes according to its **own** genome. |
+| **Stamina** (`stamina`) | 0.45..2 | Controls the rate of fatigue accumulation in tile regimes dominated by that source; also modifies that source's vulnerability to rival suppression. |
+| **Recovery** (`recovery`) | 0.45..2 | Controls the fatigue recovery rate at tiles currently dominated by that source. |
 
-- **Dormant (q=0):** lower conduction. Wakes when strongest energy exceeds adjustable Wake threshold, provided fatigue is low enough.
-- **Conducting (q=1):** increased neighbor-to-neighbor transfer. Accumulates fatigue from actual concentration and switches to refractory after sustained exhaustion (fatigue ≥ 0.72).
-- **Refractory (q=2):** sharply restricted conductivity; outgoing edge weight is 0.1 of normal, source injection is blocked, and recovery requires minimum dwell plus fatigue ≤ 0.24.
+Genomes use species-based templates for **Bloom**, **Leech**, and **Fossil**, and support source-specific manual editing, deterministic seeded **Mutate** (incrementing persistent `geneSerial`), template reset, and two-parent **Crossbreed**. Breeding creates a new independent source with its own ID and blended bounded traits. The parents, their identities, and existing mathematical history remain unchanged. Maximum six sources. Undo/Redo preserve all genomic edits and new source identities; recipe JSON includes all genes.
 
-The new **Cultivation** tab holds the ON/OFF toggle (OFF returns to the Phase 007 equation), Wake threshold, Exhaustion/tick, Recovery/tick, Minimum refractory ticks, and independent Life-cycle glow. Live counts show conducting, refractory and dormant rhombi. **⚡ Cultivate +60 history steps** performs a bounded fast-forward at fixed present geometry and saves a single Undo checkpoint.
+Optional **competition frontiers** visually connect actual adjacency links between neighboring rhombi whose strongest nontrivial signal belongs to different sources. A live **colony census** reports the number of rhombi actually dominated by each source; these are discrete winning territories, *not* area fractions or percentages of the infinite tiling.
 
-The preexisting Signal Garden source controls, twin pentagrid, seven phason motion laws, graph stitches, color territory modes, materials, aspect ratios, palette imports, PNG/GIF/MP4 exports, and Undo/Redo are preserved.
+### Switch OFF = previous equations
 
-## History / compatibility
+When `speciesWar` is disabled, all genetic modifications are ignored by the graph simulation. The Phase 008 transport, inhibition, fatigue, and recovery laws run **unchanged**, even if the source objects still carry customized genomes. The feature does not rewrite the pentagrid, replace existing palettes, delete strokes, or alter twin-field animations. Phase 009 defaults to ON in a fresh studio, with an immediate OFF switch for comparisons.
 
-- New checkpoint `signal-memory-v2` includes concentrations per source, scars, fatigue, regime and dwell, keyed by intersection ID plus five-dimensional K-label. Global phason rearrangement retains history **only** for still-identical rhombi.
-- The recipe envelope remains `phason-riot-1`. Version 1 signal histories load as dormant tiles with zero fatigue, while older recipes without histories start empty.
-- Concentration/scar/fatigue values are saved as **8-bit quantized fields**. Restarting from a checkpoint approximates uninterrupted execution; it is *not* bit-for-bit identical. Same initial conditions and simulation steps before compression replay deterministically.
-- Stateful life history is **not periodic**. Existing looping GIF and browser-supported real MP4 exports use a *frozen memory portrait* while periodic phason and chromatic parts animate. MP4 is available only where native `MediaRecorder` reports actual `video/mp4` support, never by renaming WebM.
+## Mathematics / truth boundaries
 
-## Testing
+Under `genetics=true`, source-specific neighbor contributions are weighted by
 
-- `node test-007.cjs` — Phase 007 history and graph regression.
-- `node test-008.cjs` — deterministic same-start simulation; three regimes; ON/OFF causal ablation; bounded checkpoint values; version 1 migration; approximate resumed checkpoint; non-mutating view; phason remap.
-- Local Chromium checks at 390×844 and 1280×900 tested HTML execution and rendering, controls/toggle/slider, recipe JSON download, and JavaScript runtime errors. A separate paused +60-step test verified Undo restored the earlier tick count.
-- Physical iPhone Safari performance and codec support remain unverified.
+`w_j(k) = 1 + 0.62 × affinity_j × (tile[k].thick ? +1 : −1)`
 
-No GitHub Action, Netlify deploy, paid API or external analytics is required.
+with normalized weighted averages, so `w_j(k)` remains strictly positive for all permitted traits. Rival penalty for source `j` depends on the concentrations of *other* sources multiplied by their `inhibition` traits. The tile's maximum-energy source determines local stamina/recovery modifiers used by the existing dormant–conducting–refractory state machine.
+
+This synthetic ecology uses a **global per-tile** life-cycle regime (shared by all species at that tile), not a separate neuronal compartment for every species. Genetics are changed by the artist's buttons, not automatically bred by simulation history. Newborns are created by seeded arithmetic blending with small bounded variation; no evolutionary optimization or Darwinian fitness is claimed. Real local phason flips, thermal quasicrystal dynamics, physical interference colors and true biological genetics are not implemented.
+
+The signal-history checkpoint remains `signal-memory-v2`, keyed by original tile intersection ID and five-dimensional K-label; recipe envelope remains `phason-riot-1`. Old recipes with sources that lack `genes` transparently receive their species template. All history save/load caveats remain: 8-bit concentrations/fatigue are quantized, so checkpoint resume is **approximately**, not bitwise, identical. An unsaved continuous deterministic simulation replays exactly with the same seed and update steps. Nonperiodic living memory is **frozen** during periodic GIF/MP4 exports, so the actual evolving ecology is not a mathematically perfect loop.
+
+## Controls
+
+1. **Signal Garden** → plant/move up to six electric sources using ✺ Seed. Control their power, hue and broad species identity.
+2. **Cultivation** → turn tile regime changes ON, tune fatigue/recovery, or use Undoable **Cultivate +60 history steps**.
+3. **Species War** → select a source; change four genes, mutate, pick another parent and crossbreed; toggle the law and frontier overlay.
+4. All other existing panels are preserved: Motion, Materials, Twin Field, Geometry, Color, Export.
+
+## Verification
+
+- `node test-007.cjs` and `node test-008.cjs`: preserved regressions.
+- `node test-009.cjs`: deterministic reproduction, unchanged exact OFF baseline, causal tests for all four genes, stable bounded mutation and two-parent breeding, immutable census and checkpoint retention.
+- Local Chromium tests at 390px and 1280px: real source-select, gene slider, mutate, breed, Undo/Redo, recipe download, ON/OFF census and runtime exception checks.
+- Local paused evolution check: 60 history steps, restored with Undo/Redo, real owner counts of 21/17 in that tested two-source setup.
+- Actual 360×360 16-frame GIF produced, decoded with Pillow, 2,000 ms total duration and infinite loop flag.
+- Physical iPhone Safari, native MP4 codec/performance and public Pages availability are **not independently verified**.
+
+No GitHub Actions, Netlify builds, or paid services were run for this development phase.
