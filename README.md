@@ -1,34 +1,25 @@
-# PHASON RIOT — Phase 013 · The Physical Pattern Lab
+# PHASON RIOT — The Living Pattern Network · Phase 014
 
-A touch-first, single-file generative art app driven by a real finite five-family de Bruijn dual pentagrid, independently animated twin grid, living colonies, authored shared-edge routes, inherited traits and synthetic relationship memory. `index.html` runs without CDNs, build tools or paid APIs. Serve it from GitHub Pages or another static server; iPhone Files/ChatGPT HTML preview generally does **not** execute the app.
+Self-contained animated math-art studio: open index.html in a JavaScript-enabled web page such as GitHub Pages. iPhone Files Quick Look and GitHub source view do not execute it. No Netlify, paid API or build step.
 
-## What shipped in 013
+## What's new
 
-The **Patterns** tab now contains **17** families, including the prior fourteen and three new modes:
+**⚗ Reagents touch tool:** three real interventions in the numerical Gray–Scott U/V grid: inject activator V, erase activator V, or replenish substrate U. Touch brush width and strength are adjustable. Stamps are bounded and spatially toroidal. A whole stroke is one Undo/Redo action; paused artwork redraws immediately. Chemical history is saved in the existing gray-scott-v1 checkpoint, with 8-bit quantization (so resumed Float32 evolution is approximate).
 
-1. **Delaunay — actual triangulation.** A deterministic seeded set of jittered sites is passed through Bowyer–Watson. Triangles satisfy the empty circumcircle criterion. Rendered lines follow actual computed edges, not a triangle-grid visual approximation.
-2. **Voronoi dual — shared circumcenters.** Adjacent triangles from the *same Delaunay site set* generate clipped, finite dual segments between their circumcenters. (Unbounded Voronoi rays at the outside are not drawn.) The original artistic Voronoi field remains available separately.
-3. **Gray–Scott — numerical reaction–diffusion.** A fixed-step 96×96 periodic-grid simulation integrates two chemical fields with Du=0.16, Dv=0.08, selectable feed and kill coefficients, seeded initial concentrations and eight-neighbor Laplacian. This is a model-inspired creative simulation, **not measured chemical physics**. It has its own state and is not inherently periodic.
+**⚡ Chemistry changes electricity:** optional causal bridge from V concentration sampled at each rhomb center into the real shared-edge electrical transport law. Three modes—promote, suppress and contrast—plus influence strength. This is an original artistic heterogeneous conductivity model, not biologically validated physics. No imaginary edges or global energy-conservation claim. With coupling OFF, Pattern Lab OFF, or zero influence, the old Phase 013 transport operator is exactly unchanged.
 
-For each of the three pattern layers, **Driven by** can select independent / revealed by previous / inverse previous. The layer-0 pattern may also control the *local feed coefficient in the actual Gray–Scott update* when **Pattern A controls RD feed** is on. When A is itself the reaction field, the feed gate is disabled to avoid recursive self-sampling. The gate pattern is held at a reproducible frame while each bounded reaction batch advances.
+**Independent pattern palettes:** A/B/C can each select the main palette, any built-in palette, or imported named JSON palettes. Shuffle color roles independently. Surprise Me picks colors for each active layer without resetting colonies, genes, relationships or stitches. Recipe JSON includes all referenced named palettes and restores custom colors in a fresh browser.
 
-**◉ Paint Mask** gives you a one-finger brush on the canvas, configurable to erase/reveal. Use **Full** to erase portions of the existing stack and **Empty** to reveal only painted regions. Brush strokes persist in recipe JSON, and each stroke is one Undo/Redo transaction. Mask painting never mutates the Penrose grid, source energy, genomes, or ecological history. Pinch zoom remains supported.
+Existing pentagrid, twin grid, editable stitches, evolving colonies, signal genomes, alliances/feuds, Underground routes, 17 pattern families, genuine Delaunay/Voronoi dual, numerical reaction-diffusion, PNG, looping GIF and capability-checked MP4 features are preserved.
 
-The **Grow +120** button advances numerical chemistry, not just the visual phase. **Freeze chemicals** sets numeric stepping to zero; **Reseed chemicals** reinitializes only this chemical field. Reaction-history checkpoints are included in Undo and recipe exports as lossy 8-bit concentrations (`gray-scott-v1`). Recipe reload has bounded quantization differences from uninterrupted execution. The live state intentionally is *not* guaranteed to loop; GIF/MP4 renders freeze it and sample closed periods of the original phason/chromatic animation.
+## How to try it
 
-## Performance and backwards compatibility
+Enable Patterns; put Gray–Scott in an active layer; choose ⚗ Reagents from TOUCH; paint. Grow +120 to evolve the chemistry. Optionally enable Chemistry changes electricity to let chemical concentrations influence living colony transmission. Set separate palettes for A/B/C. Save a recipe to preserve colors and chemical history.
 
-- Phase 013 starts with Pattern Lab **OFF**, so the Phase 012 default picture is pixel-for-pixel identical. No hidden change to the existing signal simulation.
-- The 14 original patterns, routes, palettes, touch modes, saved genetics, relationship ecology and exports remain available.
-- New Delaunay/RD visual layers use a bounded 185px preview longest-edge raster and independently cached Delaunay meshes. RD feed gates precompute their spatial mask once per bounded batch.
-- Paused artwork avoids unnecessary repeated redraws, and a resize observer no longer clears unchanged canvas dimensions.
-- Legacy Phase 012 recipes load with the old visuals intact. New recipes save painted masks and chemical history.
-- Full-res PNG/MP4 overlays inherit the bounded texture resolution and may look softer than vector geometry. This is a performance tradeoff, not an actual continuous high-resolution PDE solver.
+## Testing
 
-## Test evidence
+Eight Node regression suites (007–014) passed locally. Phase 014 tests verify the three reagent modes, bounded values, deterministic replay, checkpoints, actual electrical consequences and exact OFF behavior. Chromium 390×844 and 1280×900 interaction tests passed: stroke Undo/Redo, palette selection, custom palette recipe roundtrip and no JS errors. Pattern Lab OFF matched Phase 013 pixel-for-pixel on both viewports. Actual GIF89a: 360×360, 16 decoded frames, 2.000 seconds, infinite loop.
 
-Run `node test-007.cjs` through `node test-013.cjs`. Phase 013 tests specifically check seed determinism, the Delaunay empty circumcircle property, finite dual adjacency, Gray–Scott deterministic fixed-step history, bounded concentrations, causal feed gating, save/reload, and isolation from the existing colony system.
+**Physical iPhone Safari and native MP4 were not retested** in this phase. Stateful chemical/electrical history does not inherently loop; looping GIFs freeze that history while periodic geometry/colors animate.
 
-Chromium checks were run at 390×844 and 1280×900: baseline pixel equality with Phase 012, Delaunay and dual Voronoi renders, 120 reaction steps, A→B visual gate, feed mask, painting, Undo/Redo and recipe save passed with no JS errors. GIF89a export decoded to 16 frames, 2.000s total, infinite loop. Old Phase 012 recipe and new Phase 013 chemical/brush recipe imported successfully.
-
-**A physical iPhone Safari was NOT tested. Native MP4 was preserved but not retested this phase.** No Netlify deployment, GitHub Actions or paid API calls.
+See ROADMAP.md and docs/PHASE-014-COUPLING.md.
