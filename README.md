@@ -1,36 +1,33 @@
-# PHASON RIOT — Living Quasicrystal Studio · Phase 007
+# PHASON RIOT — Living Quasicrystal Studio · Phase 008
 
-A standalone, mobile-first animated generative-art app based on the **finite five-family de Bruijn pentagrid** and its dual rhomb tiling. Everything is in `index.html` — no installation, CDN, build tooling, paid APIs, or Netlify deployment is necessary. To run it in Safari, use an actual webpage (e.g. enable GitHub Pages for this repo); the iPhone Files Quick Look HTML preview does **not** execute scripts.
+PHASON RIOT is an offline-capable, zero-dependency animated generative art studio using genuine finite five-family de Bruijn pentagrid geometry. Its main artifact is `index.html`; no Netlify deployment, paid API, server logic, or build system is needed. Serve `index.html` in a JavaScript-enabled webpage (e.g. GitHub Pages), **not** an iPhone Files/HTML preview.
 
-## What's new: Signal Garden
+## Phase 008: The Cultivation Chamber
 
-Phase 007 introduces an **actual evolving graph state**, not just a time-varying shader. The artist can plant up to **six persistent sources** onto the underlying rhomb network using the **✺ Seed** touch mode; drag the circle to reposition an existing source, pinch to zoom, use `Signal Garden` to select/edit sources, or press **Spawn a trio** for deterministic starting colonies. Each source has a power, hue, enabled state, and one of three phenotypes:
+Real tile-by-tile life cycles evolve on the existing **shared-edge rhombus adjacency graph**, driven by accumulated signal energy and fatigue. This is an original artist-designed dynamical model, *not* scientifically validated neural/biological kinetics, nor a local phason-flip simulation.
 
-- **Bloom**: relatively fast expansion to graph neighbors.
-- **Leech**: greater inhibition of rival source concentrations.
-- **Fossil**: slower expansion and slower energy loss.
+The three regimes alter the **signal-transfer operator itself**, not just the tile colors:
 
-A source injects energy at its nearest rhomb center. On each fixed, bounded `0.14s` simulation tick, tile concentrations spread **only along verified shared rhomb edges**, decay, and compete with rival concentrations. A separate stored **scar/imprint field** integrates past excitation, decays slowly, and changes subsequent diffusion, creating real history-dependent behavior. No randomness or wall-clock dependence exists in the equations themselves; live animation time determines how many discrete steps occur. Pausing stops progression. The math is an *invented graph-field artistic simulation*, not a claim of physical phason kinetics or scientific neuron dynamics.
+- **Dormant (q=0):** lower conduction. Wakes when strongest energy exceeds adjustable Wake threshold, provided fatigue is low enough.
+- **Conducting (q=1):** increased neighbor-to-neighbor transfer. Accumulates fatigue from actual concentration and switches to refractory after sustained exhaustion (fatigue ≥ 0.72).
+- **Refractory (q=2):** sharply restricted conductivity; outgoing edge weight is 0.1 of normal, source injection is blocked, and recovery requires minimum dwell plus fatigue ≤ 0.24.
 
-When global phason offsets rearrange tile neighborhoods, the simulator retains memory only on cells where **both** the stable grid intersection ID **and** its five-dimensional K-label remain the same. New or changed cell identities start without inherited concentrations. A source's world-space placement is persistent artwork state.
+The new **Cultivation** tab holds the ON/OFF toggle (OFF returns to the Phase 007 equation), Wake threshold, Exhaustion/tick, Recovery/tick, Minimum refractory ticks, and independent Life-cycle glow. Live counts show conducting, refractory and dormant rhombi. **⚡ Cultivate +60 history steps** performs a bounded fast-forward at fixed present geometry and saves a single Undo checkpoint.
 
-## Touch and controls
+The preexisting Signal Garden source controls, twin pentagrid, seven phason motion laws, graph stitches, color territory modes, materials, aspect ratios, palette imports, PNG/GIF/MP4 exports, and Undo/Redo are preserved.
 
-`✧ Primary` shifts the primary pentagrid's perpendicular-space offset. `◇ Twin` independently shifts the second pentagrid. `〰 Stitch` draws permanent guided graph routes. `✎ Edit` drags individual stitch control points or whole paths. `✺ Seed` plants or moves the Signal Garden's persistent colonies. Pinch to change camera zoom.
+## History / compatibility
 
-The Signal Garden tab has diffusion, decay, competition, memory, radiance, source phenotype, power, and hue settings. **Clear memory** resets only the signal histories and is undoable. **Clear all sources** requires confirmation and is undoable. Edits use the existing Undo/Redo snapshots, now including a compact quantized history checkpoint. The recipe JSON saves the source settings **and** the memory checkpoint; importing rehydrates the memory, not merely the source positions.
+- New checkpoint `signal-memory-v2` includes concentrations per source, scars, fatigue, regime and dwell, keyed by intersection ID plus five-dimensional K-label. Global phason rearrangement retains history **only** for still-identical rhombi.
+- The recipe envelope remains `phason-riot-1`. Version 1 signal histories load as dormant tiles with zero fatigue, while older recipes without histories start empty.
+- Concentration/scar/fatigue values are saved as **8-bit quantized fields**. Restarting from a checkpoint approximates uninterrupted execution; it is *not* bit-for-bit identical. Same initial conditions and simulation steps before compression replay deterministically.
+- Stateful life history is **not periodic**. Existing looping GIF and browser-supported real MP4 exports use a *frozen memory portrait* while periodic phason and chromatic parts animate. MP4 is available only where native `MediaRecorder` reports actual `video/mp4` support, never by renaming WebM.
 
-## Animation and export truth
+## Testing
 
-The 7 original analytically periodic phason motions, twin geometry, chromatic territories, guided routes, and color/material controls are preserved. **Signal Garden's stateful accumulation is not periodic.** PNG captures the current field. GIF and MP4 export freeze the current memory checkpoint and animate only the periodic geometry/color layers, giving a *looped memory portrait*, not a counterfeit perfectly repeating live simulation.
+- `node test-007.cjs` — Phase 007 history and graph regression.
+- `node test-008.cjs` — deterministic same-start simulation; three regimes; ON/OFF causal ablation; bounded checkpoint values; version 1 migration; approximate resumed checkpoint; non-mutating view; phason remap.
+- Local Chromium checks at 390×844 and 1280×900 tested HTML execution and rendering, controls/toggle/slider, recipe JSON download, and JavaScript runtime errors. A separate paused +60-step test verified Undo restored the earlier tick count.
+- Physical iPhone Safari performance and codec support remain unverified.
 
-GIF89a uses a local worker with a 256-color dithered palette. Native MP4 uses `MediaRecorder` **only when `video/mp4` is genuinely supported by the current browser**, with best-effort recording; a WebM file is never disguised as MP4. Frame loops may change discretely when the pentagrid reassigns tile types, and MP4 timing is not guaranteed to be frame-exact.
-
-## Verification
-
-- `node test.cjs`: full original geometry, rhomb neighbors, stitched routes, closed phason paths, all three branch species, and periodic color fields.
-- `node test-007.cjs`: deterministic history replay; competition and imprint ablation; finite bounded concentrations; save/load; state remapping across changed pentagrid neighborhoods; and non-mutating render-read checks.
-- Browser test (desktop Linux Chromium, viewport sizes **390×844 and 1280×900**): no page errors; source planting, trio, editing, Undo/Redo, JSON recipe export. Actual iPhone Safari still requires testing.
-- 360px/8fps two-second GIF: **16 decoded frames, exactly 2000ms** total duration.
-
-The 007 source is compatible with the existing app's `phason-riot-1` recipe format; recipes from older phases load without signal history and receive the new defaults. Nothing calls Netlify or third-party services.
+No GitHub Action, Netlify deploy, paid API or external analytics is required.
