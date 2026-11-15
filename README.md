@@ -1,50 +1,36 @@
-# PHASON RIOT — Living Quasicrystal Studio · Phase 006
+# PHASON RIOT — Living Quasicrystal Studio · Phase 007
 
-A **zero-dependency**, touch-first, offline generative-art studio. `index.html` is the entire app, with a finite de Bruijn five-family dual pentagrid, two independently animated phason fields, glowing adjacency networks, interactive stitched circuits, animated palettes, PNG, GIF, recipe JSON and browser-capability-checked MP4.
+A standalone, mobile-first animated generative-art app based on the **finite five-family de Bruijn pentagrid** and its dual rhomb tiling. Everything is in `index.html` — no installation, CDN, build tooling, paid APIs, or Netlify deployment is necessary. To run it in Safari, use an actual webpage (e.g. enable GitHub Pages for this repo); the iPhone Files Quick Look HTML preview does **not** execute scripts.
 
-## Play
+## What's new: Signal Garden
 
-To run on iPhone, enable GitHub Pages in **Settings → Pages → Deploy from a branch → main → /(root)**, then visit `https://merrypranxter.github.io/phason_riot/` in Safari. GitHub's HTML preview and iPhone Files Quick Look display the page but do **not** execute its interactive JavaScript. A real browser or JavaScript-capable HTML preview is required. No Netlify or paid API.
+Phase 007 introduces an **actual evolving graph state**, not just a time-varying shader. The artist can plant up to **six persistent sources** onto the underlying rhomb network using the **✺ Seed** touch mode; drag the circle to reposition an existing source, pinch to zoom, use `Signal Garden` to select/edit sources, or press **Spawn a trio** for deterministic starting colonies. Each source has a power, hue, enabled state, and one of three phenotypes:
 
-## Newly added in Phase 006
+- **Bloom**: relatively fast expansion to graph neighbors.
+- **Leech**: greater inhibition of rival source concentrations.
+- **Fossil**: slower expansion and slower energy loss.
 
-### Surgical route editing — the Gesture Witch
+A source injects energy at its nearest rhomb center. On each fixed, bounded `0.14s` simulation tick, tile concentrations spread **only along verified shared rhomb edges**, decay, and compete with rival concentrations. A separate stored **scar/imprint field** integrates past excitation, decays slowly, and changes subsequent diffusion, creating real history-dependent behavior. No randomness or wall-clock dependence exists in the equations themselves; live animation time determines how many discrete steps occur. Pausing stops progression. The math is an *invented graph-field artistic simulation*, not a claim of physical phason kinetics or scientific neuron dynamics.
 
-1. Choose **〰 Stitch** and draw a route on the artwork.
-2. Choose **✎ Edit**. Tap a route and drag its **white control nodes** to move individual points, *or* drag between nodes to translate the entire path.
-3. In **Geometry**, use **Insert control point** or **Delete selected point**. The app preserves at least two nodes and at most 28 per stitch, with at most eight stitches.
-4. Undo/Redo treats a finger gesture as one reversible edit. `pointercancel` rolls back. The route reprojects through actual shared-edge rhomb adjacency after edits; the fingertip's authored polyline is a **guide**, not a guarantee of a fixed rhomb path as phason offsets change.
+When global phason offsets rearrange tile neighborhoods, the simulator retains memory only on cells where **both** the stable grid intersection ID **and** its five-dimensional K-label remain the same. New or changed cell identities start without inherited concentrations. A source's world-space placement is persistent artwork state.
 
-### Three genuine branch behaviors
+## Touch and controls
 
-Routes can have independently selected **Wander**, **Fan**, or **Reef** branch species. Wander selects reproducible neighboring tiles; Fan favors outward directions; Reef favors highly connected nearby tiles. Every fork follows shared edges and returns along its path for loop closure. These are deterministic graph navigation styles, **not** biological growth or thermal physics.
+`✧ Primary` shifts the primary pentagrid's perpendicular-space offset. `◇ Twin` independently shifts the second pentagrid. `〰 Stitch` draws permanent guided graph routes. `✎ Edit` drags individual stitch control points or whole paths. `✺ Seed` plants or moves the Signal Garden's persistent colonies. Pinch to change camera zoom.
 
-### Independent living color territories
+The Signal Garden tab has diffusion, decay, competition, memory, radiance, source phenotype, power, and hue settings. **Clear memory** resets only the signal histories and is undoable. **Clear all sources** requires confirmation and is undoable. Edits use the existing Undo/Redo snapshots, now including a compact quantized history checkpoint. The recipe JSON saves the source settings **and** the memory checkpoint; importing rehydrates the memory, not merely the source positions.
 
-Under **Color**, select:
+## Animation and export truth
 
-- **Traveling fronts**: directional moving wavebands.
-- **Drifting islands**: two orbiting localized chromatic sources.
-- **Spiral regions**: rotating angular color domains.
-- **Off**: restore the Phase 005 color mapping.
+The 7 original analytically periodic phason motions, twin geometry, chromatic territories, guided routes, and color/material controls are preserved. **Signal Garden's stateful accumulation is not periodic.** PNG captures the current field. GIF and MP4 export freeze the current memory checkpoint and animate only the periodic geometry/color layers, giving a *looped memory portrait*, not a counterfeit perfectly repeating live simulation.
 
-Territories have independent **strength, harmonic and scale**. Their phase formulas close exactly for whole-number harmonic settings; they are used by tile, twin, signal, and stitched-route colors. This is a mathematically varying *color-field layer*, not colored pigment motion or a phason displacement.
+GIF89a uses a local worker with a 256-color dithered palette. Native MP4 uses `MediaRecorder` **only when `video/mp4` is genuinely supported by the current browser**, with best-effort recording; a WebM file is never disguised as MP4. Frame loops may change discretely when the pentagrid reassigns tile types, and MP4 timing is not guaranteed to be frame-exact.
 
-### Lamellar Opal material
+## Verification
 
-A stylized nacre-like finish with oriented, phase-shifting band highlights and optional glint strokes. Control **Lamellar sparkle** under Materials. This is artistic interference-inspired shading in Canvas2D, **not** measured spectral reflectance or thin-film simulation.
+- `node test.cjs`: full original geometry, rhomb neighbors, stitched routes, closed phason paths, all three branch species, and periodic color fields.
+- `node test-007.cjs`: deterministic history replay; competition and imprint ablation; finite bounded concentrations; save/load; state remapping across changed pentagrid neighborhoods; and non-mutating render-read checks.
+- Browser test (desktop Linux Chromium, viewport sizes **390×844 and 1280×900**): no page errors; source planting, trio, editing, Undo/Redo, JSON recipe export. Actual iPhone Safari still requires testing.
+- 360px/8fps two-second GIF: **16 decoded frames, exactly 2000ms** total duration.
 
-## Preserved
-
-The old settings, seed/determinism, built-in named palette stops and palette JSON imports, phason motion, twin field, stitches, GIF/PNG, recipe JSON, native MP4 capability checks, export clocks, 1:1/9:16/16:9/3:4/4:3 artwork ratios, and Undo/Redo all remain available. Existing recipes load with new fields defaulted; old routes gain the default `wander` species.
-
-## Truth and limits
-
-- The underlying pentagrid is a *finite patch*, not a periodic seamless square texture. Its global phason offsets cause **actual rhomb-neighborhood changes**, not a certified count of individual legal local phason flips.
-- GIF89a is genuine animated, indexed-color GIF. MP4 uses native browser encoding only when real `video/mp4` capture is supported; its real-time timestamps may drift, and iPhone Safari playback/encoding still needs on-device verification.
-- User's larger palette vault is not silently loaded from other apps. Import a named JSON palette archive if desired.
-- No Netlify calls, no remote image/font/audio fetches, no paid API, no build step.
-
-## Validation
-
-Run `node test.cjs` for mathematical geometry, closed branch paths, color phase closure and deterministic branching. Chromium tests exercised desktop (1280px) and mobile-sized (390px) screen layouts, drawing a route, point-specific drag, Undo/Redo, inserting/deleting nodes, choosing a branch species, switching material and color territories, valid PNG output, and a 16-frame/2.000s looped GIF. **Physical iPhone Safari has not been tested.**
+The 007 source is compatible with the existing app's `phason-riot-1` recipe format; recipes from older phases load without signal history and receive the new defaults. Nothing calls Netlify or third-party services.
