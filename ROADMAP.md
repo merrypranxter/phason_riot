@@ -1,23 +1,29 @@
-# PHASON RIOT — Roadmap after Phase 008
+# PHASON RIOT — Roadmap after Phase 009
 
-## Shipped in Phase 008
-- Tile-local Dormant / Conducting / Refractory regimes with *different actual conduction rules*.
-- Hysteretic state transitions based on activity, fatigue, recovery and minimum dwell; one-click OFF restores Phase 007 propagation.
-- New Cultivation tab and live counts, editable thresholds and regime optics.
-- Undoable **Cultivate +60 history steps** accelerated simulation.
-- `signal-memory-v2` checkpoints include fatigue, regime and dwell per stable tile identity, and load older v1 histories.
-- Regression tests, phone-sized and desktop Chromium control checks, preservation of earlier animation and drawing systems.
+## Delivered · Species War
 
-## Phase 009: Species ecologies
-- Per-source biological **artistic** genes: exhaustion response, recovery bias, conduction preference, rival inhibition.
-- Source-specific signals steering stitch-guide transmission, with clear ON/OFF causal tests.
-- Named signal histories, checkpoints, compares and safe restoration.
-- More visually distinctive materials without falsely claiming physical optics.
+- Four true graph-dynamics genes **per source**: thick/thin affinity, rival inhibition, stamina and recovery.
+- Completely reversible ON/OFF genetic law adapter; OFF matches original Phase 008 simulation exactly under matching starting conditions.
+- Seeded mutation and two-parent breeding with source identities, genome inheritance, bounded changes, source capacity guards and one-step Undo/Redo.
+- Actual adjacency-based competition frontiers and live per-colony owner census; adjustable visual strength, separate from simulation law toggle.
+- Backward-compatible JSON recipes and frozen history state; existing pentagrid, materials, palettes, strokes and exports preserved.
+- Node and Chromium browser checks; GIF test decoded and timing verified.
 
-## Phase 010: Export / mobile truth
-- Full physical-iPhone Safari testing including pointercancel, memory, downloads, and supported codecs.
-- Improved frame-controlled native MP4 when a trustworthy browser encoder exists.
-- Larger real GIFs with better palette quantization and responsive worker progress.
-- Saved scene library with reversible artwork versioning.
+## Phase 010 · The Long Memory
 
-**Integrity:** A moving global phason coordinate is not a simulated local phason flip; the life-cycle field is an invented graph simulation; saved checkpoints use lossy 8-bit quantization; disable experimental systems without wiping original designs. No Netlify or paid APIs.
+- Genomic **expression** from accumulated state (not automatic random mutation): tile-local thresholds and source-specific metabolic allocation; instrument causal change and OFF comparisons.
+- Three distinct ecology regimes: coexistence, territorial exclusion, symbiosis, each with explicit coupled transport equations and saved deterministic history. Do not rename simple color changes as different physics.
+- Contested-border formation and retreat histories, explicit dominance time series and simple colony census visualization.
+- More striking art materials linked to regimes: microscopic opal vein lace, electrochemical blooms, fossilized boundary scar tissue, all stylized until actual physical optics exist.
+- Source-aware touch brushes to inject stimulation into a chosen colony without moving the entire global pentagrid.
+
+## Phase 011 · Export / mobile reliability
+
+- Physical iPhone Safari test matrix for Pointer Events, paused/resumed state, memory, file downloads and true MP4 browser support.
+- Time-controlled encoder path where platform offers it. Do not fake MP4 or claim temporal precision from a real-time capture alone.
+- Animated evolving-memory video export as a separate **nonperiodic** mode, with deterministic fixed-tick video sampling and honest loop labels.
+- Larger true GIF exports with improved per-frame quantization and worker cancellation/progress.
+
+## Invariants
+
+Artist-owned immutable seed and undoable edits. Preserve all user-defined palettes and source documents. No Netlify, no paid API, no destructive resets, no unverified Penrose-periodic seams, and no claim of physical or biological fidelity from this speculative synthetic ecology.
