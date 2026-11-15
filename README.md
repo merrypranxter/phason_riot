@@ -1,25 +1,31 @@
-# PHASON RIOT — The Living Pattern Network · Phase 014
+# PHASON RIOT — Phase 015: The Chemical Feedback Loop
 
-Self-contained animated math-art studio: open index.html in a JavaScript-enabled web page such as GitHub Pages. iPhone Files Quick Look and GitHub source view do not execute it. No Netlify, paid API or build step.
+**Offline-capable, self-contained living quasicrystal studio.** Open index.html in a JavaScript-enabled browser or through GitHub Pages. GitHub source view and iPhone Files preview do not execute it. No Netlify deployment, paid APIs, package installation, external libraries or GitHub Actions are required.
 
 ## What's new
+A dedicated **⚡↔⚗ Feedback** tab keeps the new controls out of the long Patterns tab. The reciprocal bridge is OFF by default.
 
-**⚗ Reagents touch tool:** three real interventions in the numerical Gray–Scott U/V grid: inject activator V, erase activator V, or replenish substrate U. Touch brush width and strength are adjustable. Stamps are bounded and spatially toroidal. A whole stroke is one Undo/Redo action; paused artwork redraws immediately. Chemical history is saved in the existing gray-scott-v1 checkpoint, with 8-bit quantization (so resumed Float32 evolution is approximate).
+- **✦ Start 2-way feedback:** enables an existing or new Gray–Scott visual layer, real electrical colonies, the existing chemistry→electricity bridge and the new electricity→chemistry bridge. Does not erase existing signals, chemicals, seeds, palettes, routes, genes or bonds.
+- **Species-specific chemical production:** Bloom secretes activator V; Leech consumes V; Fossil replenishes U substrate. Three override modes apply one behavior to all enabled source species.
+- **Bounded strength and source-energy threshold.** Only the real owner-specific electrical concentration above a threshold deposits chemicals at existing rhomb centers. Deposits are applied locally to the 96×96 periodic Gray–Scott grid.
+- **⚡ Evolve +48 linked steps:** advances the same deterministic causal operator used live. One Undo/Redo transaction restores both chemical and electrical checkpoints.
+- **Disconnect only:** turns off new deposition without deleting either memory. Chemistry→electricity remains separately switchable. With OFF or strength zero the original Phase 014 behavior is unchanged.
+- **Reaction settings:** feed, kill and chemical substep count are available directly in the Feedback tab; the Patterns tab retains all 17 family options, painting/masks and independent palettes.
 
-**⚡ Chemistry changes electricity:** optional causal bridge from V concentration sampled at each rhomb center into the real shared-edge electrical transport law. Three modes—promote, suppress and contrast—plus influence strength. This is an original artistic heterogeneous conductivity model, not biologically validated physics. No imaginary edges or global energy-conservation claim. With coupling OFF, Pattern Lab OFF, or zero influence, the old Phase 013 transport operator is exactly unchanged.
+## Causal operator
+Each opt-in fixed step (1) evolves actual rhomb-graph electrical energy using the **previous chemical concentration**, (2) deposits synthetic source-specific reagents from the newly computed electrical energy, and (3) advances Gray–Scott chemistry by the chosen numerical substeps. The next electrical step reads the newly evolved chemical field.
 
-**Independent pattern palettes:** A/B/C can each select the main palette, any built-in palette, or imported named JSON palettes. Shuffle color roles independently. Surprise Me picks colors for each active layer without resetting colonies, genes, relationships or stitches. Recipe JSON includes all referenced named palettes and restores custom colors in a fresh browser.
+This is **original mathematical artwork**, not validated neuroscience, material chemistry or simulated local phason kinetics. The deposition law is nonconservative; chemical concentrations are clamped to [0,1]. Electrical connectivity remains real shared rhomb edges. With feedback disabled, the original Phase 014 independent clock path is executed unchanged. Recipe histories remain 8-bit quantized and resuming them is approximately, not bit-for-bit, identical to uninterrupted Float32 evolution. The living state is not temporally periodic; GIF/MP4 exports freeze history and loop the periodic visual fields.
 
-Existing pentagrid, twin grid, editable stitches, evolving colonies, signal genomes, alliances/feuds, Underground routes, 17 pattern families, genuine Delaunay/Voronoi dual, numerical reaction-diffusion, PNG, looping GIF and capability-checked MP4 features are preserved.
+## Tests performed
+- Nine local Node suites, test-007.cjs through test-015.cjs, passed. The new suite covers actual U/V secretion, consumption and replenishment, bounded fields, exact zero-strength behavior, deterministic replay, and causal divergence of one-way versus two-way history.
+- Browser tests at 390×844 and 1280×900 in Chromium: separate Feedback controls, activation without clearing prior signal state, 48 linked steps, both histories restored with Undo and Redo, disconnect, recipe export and no JavaScript exceptions.
+- With feedback OFF, Phase 015 matches Phase 014 **pixel for pixel** at both viewport sizes.
+- Verified real 360×360 GIF89a, 16 frames, infinite loop, total exactly 2.000 seconds.
+- Verified native H.264 MP4, 480×480, measured 2.0312 seconds on desktop Chromium for a requested 2-second loop. Real-time MP4 capture may vary in frame timing.
+- Physical iPhone Safari, thermal/memory behavior and social-app playback were **not** tested. A phone-sized Chromium viewport is not physical iPhone Safari.
 
-## How to try it
+## Try it
+Open **⚡↔⚗ Feedback**, tap **✦ Start 2-way feedback**, then **⚡ Evolve +48 linked steps**. Modify the gene/source species in Species War/Signal Garden; change which reagent they emit in Feedback; alter paints, visual layers and palettes in Patterns. Export a PNG, genuine GIF, supported true MP4 or full recipe.
 
-Enable Patterns; put Gray–Scott in an active layer; choose ⚗ Reagents from TOUCH; paint. Grow +120 to evolve the chemistry. Optionally enable Chemistry changes electricity to let chemical concentrations influence living colony transmission. Set separate palettes for A/B/C. Save a recipe to preserve colors and chemical history.
-
-## Testing
-
-Eight Node regression suites (007–014) passed locally. Phase 014 tests verify the three reagent modes, bounded values, deterministic replay, checkpoints, actual electrical consequences and exact OFF behavior. Chromium 390×844 and 1280×900 interaction tests passed: stroke Undo/Redo, palette selection, custom palette recipe roundtrip and no JS errors. Pattern Lab OFF matched Phase 013 pixel-for-pixel on both viewports. Actual GIF89a: 360×360, 16 decoded frames, 2.000 seconds, infinite loop.
-
-**Physical iPhone Safari and native MP4 were not retested** in this phase. Stateful chemical/electrical history does not inherently loop; looping GIFs freeze that history while periodic geometry/colors animate.
-
-See ROADMAP.md and docs/PHASE-014-COUPLING.md.
+See docs/PHASE-015-COUPLING.md and ROADMAP.md.
