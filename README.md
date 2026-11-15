@@ -1,53 +1,25 @@
-# PHASON RIOT — Living Quasicrystal Studio · Phase 010
+# PHASON RIOT — The Symbiotic Underground · Phase 011
 
-A zero-dependency, animated mathematical-art studio in one self-contained `index.html`. Its geometry is a finite five-family **de Bruijn dual pentagrid** with real phason offset animation. The app preserves the two independent pentagrid layers, touch editing, stitched graph routes, signal gardens, tile cultivation, colony genomes, named palettes and native-browser export paths from phases 001–009.
+Offline-capable single-file JavaScript art app using actual five-family de Bruijn pentagrid geometry. Open `index.html` in a JavaScript-enabled browser or enable GitHub Pages; iPhone Files Quick Look alone cannot run the app.
 
-## New in Phase 010 — The Long Memory
+## New: real stitched relationship corridors
+The Underground tab connects individually editable graph-projected stitches with the pairwise relationship scores of the Phase 010 Long Memory engine.
 
-Each colony pair now accumulates an **earned relationship score** in `[-1,1]`, contact strength in `[0,1]`, and history age in fixed simulation ticks. Scores are not assigned merely by a color preset; they arise from historical signal co-occupation and actual shared-edge frontier encounters. Positive bonds add a bounded mutual-aid term to local colony propagation. Negative bonds add a bounded territorial-exclusion term. They alter the **tile-energy equations**, not only the drawing.
+- Choose a colony pair, and **Grow corridor between pair** creates a new, undoable, editable route through real shared rhomb-edge connections. Or use **Bind selected stitch** / **Unbind** to pair an existing finger-drawn route.
+- A positive earned relationship adds bounded owner-specific transport along the corridor's actual shared edges, moving signal from higher-energy tiles toward lower-energy tiles. The *extra transfer* conserves transported energy; the wider simulation still has injection, damping and competition.
+- A negative earned relationship adds bounded inhibition at corridor contacts, reducing opposing energy. This artificial sink is deliberately nonconservative.
+- If the pair is neutral or the route is disabled, no new transport is applied. The bond must develop through actual fixed-step encounters; choosing Truce or Feud does not grant instant energy transfer.
+- **Underground ON/OFF**, independent transport strength and radiance, bound route and colony selectors, and undoable **Cultivate 120 relationship steps** controls. Cyan/teal and magenta edge flashes track alliance/feud, but are visualization rather than invented graph edges.
 
-New **Long Memory** tab:
+Old Phase 010 recipes import with Underground OFF; the **OFF baseline reproduces Phase 010 exactly**. The previously existing seven phason paths, twin grid, stitches and edit gestures, signal species, breeding, life cycles, palettes, GIF and browser-supported true MP4 are preserved. Global phason offsets may re-route corridor edges; the app does NOT claim to simulate locally legal Penrose phason flips.
 
-- **Enable Long Memory:** ON/OFF causal toggle. OFF freezes existing relationships and exactly restores the Phase 009 per-tile transport equation.
-- **Cooperative transfer** and **Territorial exclusion:** independently scale the positive and negative coupling terms.
-- **Relationship memory / tick:** sets how quickly repeated encounters update the score; when colonies do not meet, the score relaxes slowly.
-- **Relationship radiance:** cyan partnership chords or magenta rivalry chords. These chords are an annotation of remembered relationships between colony cores, **not** new mathematical edges in the pentagrid.
-- **Pair selector** and **Relationship tendency:** Adaptive, Truce, or Feud; these choose the target the learned score moves toward. They do not magically create an immediate alliance or feud.
-- **⚡ Evolve 120 steps:** advances true history at the present frozen pentagrid geometry, pauses and resumes playback, then stores one Undo checkpoint.
-- **Relationship census:** real pair scores and recorded simulation steps.
+## History and export limits
+Signal history is not periodic. Existing GIF and MP4 renderers freeze the current history while sampling periodic geometry/color loops. GIF is 8-bit indexed GIF89a; MP4 is only attempted when the browser truly supports video/mp4 recording. Memory snapshots quantize concentrations to 8-bit.
 
-Default new artworks have Long Memory ON; **imported recipes created before 010 automatically leave it OFF** to preserve legacy behavior. Old state files use `signal-memory-v1` or `signal-memory-v2`; relationship data is an **optional** `relationships` array added to v2 rather than changing the required file schema.
+## Tested
+- All existing Phase 007–010 Node suites passed; `node test-011.cjs` also passed: verified shared-edge routing, positive/negative causal effects, deterministic reproduction, source/route validation, phason reprojection, exact OFF baseline and save/load.
+- Phone-sized 390×844 and desktop 1280×900 Chromium: grow, bind/unbind, cultivate, Undo/Redo, recipe export, no JavaScript errors.
+- 360×360 GIF: 16 decoded frames, total 2.000 seconds, infinite loop. Phase 010 recipe import: Underground OFF.
+- Actual iPhone Safari and the platform's native MP4 encoder have **not** been tested in this phase. No Netlify build, paid API or GitHub Action was used.
 
-## Mathematical provenance and limits
-
-Five star vectors at 72° increments form a finite dual grid. Its internal two-parameter offsets are second-harmonic perpendicular-space coordinates, not simulated local thermodynamic phason flips. The Signal Garden is an **original artist-designed graph simulation**, not biology or a trained AI.
-
-For a colony `j` at rhomb `i`, the ecology extension changes its previous update by:
-
-`E_j'(i) = clip( E_j,baseline'(i) + 0.095 × help × (1-E_j(i)) × Σ_{h≠j} max(bond_jh,0) E_h(i) − 0.22 × exclusion × E_j(i) × Σ_{h≠j} max(-bond_jh,0) E_h(i) )`.
-
-Pair history updates after the entire field update (no dependence on the current frame color). Bond scores relax towards an encounter-dependent target via bounded exponential smoothing. On each tick, co-occupied rhombi and actual shared-edge frontier encounters determine contact. Adaptive mode incorporates genetic inhibition and rivalry. Truce/Feud modify the target sign when interactions are observed. The optional pair `relationships` array is quantized to four decimal places in saved checkpoints, while tile concentrations are quantized to 8-bit values. **Uninterrupted runs are deterministic**; reloading compressed checkpoints yields close rather than bit-identical future runs.
-
-The history is not periodic. GIF and supported native MP4 capture a **frozen history portrait** while periodic phason/chromatic phases animate. A valid GIF loop does not mean the colony simulation itself loops. Browser-native MP4 support varies; no WebM renaming is attempted. Finite Penrose patches are not square-tile seamless.
-
-## Running / deployment
-
-1. Enable GitHub Pages from the repository's `main` branch at the root folder, then open `https://merrypranxter.github.io/phason_riot/` in Safari. Pages availability is separate from committing source files.
-2. Or open `index.html` from a JavaScript-capable local HTML server/editor. iPhone Files Quick Look only previews HTML and **does not run** the JS app.
-3. No paid APIs, no external libraries, no GitHub Actions required, **no Netlify**.
-
-## Automated tests
-
-Run:
-
-```sh
-node test.cjs
-node test-007.cjs
-node test-008.cjs
-node test-009.cjs
-node test-010.cjs
-```
-
-Phase 010 verifies: exact Phase009 OFF ablation; sign and causal consequences of truce/feud; independent replay; bounded relationships; checkpoint storage and migration; non-mutating viewing; relationship survival after phason remap; deletion cleanup. Local Chromium checks were run at 390×844 and 1280×900 for tab controls, pairing, fast forward, Undo/Redo, recipe download, legacy recipe import, canvas display and JS errors. A real GIF89a loop was decoded with Pillow: 16 frames and 2,000 ms. **Physical iPhone Safari remains untested**.
-
-See `docs/PHASE-010-ECOLOGY.md` for the precise ecological mechanism and honest scope, and `ROADMAP.md` for future phases.
+See `ROADMAP.md` and `docs/PHASE-011-CONDUITS.md`.
