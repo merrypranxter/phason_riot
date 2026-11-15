@@ -998,3 +998,26 @@ function lzw(indices){
   const CLEAR=256,END=257;let dict=new Map(),next=258,bits=9;const raw=[];let buffer=0,used=0;
   function emit(v){buffer|=v<<used;used+=bits;while(used>=8){raw.push(buffer&255);buffer>>>=8;used-=8;}}
   function reset(){dict=new Map();next=258;bits=9;}
+  emit(CLEAR);let phrase=indices[0];
+  for(let i=1;i<indices.length;i++){
+    const k=indices[i],key=phrase*256+k,v=dict.get(key);
+    if(v!==undefined){phrase=v;continue;}
+    emit(phrase);
+    if(next<510){dict.set(key,next++);}
+    else {emit(CLEAR);reset();}
+    phrase=k;
+  }
+  emit(phrase);emit(END);if(used)raw.push(buffer&255);
+  for(let start=0;start<raw.length;start+=255){const len=Math.min(255,raw.length-start);byte(len);for(let j=0;j<len;j++)byte(raw[start+j]);}byte(0);
+}
+function frame(buffer,frameDelay){const rgba=new Uint8ClampedArray(buffer),ix=new Uint8Array(W*H),bayer=[0,8,2,10,12,4,14,6,3,11,1,9,15,7,13,5];
+  for(let y=0;y<H;y++)for(let x=0;x<W;x++){
+    const off=(y*W+x)*4,d=(bayer[(x&3)+((y&3)<<2)]-7.5)*2.3;
+    const r=Math.min(255,Math.max(0,rgba[off]+d)),g=Math.min(255,Math.max(0,rgba[off+1]+d)),b=Math.min(255,Math.max(0,rgba[off+2]+d));
+    ix[y*W+x]=(Math.floor(r/32)<<5)|(Math.floor(g/32)<<2)|(Math.floor(b/64));
+  }
+  byte(0x21);byte(0xf9);byte(4);byte(4);word(frameDelay||delay);byte(0);byte(0);
+  byte(0x2c);word(0);word(0);word(W);word(H);byte(0);byte(8);lzw(ix);count++;
+}
+onmessage=e=>{try{const d=e.data;if(d.type==='init')start(d.w,d.h,d.delay);else if(d.type==='frame')frame(d.pixels,d.delay);else if(d.type==='finish'){byte(0x3b);parts.push(chunk.subarray(0,usedBytes));const blob=new Blob(parts,{type:'image/gif'});postMessage({type:'done',blob,frames:count});}}catch(err){postMessage({type:'error',message:String(err)});}};
+</script></body></html>
