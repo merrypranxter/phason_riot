@@ -1,17 +1,21 @@
-# PHASON RIOT — Roadmap after Phase 012
+# PHASON RIOT — After Phase 013
 
-## Shipped and verified locally
-- Pattern Lab with fourteen deterministic mathematical procedural fields and three optional masked/blended layers.
-- Per-layer scale, rotation, seeded variation, opacity, contrast, motion harmonic, target selection and seven blend choices.
-- One/Two/Three quick remix modes, Surprise Me, and a non-destructive Pattern Reset with Undo/Redo.
-- Legacy recipe compatibility, exact Phase 011 canvas when OFF, math tests and a real 2-second GIF export.
-- Original pentagrid, living colonies, genetic breeding, cultivation, relationships, stitch corridors, palettes and export flows preserved.
+## Implemented / tested
 
-## Next: Phase 013 — Physical Pattern Laboratory
-1. Real **Delaunay triangulation** paired to the Voronoi dual, with validated edge connectivity.
-2. Optional numerical **Gray–Scott reaction-diffusion** field with fixed-step state, checkpoint and output isolation. The current analytic labyrinth is deliberately not called a PDE.
-3. Per-layer palette choices, sharper masks, pattern-driven gate masks, per-stop color shuffles and distinct preview tiles.
-4. Directly brush/edit pattern masks on the artwork with reversible gestures, avoiding any unintended simulation rewrites.
-5. Device-tested quality/performance tiers for Safari, stronger export resolution without stutters or excess memory.
+- 17 procedural families, including actual Delaunay triangulation, its mathematically paired finite Voronoi dual, and numerical Gray–Scott reaction diffusion.
+- 3-layer independent/previous/inverse masks; optional pattern A spatial feed modulation for real RD dynamics.
+- Single-finger reveal/erase mask painting, bounded persistent strokes, Undo/Redo, recipe serialization.
+- Seeded 96×96 periodic Gray–Scott field, Grow/Freeze/Reseed, checkpoint persistence and export-time history freeze.
+- Exact visual Phase 012 baseline when Pattern Lab OFF; 390px and desktop browser regression checks.
+- 16-frame GIF89a, 2-second infinite loop validated with actual decoder.
 
-No silent work resets, invented geometry claims, Netlify deployment, paid APIs or fake MP4/GIF looping.
+## Candidate Phase 014 — The living pattern network
+
+- Adjustable RD mesh resolution quality tiers with measured iPhone device performance and proper upsampling.
+- Brush-on **reaction reagent sources** that inject chemical concentration (separate from visual mask painting) with reversible strokes and protected canvases.
+- Optional feedback where RD state gates signal conductivity only when explicitly enabled, with strong causal ON/OFF tests (no invisible changes to old signal dynamics).
+- Shape-compatible Delaunay/Voronoi neighborhood data in editable meshes instead of only texture overlays; distinct material finishes and per-layer palettes.
+- Better preview switching/solo/A-B comparison, thumbnail gallery, composition locks and frame-wise export diagnostics.
+- Actual iPhone Safari tests including touchcancel, memory, GIF/MP4 support and platform share-sheet downloads.
+
+Integrity: A periodic visual loop is **not** a periodic Gray–Scott chemical trajectory; the pentagrid remains a finite non-square-seamless patch; a decorative overlay does not constitute local legal Penrose flips. Do not deploy to Netlify or use paid services without permission.
