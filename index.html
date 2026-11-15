@@ -3,14 +3,14 @@
 <style>
 :root{color-scheme:dark;--bg:#090a13;--panel:#131523;--panel2:#1c1e31;--line:#3b3b54;--text:#f4f2ff;--sub:#b9b4cc;--a:#e7ff72;--b:#ff63e5}*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 8% -8%,#53215a55,transparent 40%),radial-gradient(ellipse at 95% 1%,#103d5b66,transparent 42%),var(--bg);color:var(--text)}button,select,input{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--a);outline-offset:2px}button:disabled{opacity:.45;cursor:not-allowed}.shell{max-width:1120px;margin:auto;padding:14px 15px 50px}.mast{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:3px 0 12px}.brand{font-weight:950;letter-spacing:-1.3px;font-size:clamp(24px,5vw,40px);line-height:1}.brand em{font-style:normal;color:var(--a)}.smallcaps{font-size:10px;letter-spacing:2.5px;font-weight:800;color:var(--sub);margin-top:5px}.caps{font-size:10px;color:#c9bed4;letter-spacing:1.7px;text-transform:uppercase;font-weight:750}.status{display:flex;gap:8px;align-items:center;white-space:nowrap;font-size:11px;color:var(--sub);letter-spacing:1px}.dot{width:9px;height:9px;border-radius:50%;background:var(--a);box-shadow:0 0 10px var(--a)}.stage{background:#070711;border:1px solid #59526b;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 12px 50px #000b,0 0 70px #cc42e11a;display:flex;align-items:center;justify-content:center;isolation:isolate;min-height:220px}.stage canvas{display:block;max-height:66vh;max-width:100%;touch-action:none;user-select:none;-webkit-user-select:none;cursor:crosshair}.stage:before{content:'';pointer-events:none;position:absolute;z-index:2;inset:0;border:1px solid #ffffff16;border-radius:16px}.overlay{pointer-events:none;position:absolute;z-index:3;top:10px;left:12px;font-size:10px;line-height:1.6;text-shadow:0 2px 5px #000;letter-spacing:1px;color:#fff9}.overlay.right{left:auto;right:12px;text-align:right}.toolbar{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 12px;align-items:center}.btn{border:1px solid #615d7c;background:#202238;border-radius:10px;color:white;padding:10px 12px;font-weight:700;min-height:40px}.btn:hover{border-color:#cbb7f7}.btn.primary{background:var(--a);border-color:var(--a);color:#16151c}.btn.pink{background:#803777;border-color:#dc79d3}.btn.tiny{min-height:34px;padding:7px 10px;font-size:12px}.grow{flex:1}.tabs{display:flex;overflow-x:auto;gap:5px;padding:3px;border-radius:12px;background:#171824;scrollbar-width:thin}.tab{border:0;border-radius:9px;background:transparent;color:#b9b4cc;font-size:13px;font-weight:800;padding:11px 16px;white-space:nowrap}.tab.active{background:#343049;color:var(--a)}.panel{background:linear-gradient(160deg,#181a2c,#10111f);border:1px solid #3a3b58;border-radius:0 0 16px 16px;padding:16px;margin-top:-4px;min-height:205px}.description{font-size:13px;line-height:1.55;color:#c1bad2;max-width:750px;margin:1px 0 14px}.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 18px}.field{display:flex;flex-direction:column;gap:8px;min-width:0}.field label{font-weight:750;font-size:12px;display:flex;justify-content:space-between;gap:8px}.value{color:var(--a);font-variant-numeric:tabular-nums}.field input[type=range]{width:100%;accent-color:var(--a);height:20px}.field select{width:100%;color:#faf7ff;background:#25253c;border:1px solid #62627c;border-radius:8px;padding:10px;min-height:42px}.field option{background:#23223a}.help{font-size:11px;color:#a6a1bc;line-height:1.4}.swatches{display:flex;gap:6px;margin-top:7px}.swatches span{display:block;height:18px;flex:1;border-radius:4px;border:1px solid #ffffff2a}.inline{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.toggle{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;cursor:pointer}.toggle input{accent-color:var(--a);width:18px;height:18px}.notice{margin-top:15px;background:#242439;border-left:3px solid #c2ee6a;padding:10px 12px;color:#c7c5d4;font-size:12px;line-height:1.5}.footer{font-size:11px;color:#8986a3;line-height:1.6;margin-top:16px}.foot-em{color:#bfea80}.pill{border:1px solid #6d547d;border-radius:30px;padding:6px 10px;color:#e0d3e8;background:#201c32;font-size:11px}.summary{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 8px}.badge{border:1px solid #4f4d69;padding:5px 9px;border-radius:20px;font-size:11px;color:#e4deef}#errors{color:#ff9bba;font-size:12px;white-space:pre-wrap} .viewer-warning{position:absolute;z-index:4;inset:auto 12px 14px 12px;background:#29233c;border:1px solid #e7ff72;border-radius:14px;padding:14px;font-size:13px;line-height:1.55;color:#fff4fa;box-shadow:0 6px 28px #000a}.viewer-warning strong{display:block;color:#e7ff72;margin-bottom:3px}.phason-ready .viewer-warning{display:none} .metrics{font-size:11px;line-height:1.4;letter-spacing:.5px;color:#b9b4cc;padding:6px 3px 3px;overflow-wrap:anywhere}.touchbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:9px 0 1px}.touchlabel{font-size:10px;font-weight:850;letter-spacing:2px;color:#bdafd0;margin-right:3px}.touchchip{border:1px solid #514960;border-radius:99px;color:#d4c9ec;background:#171626;font-size:12px;font-weight:800;padding:7px 11px;min-height:36px}.touchchip.selected{background:#e7ff72;color:#161624;border-color:#e7ff72}.touchchip:focus-visible{outline:2px solid #ff61d8;outline-offset:2px}.touchhint{color:#a6a1bc;font-size:11px;flex-basis:100%;line-height:1.4;padding:0 0 3px 4px}.signalbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:4px 0 7px}.signalstate{color:#e7ff72;font-size:11px;font-weight:850;letter-spacing:1px}.signalbadge{font-size:11px;color:#cfc8e3;border:1px solid #53465e;padding:4px 8px;border-radius:22px}.hidden{display:none!important}@media(max-width:620px){.shell{padding:10px 10px 32px}.controls{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 12px}.panel{padding:13px}.brand{letter-spacing:-.6px}.stage canvas{max-height:55vh}.status{font-size:10px}.mast{margin-bottom:9px}.tab{padding:11px 12px}.toolbar{gap:5px}.btn{padding:9px 10px;font-size:12px}.overlay{font-size:9px}}@media(max-width:360px){.controls{grid-template-columns:1fr}.stage canvas{max-height:52vh}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style></head><body><main class="shell">
-<header class="mast"><div><div class="brand">PHASON <em>RIOT</em></div><div class="smallcaps">LIVING QUASICRYSTAL STUDIO · 008</div></div><div class="status"><span class="dot" id="liveDot"></span><span id="liveText">STRUCTURAL MOTION</span></div></header>
+<header class="mast"><div><div class="brand">PHASON <em>RIOT</em></div><div class="smallcaps">LIVING QUASICRYSTAL STUDIO · 009</div></div><div class="status"><span class="dot" id="liveDot"></span><span id="liveText">STRUCTURAL MOTION</span></div></header>
 <section class="stage" id="stage"><canvas id="art" aria-label="Interactive animated Penrose-style quasicrystal. Drag to shift phason offsets."></canvas><div class="overlay"><div>⊹ PENTAGRID / 05</div><div id="tileStats">GENERATING…</div></div><div class="overlay right"><div id="motionStats">U 0.00 · V 0.00</div></div><div class="viewer-warning"><strong>⚠ PREVIEW ONLY — JAVASCRIPT IS NOT RUNNING</strong>This preview cannot run the JavaScript engine. Open the published GitHub Pages site in Safari, or load this file into a JavaScript-enabled HTML editor. GitHub's code/file preview and iPhone Files Quick Look are NOT the running app.</div></section><div class="metrics" id="loopStats" aria-live="off">LOOP 08.0s</div>
 <div class="touchbar" aria-label="Artwork touch tool"><span class="touchlabel">TOUCH</span><button class="touchchip selected" id="touchPrimary" data-touch="primary" aria-pressed="true">✧ Primary</button><button class="touchchip" id="touchTwin" data-touch="twin" aria-pressed="false">◇ Twin</button><button class="touchchip" id="touchStitch" data-touch="stitch" aria-pressed="false">〰 Stitch</button><button class="touchchip" id="touchEdit" data-touch="edit" aria-pressed="false">✎ Edit</button><button class="touchchip" id="touchSource" data-touch="source" aria-pressed="false">✺ Seed</button><span class="touchhint" id="touchHint">Drag to change PRIMARY phason offsets · pinch to zoom</span></div>
 <div class="signalbar"><span class="signalstate" id="signalState">✺ LIVING MEMORY</span><span class="signalbadge" id="signalCounter">0 signal steps</span><span class="signalbadge" id="signalOwners">0 source colonies</span></div>
 <nav class="toolbar" aria-label="Artwork actions"><button class="btn primary" id="playBtn">Ⅱ Pause</button><button class="btn" id="newBtn">✦ New Design</button><button class="btn" id="undoBtn">↶ Undo</button><button class="btn" id="redoBtn">↷ Redo</button><span class="grow"></span><button class="btn" id="exportPng">↓ PNG</button><button class="btn" id="exportJson">↓ Recipe</button></nav>
-<nav class="tabs" aria-label="Editor sections"><button class="tab active" data-tab="motion">Motion</button><button class="tab" data-tab="material">Materials</button><button class="tab" data-tab="twin">Twin Field</button><button class="tab" data-tab="geometry">Geometry</button><button class="tab" data-tab="signals">Signal Garden</button><button class="tab" data-tab="cultivation">Cultivation</button><button class="tab" data-tab="color">Color</button><button class="tab" data-tab="export">Export</button></nav>
+<nav class="tabs" aria-label="Editor sections"><button class="tab active" data-tab="motion">Motion</button><button class="tab" data-tab="material">Materials</button><button class="tab" data-tab="twin">Twin Field</button><button class="tab" data-tab="geometry">Geometry</button><button class="tab" data-tab="signals">Signal Garden</button><button class="tab" data-tab="cultivation">Cultivation</button><button class="tab" data-tab="species">Species War</button><button class="tab" data-tab="color">Color</button><button class="tab" data-tab="export">Export</button></nav>
 <div class="panel" id="panel"></div><div id="errors" role="status"></div>
-<footer class="footer">REAL GEOMETRY: de Bruijn five-family dual pentagrid · RHOMBI: 36° / 72° · PHASON: global perpendicular-space offset path. GRAPH: actual shared-edge adjacency trails. The second pentagrid changes independently; saved editable routes and branched travelers traverse real shared-edge links and reroute with the geometry. Collisions are deterministic proximity flares, not kinetic impacts. PHASE 007: seeded sources diffuse, compete, and accumulate actual history on the graph. Export freezes the accumulated history while periodic geometry continues. These remain constructed artworks, not physical local phason kinetics. <span class="foot-em">No paid APIs. No Netlify. Works offline.</span></footer>
+<footer class="footer">REAL GEOMETRY: de Bruijn five-family dual pentagrid · RHOMBI: 36° / 72° · PHASON: global perpendicular-space offset path. GRAPH: actual shared-edge adjacency trails. The second pentagrid changes independently; saved editable routes and branched travelers traverse real shared-edge links and reroute with the geometry. Collisions are deterministic proximity flares, not kinetic impacts. PHASE 007: seeded sources diffuse, compete, and accumulate actual history on the graph. Export freezes the accumulated history while periodic geometry continues. These remain constructed artworks, not physical local phason kinetics. <span class="foot-em">Species War: inherited synthetic graph-conduction genes, with ON/OFF baseline. No paid APIs. No Netlify. Works offline.</span></footer>
 </main><script id="mathcore">
 const PhasonCore = (() => {
   'use strict';
@@ -214,6 +214,46 @@ const PhasonCore = (() => {
     for(const t of b.tiles) if(m.has(t.id)){shared++;if(m.get(t.id)!==t.label)changed++;}
     return {changed,shared};
   }
+  // PHASE 009: purely mathematical "genes" for synthetic colonies, not biological genetics.
+  const geneBounds={affinity:[-1,1],inhibition:[0,2],stamina:[.45,2],recovery:[.45,2]};
+  const geneTemplates={
+    bloom:{affinity:.65,inhibition:.65,stamina:.75,recovery:1.35},
+    leech:{affinity:-.55,inhibition:1.75,stamina:1.3,recovery:.78},
+    fossil:{affinity:.1,inhibition:.45,stamina:1.7,recovery:1.6}
+  };
+  function defaultGenes(species,values){
+    const template=geneTemplates[species]||geneTemplates.bloom, g={};
+    for(const [name,[min,max]] of Object.entries(geneBounds)){
+      const value=Number(values?.[name]);g[name]=clamp(Number.isFinite(value)?value:template[name],min,max);
+    }
+    return g;
+  }
+  function mutateGenes(species,genes,seed){
+    const random=seeded(seed),g=defaultGenes(species,genes);
+    for(const [name,[min,max]] of Object.entries(geneBounds))g[name]=Math.round(clamp(g[name]+(random()+random()-1)*(max-min)*.24,min,max)*100)/100;
+    return g;
+  }
+  function crossGenes(a,b,seed){
+    const random=seeded(seed),x=defaultGenes(a.species,a.genes),y=defaultGenes(b.species,b.genes),g={};
+    for(const [name,[min,max]] of Object.entries(geneBounds)){
+      const blend=.25+.5*random();g[name]=Math.round(clamp(x[name]*blend+y[name]*(1-blend)+(random()-.5)*.08*(max-min),min,max)*100)/100;
+    }
+    return g;
+  }
+  function colonyCensus(geo,field){
+    // A census reflects the actual per-source concentration winner on each tile.
+    const occupied=field.owners.map(()=>0),mass=field.owners.map(()=>0),leaders=new Int16Array(geo.tiles.length).fill(-1);
+    for(let i=0;i<geo.tiles.length;i++){
+      const vals=field.table.get(geo.tiles[i].id+'|'+geo.tiles[i].label);if(!vals)continue;
+      let best=.045,winner=-1;
+      for(let j=0;j<field.owners.length;j++){
+        const v=vals[j+1]||0;mass[j]+=v;
+        if(v>best){best=v;winner=j;}
+      }
+      leaders[i]=winner;if(winner>=0)occupied[winner]++;
+    }
+    return {leaders,occupied,mass};
+  }
   // Phase 007: bounded, deterministic, stateful propagation on the actual rhomb adjacency graph.
   // It is not a physical quasicrystal thermal model; stored deposits are artistic synthetic memory.
   // Phase 008: tile-local law selector. Three genuinely different conductance regimes.
@@ -282,6 +322,8 @@ const PhasonCore = (() => {
       const damping=numeric(opts.decay,.06,.003,.3),flow=numeric(opts.diffusion,.26,.01,.7);
       const rivalry=numeric(opts.competition,.28,0,1),imprint=numeric(opts.imprint,.12,0,1);
       const cultivating=opts.cultivation===true;
+      const genetics=opts.genetics===true;
+      const genes=genetics?src.map(sp=>defaultGenes(sp.species,sp.genes)):null;
       const wake=numeric(opts.wake,.11,.025,.5),exhaust=numeric(opts.exhaust,.05,.005,.18);
       const recover=numeric(opts.recover,.045,.005,.14),rest=numeric(opts.rest,10,3,48)|0;
       const starts=src.map(o=>{let best=-1,d=Infinity;for(let i=0;i<n;i++){
@@ -297,37 +339,48 @@ const PhasonCore = (() => {
         const bite=sp.species==='leech'?1.65:sp.species==='fossil'?.6:1;
         for(let i=0;i<n;i++){
           const linked=neighbors[i],degree=linked.length,q=cultivating?regimes[i]:0;
-          let mean=0;
+          let mean=0,weightSum=0;
           for(let k=0;k<degree;k++){
             const node=linked[k],neighborMode=cultivating?regimes[node]:0;
-            mean+=arr[node]*(cultivating?(neighborMode===2?.10:neighborMode===1?1.18:.8):1);
+            // An owner-specific graph operator favors thick or thin rhombi.
+            const bias=genetics?1+(geo.tiles[node].thick?1:-1)*genes[j].affinity*.62:1;
+            mean+=arr[node]*(cultivating?(neighborMode===2?.10:neighborMode===1?1.18:.8):1)*bias;
+            weightSum+=bias;
           }
-          if(degree)mean/=degree;else mean=arr[i];
-          const rival=Math.max(0,totals[i]-arr[i]);
+          if(degree)mean/=weightSum;else mean=arr[i];
+          // Rival inhibition is sourced from the *other* colonies' genomes.
+          let rival=Math.max(0,totals[i]-arr[i]);
+          if(genetics){rival=0;for(let h=0;h<energy.length;h++)if(h!==j)rival+=energy[h][i]*genes[h].inhibition;}
+
           const conductivity=cultivating?(q===2?.06:q===1?1.23:.9):1;
           const retention=1-selfDamp*(cultivating&&q===2?3:1);
           const supply=flow*factor*(mean-arr[i])*(1+1.6*scars[i])*conductivity;
-          const penalty=rivalry*bite*rival*arr[i]*.18;
+          const penalty=rivalry*bite*rival*arr[i]*.18*(genetics?1/(.7+.3*genes[j].stamina):1);
           const injection=sp.enabled!==false&&starts[j]===i&&!(cultivating&&q===2)
             ?numeric(sp.power,1,.1,2)*.26*(cultivating&&q===1?1.1:1):0;
           dest[i]=clamp(arr[i]*retention+supply-penalty+injection,0,1);
         }
       }
       for(let i=0;i<n;i++){
-        let strongest=0,total=0;
-        for(const row of next){strongest=Math.max(strongest,row[i]);total+=row[i];}
+        let strongest=0,total=0,dominant=-1;
+        for(let j=0;j<next.length;j++){
+          const value=next[j][i];total+=value;
+          if(value>strongest){strongest=value;dominant=j;}
+        }
+        const stamina=genetics&&dominant>=0?genes[dominant].stamina:1;
+        const repair=genetics&&dominant>=0?genes[dominant].recovery:1;
         scars[i]=clamp(scars[i]*(1-.005)+strongest*imprint*.025,0,1);
         if(!cultivating)continue; // OFF is the original causal law, not a color-only hide button.
         const q=regimes[i];ages[i]=Math.min(255,ages[i]+1);
         if(q===0){ // dormant retains tiny history, wakes only above threshold
-          fatigue[i]=clamp(fatigue[i]-recover*.55,0,1);
+          fatigue[i]=clamp(fatigue[i]-recover*.55*repair,0,1);
           if(strongest>=wake&&fatigue[i]<.58){regimes[i]=1;ages[i]=0;}
         }else if(q===1){ // conducting regime consumes capacity according to actual local excitation
-          fatigue[i]=clamp(fatigue[i]+strongest*exhaust+Math.max(0,total-strongest)*exhaust*.08-.009,0,1);
+          fatigue[i]=clamp(fatigue[i]+(strongest*exhaust+Math.max(0,total-strongest)*exhaust*.08)/stamina-.009,0,1);
           if(fatigue[i]>=.72&&ages[i]>=3){regimes[i]=2;ages[i]=0;}
           else if(strongest<wake*.36&&ages[i]>=3){regimes[i]=0;ages[i]=0;}
         }else{ // refractory: closes outgoing edges and blocks source injection, with minimum dwell
-          fatigue[i]=clamp(fatigue[i]-recover,0,1);
+          fatigue[i]=clamp(fatigue[i]-recover*repair,0,1);
           if(ages[i]>=rest&&fatigue[i]<=.24){regimes[i]=0;ages[i]=0;}
         }
       }
@@ -353,7 +406,7 @@ const PhasonCore = (() => {
     }
     return {advance,view,values,save,load,stats,stableKey};
   }
-  return {TAU,star,internal,clamp,seeded,offsets,makeGrid,generate,phasonAt,compare,walks,stitchRoutes,graphDepths,branchRoutes,routePosition,colorTerritory,createSignalMemory};
+  return {TAU,star,internal,clamp,seeded,offsets,makeGrid,generate,phasonAt,compare,walks,stitchRoutes,graphDepths,branchRoutes,routePosition,colorTerritory,createSignalMemory,defaultGenes,mutateGenes,crossGenes,colonyCensus};
 })();
 </script><script>
 (()=>{'use strict';
@@ -369,10 +422,11 @@ const palettes={
 'Ink & Gold':['#e5ae53','#ffc9a4','#c4d6ff','#faf0d7','#8656af','#ef8469']};
 const clean=(s)=>Array.isArray(s)?s.filter(x=>/^#[0-9a-fA-F]{6}$/.test(x)).slice(0,24):[];
 try{const loaded=JSON.parse(localStorage.getItem('phason_user_palettes')||'{}');for(const [k,v] of Object.entries(loaded))if(clean(v).length>=2)palettes[k]=clean(v);}catch{}
-const defaults={seed:1931,radius:8,zoom:1,mode:'orbit',period:8,amp:.82,baseU:0,baseV:0,material:'opal',palette:'Acid Carnival',intensity:1.1,glow:.65,edge:.7,comets:1,wave:1,speed:1,colorCycles:2,threadCycles:3,network:.6,structureSteps:96,showChanges:false,neonBoost:0,background:'#080b18',aspect:'square',showGrid:false,showNodes:true,twinEnabled:true,twinMode:'gyre',twinAmp:.56,twinPhase:.23,twinFrequency:2,twinOpacity:.36,twinScale:1.02,twinU:.08,twinV:-.12,twinStyle:'mesh',riderCount:14,riderSpeed:2,riderGlow:1,gifSize:'480',gifFps:'12',touchMode:'primary',stitches:[],stitchSerial:1,guideIntensity:1.3,guideCycles:2,linkStyle:'flow',previewFps:18,guideBranching:true,guideCollision:0.85,territoryMode:'fronts',territoryStrength:.65,territoryCycles:2,territoryScale:1.1,lamellarShine:.9,mp4Size:'720',mp4Fps:'16',signalEnabled:true,signalDiffusion:.32,signalDecay:.045,signalCompetition:.45,signalImprint:.35,signalIntensity:1.35,cultivationEnabled:true,cultivationWake:.11,cultivationExhaust:.05,cultivationRecover:.045,cultivationRest:10,cultivationGlow:.9,sourceSerial:3,sources:[{id:'src-1',pos:[-2.3,-1],species:'bloom',power:1,hue:.02,enabled:true},{id:'src-2',pos:[2.4,1.5],species:'leech',power:1,hue:.52,enabled:true}]};
+const defaults={seed:1931,radius:8,zoom:1,mode:'orbit',period:8,amp:.82,baseU:0,baseV:0,material:'opal',palette:'Acid Carnival',intensity:1.1,glow:.65,edge:.7,comets:1,wave:1,speed:1,colorCycles:2,threadCycles:3,network:.6,structureSteps:96,showChanges:false,neonBoost:0,background:'#080b18',aspect:'square',showGrid:false,showNodes:true,twinEnabled:true,twinMode:'gyre',twinAmp:.56,twinPhase:.23,twinFrequency:2,twinOpacity:.36,twinScale:1.02,twinU:.08,twinV:-.12,twinStyle:'mesh',riderCount:14,riderSpeed:2,riderGlow:1,gifSize:'480',gifFps:'12',touchMode:'primary',stitches:[],stitchSerial:1,guideIntensity:1.3,guideCycles:2,linkStyle:'flow',previewFps:18,guideBranching:true,guideCollision:0.85,territoryMode:'fronts',territoryStrength:.65,territoryCycles:2,territoryScale:1.1,lamellarShine:.9,mp4Size:'720',mp4Fps:'16',signalEnabled:true,signalDiffusion:.32,signalDecay:.045,signalCompetition:.45,signalImprint:.35,signalIntensity:1.35,cultivationEnabled:true,cultivationWake:.11,cultivationExhaust:.05,cultivationRecover:.045,cultivationRest:10,cultivationGlow:.9,speciesWar:true,speciesBorders:true,speciesBorderGlow:1,geneSerial:1,mateSourceId:'',sourceSerial:3,sources:[{id:'src-1',pos:[-2.3,-1],species:'bloom',power:1,hue:.02,enabled:true},{id:'src-2',pos:[2.4,1.5],species:'leech',power:1,hue:.52,enabled:true}]};
 const signalSim=C.createSignalMemory(); let signalAccumulator=0,selectedSourceId=null;
 let S={...defaults,sources:defaults.sources.map(x=>({...x,pos:x.pos.slice()}))},undo=[],redo=[],lastDraw=0,isPlaying=!window.matchMedia('(prefers-reduced-motion:reduce)').matches,elapsed=0,lastTime=0,current=null,grid=[],needGeom=true,geomStamp='',frameNo=0,reference=null,referenceStamp='',referenceLabels=null,twinGeo=null,twinStamp='',pointers=new Map(),gesture=null,selectedStitchId=null,selectedPointIndex=-1,mp4Cancel=false,recordingMp4=false;
-const TABS={motion:'Seven structural phason paths and real graph-linked filaments, now with individually named stitch voices, side branches and collision sparks. Use the TOUCH chips to manipulate the artwork.',material:'Try Lamellar Opal: phase-driven nacre-like bands and oriented faceting. This is stylized Canvas lighting, not a physical spectral optics solver.',twin:'Touch ◇ Twin above the controls to directly manipulate this second field. Two real pentagrid fields run their own internal-space orbits. Off restores the single-layer image. These are overlaid finite patches, NOT a magically seamless Penrose wallpaper.',geometry:'Use 〰 Stitch to draw. In ✎ Edit, drag a WHITE control point to reshape the route, or drag its line to move it. Select a point to insert/delete other points. Each route retains its own branch species. Actual five-family dual grid. Inspect changed K-label neighborhoods relative to the frozen base offset; this is NOT a certified count of local tile flips.',color:'Color territories move according to their own closed field: traveling fronts, drifting islands or spiral domains. They do not fake phason flips. Palette stops are unchanged and your colors are still yours.',signals:'Plant sources using ✺ Seed: tap empty geometry to grow a colony, drag a selected source to move it. Each source has its own species and hue. Real network diffusion, competition and fading territory memory; pause to inspect. Undo restores the saved memory checkpoint.',cultivation:'Individual rhombi genuinely change conducting rules after excitation and exhaustion: dormant → conducting → refractory → recovered. This is an invented, deterministic stateful graph model, not physical neuron kinetics. Disable it for Phase 007 baseline behavior.',export:'PNG and loop exports use a FROZEN memory snapshot while periodic phason animation continues; the living signal simulation itself is stateful and does not form a perfect periodic orbit. MP4 depends on browser support.'};
+S.sources=cleanSources(S.sources);
+const TABS={motion:'Seven structural phason paths and real graph-linked filaments, now with individually named stitch voices, side branches and collision sparks. Use the TOUCH chips to manipulate the artwork.',material:'Try Lamellar Opal: phase-driven nacre-like bands and oriented faceting. This is stylized Canvas lighting, not a physical spectral optics solver.',twin:'Touch ◇ Twin above the controls to directly manipulate this second field. Two real pentagrid fields run their own internal-space orbits. Off restores the single-layer image. These are overlaid finite patches, NOT a magically seamless Penrose wallpaper.',geometry:'Use 〰 Stitch to draw. In ✎ Edit, drag a WHITE control point to reshape the route, or drag its line to move it. Select a point to insert/delete other points. Each route retains its own branch species. Actual five-family dual grid. Inspect changed K-label neighborhoods relative to the frozen base offset; this is NOT a certified count of local tile flips.',color:'Color territories move according to their own closed field: traveling fronts, drifting islands or spiral domains. They do not fake phason flips. Palette stops are unchanged and your colors are still yours.',signals:'Plant sources using ✺ Seed: tap empty geometry to grow a colony, drag a selected source to move it. Each source has its own species and hue. Real network diffusion, competition and fading territory memory; pause to inspect. Undo restores the saved memory checkpoint.',cultivation:'Individual rhombi genuinely change conducting rules after excitation and exhaustion: dormant → conducting → refractory → recovered. This is an invented, deterministic stateful graph model, not physical neuron kinetics. Disable it for Phase 007 baseline behavior.',species:'Individual synthetic colonies carry editable genes that ACTUALLY change thick/thin edge preference, rival inhibition and local fatigue and recovery. Mutation and two-parent breeding are seeded and undoable. Turn Species War OFF to get exact Phase 008 equations.',export:'PNG and loop exports use a FROZEN memory snapshot while periodic phason animation continues; the living signal simulation itself is stateful and does not form a perfect periodic orbit. MP4 depends on browser support.'};
 const modes={orbit:'Orbit — smooth structural change',choir:'Choir — 2:3 Lissajous counterpoint',saw:'Riot — multi-frequency phason jumps',tide:'Tidal — stretched orbit',braid:'Braid — fivefold harmonic crossing',gyre:'Gyre — double-wound internal orbit',quake:'Quake — sharp structural transitions'};
 const mats={lamellar:'Lamellar Opal — living nacre',opal:'Opal cathedral',neon:'Electric circuitry',velvet:'Velvet brocade',mineral:'Mineral glass',ink:'Ink constellation',filament:'Living filament network',fault:'Phason faultlines',prism:'Prism faceted glass'};
 const aspectOpts={square:'1:1 Square',portrait:'9:16 Portrait',wide:'16:9 Wide',poster:'3:4 Poster',landscape:'4:3 Landscape'};
@@ -392,6 +446,7 @@ else if(active==='twin')markup=`${toggle('Enable second living pentagrid','twinE
 else if(active==='geometry')markup=`${field('Pentagrid radius','radius',4,14,1,'Bigger = more rhombi, heavier rendering.')}${field('Camera zoom','zoom',.65,2.5,.05,'Change framing without changing the grid.')}${chooser('Canvas composition','aspect',aspectOpts)}${field('Offset U','baseU',-1.5,1.5,.01,'Stable authored internal offset, draggable from canvas.')}${field('Offset V','baseV',-1.5,1.5,.01,'Other independent phason coordinate.')}${toggle('Pentagrid overlay','showGrid')}${field('Stitch glow','guideIntensity',0,2,.05,'Brightness of your graph-following stitched routes.')}${field('Stitch travel cycles','guideCycles',1,6,1,'Global integer harmonic; each route also has its own whole-number multiplier.')}${toggle('Living fork routes','guideBranching')}${field('Collision sparks','guideCollision',0,2,.05,'Nearby travelers create flashes at close approaches, not physically simulated impacts.')}<div class="field"><label>Stitch paths <span class="value" id="stitchCount">${S.stitches.length}/8</span></label>${button('Undo last stitch','removeStitch')}${button('Clear all stitches','clearStitches')}<span class="help">Draw with 〰 Stitch. Use ✎ Edit routes to drag any saved path; each path is re-projected onto genuine tile adjacency.</span></div>${stitchEditorMarkup()}${toggle('Show changing K-label boundaries','showChanges')}<div class="help" style="grid-column:1/-1">Changes are measured against frozen base U/V within the shared finite grid patch, not counted as isolated legal phason flips.</div>`;
 else if(active==='signals')markup=`${toggle('Enable persistent signal ecology','signalEnabled')}${field('Diffusion speed','signalDiffusion',.03,.65,.02,'Graph-neighbor diffusion per fixed simulation step, not shader-only motion.')}${field('Territory decay','signalDecay',.005,.16,.005,'Older energy fades, while accumulated tracks retain a slower imprint.')}${field('Competition','signalCompetition',0,1,.05,'Rivals inhibit each other on occupied nodes.')}${field('Territory memory','signalImprint',0,1,.05,'Past energy increases later transport and leaves slow-fading scars.')}${field('Signal radiance','signalIntensity',0,2,.05,'Glow of accumulated source territories; zero makes signals visually invisible.')}<div class="field" style="grid-column:1/-1"><label>Source colony controls</label><div class="inline">${button('✺ Spawn a source','sourceAdd','primary')}${button('✦ Spawn a trio','sourceTrio')}${button('Clear memory (Undoable)','memoryReset')}${button('Clear all sources','sourceClear')}</div><span class="help">Select ✺ Seed above. Tap an empty region to plant; drag an existing core to move it. Maximum six sources. Pausing freezes the real state; loops export a frozen snapshot.</span></div>${sourceEditorMarkup()}`;
 else if(active==='cultivation')markup=`${toggle('Activate history-dependent life cycles','cultivationEnabled')}<div class="field" style="grid-column:1/-1"><label>Accelerated cultivation</label>${button('⚡ Cultivate +60 history steps','cultivateBurst','primary')}<span class="help">Advance 60 fixed simulation steps at the CURRENT pentagrid geometry (without changing animation phase). One undoable action. Useful for seeing fatigue, refractory recovery and new growth faster.</span></div>${field('Wake threshold','cultivationWake',.025,.5,.005,'A dormant tile starts conducting once its strongest accumulated source concentration crosses this threshold.')}${field('Exhaustion / tick','cultivationExhaust',.005,.18,.005,'Conducting tiles accumulate fatigue proportionally to their real excitation; exhausted tiles switch to refractory.')}${field('Recovery / tick','cultivationRecover',.005,.14,.005,'Refractory tiles need time and falling fatigue before they can awaken again.')}${field('Minimum refractory ticks','cultivationRest',3,48,1,'Minimum number of fixed simulation steps a spent tile must remain refractory.')}${field('Life-cycle glow','cultivationGlow',0,2,.05,'Independent brightness of conducting (bright) and refractory (dark neon edge) overlays. Set zero for zero visual overlay.') }<div class="field" style="grid-column:1/-1"><label>Live conductor counts</label><div id="lifeReadout" class="notice">Simulation warms up after playback begins.</div><span class="help">The regime changes the actual signal-transfer operator. Shut cultivation OFF to restore the earlier diffusion law. Saved recipes include tile-local fatigue, regime, and dwell history; GIF/MP4 freeze that history while phason geometry loops.</span></div>`;
+else if(active==='species')markup=speciesPanelMarkup();
 else if(active==='color')markup=`${chooser('Named palette','palette',Object.fromEntries(Object.keys(palettes).map(k=>[k,k])))}${paletteWidget()}${field('Chromatic beats','colorCycles',0,8,1,'Integer color cycles per full structural loop. Zero locks colors in place.')}${field('Saturation violence','neonBoost',0,2,.05,'Push pastel/intermediate colors outward from gray; zero preserves palette exactly.')}${chooser('Moving color territories','territoryMode',{off:'Off — original color mapping',fronts:'Traveling chromatic fronts',islands:'Drifting color islands',spirals:'Countertwisting spiral regions'})}${field('Territory contrast','territoryStrength',0,1.5,.05,'Blend local color domains into rhomb, filament, and twin colors.')}${field('Territory rhythm','territoryCycles',0,6,1,'Integer territory cycles per one structural loop; 0 freezes regions.')}${field('Territory size','territoryScale',.4,2.8,.05,'Spatial scale of the colored regions.')}<div class="field" style="grid-column:1 / -1"><label for="paletteImport">Import named palette JSON</label><input type="file" id="paletteImport" accept="application/json,.json"><span class="help">Accepts {"My Palette":["#ff00ff","#00ffff",...]} or a single array of hex stops. Saved only to this browser.</span></div>${button('Shuffle color roles','shuffleColors')}`;
 else markup=`<div class="field"><label>Looped animated GIF</label>${chooser('GIF resolution','gifSize',{'360':'360px fast','480':'480px balanced','720':'720px detailed'})}${chooser('GIF frames per second','gifFps',{'8':'8 fps','12':'12 fps','16':'16 fps'})}${button('Render animated GIF','gifRender','primary')}<span class="help">Encodes actual GIF89a locally, no server. Higher settings need more iPhone memory. Captures exactly one structural loop without duplicating its final frame.</span></div><div class="field"><label>Native MP4 recording (browser-dependent)</label>${chooser('MP4 longest side','mp4Size',{'480':'480px preview','720':'720px HQ','1080':'1080px high res'})}${chooser('MP4 target FPS','mp4Fps',{'12':'12 FPS','16':'16 FPS','24':'24 FPS'})}${button('Record actual MP4','mp4Render','primary')}<span class="help" id="mp4Support">Probes the browser for genuine video/mp4 recording and rejects other containers. Records one loop in real time; exact timing and frame delivery are not guaranteed.</span></div><div class="field"><label>High resolution still</label>${button('PNG · 2048px longest edge','pngLarge','primary')}<span class="help">Uses the live artwork phase. Saves a static frame at a high resolution.</span></div><div class="field"><label>Art recipe</label>${button('Save recipe JSON','jsonLarge')}<span class="help">Reproducible seed, settings and palettes. Import below.</span></div><div class="field"><label>Load recipe</label><input type="file" id="recipeImport" accept="application/json,.json"><span class="help">Undoable and non-destructive until you select a file.</span></div><div class="field"><label>Frame sheet (loop atlas)</label>${button('Export 4 × 4 loop PNG','frameSheet')}<span class="help">16 evenly sampled phases (0 to 15/16, endpoint not duplicated).</span></div>`;
 panel.innerHTML=`<p class="description">${TABS[active]}</p><div class="controls">${markup}</div>${active==='export'?'<div class="notice" id="exportNotice">GIF export is genuine GIF89a animation (256-color dithered), not a sprite sheet. MP4 uses native browser encoding ONLY when video/mp4 is supported; no WebM file is renamed. Recorder FPS is best-effort, unlike exact-phase GIF frame sampling.</div>':''}`;
@@ -419,7 +474,7 @@ if($$('#cultivateBurst'))bindEl('cultivateBurst',async()=>{
  const button=$$('#cultivateBurst');if(button)button.disabled=true;
  try{
    const phase=((elapsed/S.period)%1+1)%1,geo=computed(phase);
-   const options={diffusion:S.signalDiffusion,decay:S.signalDecay,competition:S.signalCompetition,imprint:S.signalImprint,cultivation:S.cultivationEnabled,wake:S.cultivationWake,exhaust:S.cultivationExhaust,recover:S.cultivationRecover,rest:S.cultivationRest};
+   const options={diffusion:S.signalDiffusion,decay:S.signalDecay,competition:S.signalCompetition,imprint:S.signalImprint,cultivation:S.cultivationEnabled,wake:S.cultivationWake,exhaust:S.cultivationExhaust,recover:S.cultivationRecover,rest:S.cultivationRest,genetics:S.speciesWar};
    for(let i=0;i<60;i+=5){for(let j=0;j<5;j++)signalSim.advance(geo,S.sources,options);
      if(button)button.textContent=`Cultivating ${i+5}/60…`;
      await new Promise(requestAnimationFrame);
@@ -431,9 +486,31 @@ if($$('#sourceTrio'))bindEl('sourceTrio',()=>{const before=snapshot();const rng=
 if($$('#memoryReset'))bindEl('memoryReset',()=>{const before=snapshot();signalSim.load(null);addHistory(before);flash('The colony history is reset. Undo brings it back.');});
 if($$('#sourceClear'))bindEl('sourceClear',()=>{if(!S.sources.length||!confirm('Remove all planted sources? Undo restores them and their memory.'))return;const before=snapshot();S.sources=[];selectedSourceId=null;signalSim.load(null);addHistory(before);renderPanel();});
 if($$('#sourceSelect'))bindEl('sourceSelect',e=>{selectedSourceId=e.target.value;renderPanel();},'change');
-if($$('#sourceSpecies'))bindEl('sourceSpecies',e=>{const src=selectedSource();if(!src)return;const before=snapshot();src.species=e.target.value;addHistory(before);},'change');
+if($$('#sourceSpecies'))bindEl('sourceSpecies',e=>{const src=selectedSource();if(!src)return;const before=snapshot();src.species=e.target.value;src.genes=C.defaultGenes(src.species);addHistory(before);},'change');
 if($$('#sourceDelete'))bindEl('sourceDelete',()=>{const index=S.sources.findIndex(x=>x.id===selectedSourceId);if(index<0)return;const before=snapshot();S.sources.splice(index,1);selectedSourceId=S.sources[Math.min(index,S.sources.length-1)]?.id||null;addHistory(before);renderPanel();});
 for(const [id,prop] of [['sourceEnabled','enabled'],['sourcePower','power'],['sourceHue','hue']]){const el=$$('#'+id);if(!el)continue;let before=null;el.addEventListener('pointerdown',()=>before=snapshot());el.addEventListener('focus',()=>{if(before===null)before=snapshot()});const apply=()=>{const src=selectedSource();if(src)src[prop]=el.type==='checkbox'?el.checked:Number(el.value);if(el.type==='range'){const v=$$('#value-'+id);if(v)v.textContent=typeof src?.[prop]==='number'?src[prop].toFixed(2):String(src?.[prop]);}};el.addEventListener('input',apply);el.addEventListener('change',()=>{const old=before??snapshot();apply();addHistory(old);before=null;});}
+// Phase 009: one source genome edit is exactly one Undo transaction.
+if($$('#geneSelect'))bindEl('geneSelect',e=>{selectedSourceId=e.target.value;renderPanel();},'change');
+if($$('#geneMate'))bindEl('geneMate',e=>{S.mateSourceId=e.target.value;},'change');
+if($$('#geneSpecies'))bindEl('geneSpecies',e=>{const src=selectedSource();if(!src)return;const before=snapshot();src.species=e.target.value;src.genes=C.defaultGenes(src.species);addHistory(before);renderPanel();},'change');
+for(const name of ['affinity','inhibition','stamina','recovery']){
+ const id='gene-'+name,el=$$('#'+id);if(!el)continue;let before=null;
+ el.addEventListener('pointerdown',()=>{before=snapshot()});
+ el.addEventListener('focus',()=>{if(before===null)before=snapshot()});
+ el.addEventListener('input',()=>{const src=selectedSource();if(!src)return;src.genes=C.defaultGenes(src.species,{...src.genes,[name]:Number(el.value)});const display=$$('#value-'+id);if(display)display.textContent=Number(el.value).toFixed(2);});
+ el.addEventListener('change',()=>{const old=before??snapshot();const src=selectedSource();if(src)src.genes=C.defaultGenes(src.species,{...src.genes,[name]:Number(el.value)});addHistory(old);before=null;renderPanel();});
+}
+if($$('#geneTemplate'))bindEl('geneTemplate',()=>{const src=selectedSource();if(!src)return;const before=snapshot();src.genes=C.defaultGenes(src.species);addHistory(before);renderPanel();});
+if($$('#geneMutate'))bindEl('geneMutate',()=>{const src=selectedSource();if(!src)return;const before=snapshot();src.genes=C.mutateGenes(src.species,src.genes,S.seed+S.geneSerial++*17011);addHistory(before);renderPanel();});
+if($$('#geneBreed'))bindEl('geneBreed',()=>{
+ const a=selectedSource(),b=S.sources.find(x=>x.id===S.mateSourceId&&x.id!==a?.id)||S.sources.find(x=>x.id!==a?.id);
+ if(!a||!b){flash('Breed needs at least two parents. Plant another source first.');return;}
+ if(S.sources.length>=6){flash('Six colonies maximum. Delete one or edit an existing genome.');return;}
+ const before=snapshot(),r=rnd(S.seed+S.geneSerial*12931),genes=C.crossGenes(a,b,S.seed+S.geneSerial++*3907);
+ const newborn=createSource([C.clamp((a.pos[0]+b.pos[0])/2+(r()-.5)*1.7,-S.radius*1.5,S.radius*1.5),C.clamp((a.pos[1]+b.pos[1])/2+(r()-.5)*1.7,-S.radius*1.5,S.radius*1.5)],false);
+ newborn.species=r()>.5?a.species:b.species;newborn.genes=genes;newborn.hue=(a.hue+b.hue)*.5+(r()-.5)*.15;
+ addHistory(before);renderPanel();syncTouchMode();flash('New colony bred. Parents and their memories were preserved.');
+});
 if($$('#pngLarge'))bindEl('pngLarge',savePng);if($$('#jsonLarge'))bindEl('jsonLarge',saveRecipe);if($$('#frameSheet'))bindEl('frameSheet',saveSheet);if($$('#gifRender'))bindEl('gifRender',saveGif);
 }
 function flash(s){$$('#errors').textContent=s;setTimeout(()=>{if($$('#errors').textContent===s)$$('#errors').textContent=''},7000);}
@@ -450,16 +527,34 @@ function cleanSources(items){
  if(!Array.isArray(items))return [];
  const seen=new Set();return items.slice(0,6).filter(x=>x&&Array.isArray(x.pos)&&x.pos.length===2&&x.pos.every(n=>typeof n==='number'&&Number.isFinite(n)&&Math.abs(n)<100)).map((src,i)=>{
   let id=String(src.id||`src-restored-${i}`).slice(0,60);if(seen.has(id))id+=`-${i}`;seen.add(id);
-  return {id,pos:src.pos.slice(),species:['bloom','leech','fossil'].includes(src.species)?src.species:'bloom',enabled:src.enabled!==false,power:C.clamp(Number(src.power)||1,.1,2),hue:C.clamp(Number(src.hue)||0,-1,1)};
+  const species=['bloom','leech','fossil'].includes(src.species)?src.species:'bloom';
+  return {id,pos:src.pos.slice(),species,genes:C.defaultGenes(species,src.genes),enabled:src.enabled!==false,power:C.clamp(Number(src.power)||1,.1,2),hue:C.clamp(Number(src.hue)||0,-1,1)};
  });
 }
 function selectedSource(){return S.sources.find(x=>x.id===selectedSourceId)||null;}
 function createSource(pos,update=true){if(S.sources.length>=6){flash('Maximum 6 source colonies.');return null;}
  const i=S.sourceSerial++,species=['bloom','leech','fossil'][(i-1)%3];
- const src={id:`src-${S.seed}-${i}`,pos:pos.slice(),species,power:1,hue:(i*.341)%1,enabled:true};
+ const src={id:`src-${S.seed}-${i}`,pos:pos.slice(),species,genes:C.defaultGenes(species),power:1,hue:(i*.341)%1,enabled:true};
  S.sources.push(src);selectedSourceId=src.id;if(update){renderPanel();syncTouchMode();}return src;
 }
 function addSource(pos){const before=snapshot();const result=createSource(pos);if(result)addHistory(before);}
+function geneControl(name,label,explain,min,max,step){
+ const src=selectedSource(),val=src?.genes?.[name]??0;
+ return `<div class="field"><label for="gene-${name}">${label} <span class="value" id="value-gene-${name}">${val.toFixed(2)}</span></label><input type="range" id="gene-${name}" min="${min}" max="${max}" step="${step}" value="${val}"><span class="help">${explain}</span></div>`;
+}
+function speciesPanelMarkup(){
+ const src=selectedSource()||S.sources[0];if(src&&!S.sources.some(x=>x.id===selectedSourceId))selectedSourceId=src.id;
+ let ui=`${toggle('Enable genetic competition and inherited conduction','speciesWar')}${toggle('Illuminate competition frontiers','speciesBorders')}${field('Territory boundary glow','speciesBorderGlow',0,2,.05,'Brightness of borders between distinct energized source owners. Rendering only.')}<div class="field" style="grid-column:1/-1"><label>Real colony census</label><div id="geneReadout" class="notice">Advance simulation to measure territory. Census counts tiles where an owner has the strongest significant signal.</div></div>`;
+ if(!src)return ui+`<div class="field"><label>No colonies planted</label>Use ✺ Seed on the canvas, or add one under Signal Garden.</div>`;
+ const eligible=S.sources.filter(x=>x.id!==src.id);
+ return ui+`<div class="field"><label for="geneSelect">Edit colony genome</label><select id="geneSelect">${S.sources.map((x,i)=>`<option value="${esc(x.id)}" ${x.id===src.id?'selected':''}>${i+1} — ${esc(x.species)} (${esc(x.id)})</option>`).join('')}</select></div><div class="field"><label for="geneSpecies">Species archetype</label><select id="geneSpecies">${[['bloom','Bloom'],['leech','Leech'],['fossil','Fossil']].map(([k,v])=>`<option value="${k}" ${src.species===k?'selected':''}>${v}</option>`).join('')}</select></div>`
+ +geneControl('affinity','Tile preference','Positive prefers thick rhombi; negative prefers thin. Changes actual graph transport weights.',-1,1,.05)
+ +geneControl('inhibition','Sabotage strength','How strongly your signals inhibit competing owners on the same rhomb.',0,2,.05)
+ +geneControl('stamina','Conduction stamina','Higher stamina resists accumulated fatigue during activity.',.45,2,.05)
+ +geneControl('recovery','Recovery genetics','Higher recovery accelerates local dormancy/refractory fatigue healing.',.45,2,.05)
+ +`<div class="field" style="grid-column:1/-1"><div class="inline">${button('⚗ Mutate selected genome','geneMutate','primary')}${button('Reset genes to species','geneTemplate')}</div><span class="help">Mutation uses the saved seed and mutation counter; it does not change the selected colony’s identity or erase its history. Undo restores the previous genome.</span></div>
+ <div class="field"><label for="geneMate">Other parent</label><select id="geneMate">${eligible.map(x=>`<option value="${esc(x.id)}" ${S.mateSourceId===x.id?'selected':''}>${esc(x.id)} · ${x.species}</option>`).join('')}</select></div><div class="field"><label>Breed a descendant</label>${button('✦ Crossbreed two colonies','geneBreed','primary')}<span class="help">Up to six sources. New organism inherits a blend of both genomes and its own id; existing sources remain unchanged.</span></div>`;
+}
 function sourceEditorMarkup(){const src=selectedSource()||S.sources[S.sources.length-1];if(!src)return `<div class="field"><label>Empty Signal Garden</label><span class="help">Tap ✺ Seed to plant, or use Spawn a trio to begin a living network.</span></div>`;
  if(!S.sources.some(x=>x.id===selectedSourceId))selectedSourceId=src.id;
  return `<div class="field" style="grid-column:1/-1"><label for="sourceSelect">SELECTED SOURCE</label><select id="sourceSelect">${S.sources.map((x,i)=>`<option value="${esc(x.id)}" ${src.id===x.id?'selected':''}>Source ${i+1} · ${esc(x.species)}</option>`).join('')}</select>${button('Delete selected source','sourceDelete')}<span class="help">Drag its glowing circle in ✺ Seed mode. Selecting is non-destructive; dragging is one undoable transaction.</span></div><div class="field"><label for="sourceSpecies">Instinct</label><select id="sourceSpecies">${[['bloom','Bloom — fast colonizer'],['leech','Leech — suppresses rivals'],['fossil','Fossil — slow lasting deposits']].map(([value,title])=>`<option value="${value}" ${src.species===value?'selected':''}>${title}</option>`).join('')}</select></div><div class="field"><label for="sourcePower">Source power <span class="value" id="value-sourcePower">${src.power}</span></label><input type="range" id="sourcePower" min=".1" max="2" step=".05" value="${src.power}"></div><div class="field"><label for="sourceHue">Hue territory <span class="value" id="value-sourceHue">${src.hue.toFixed(2)}</span></label><input type="range" id="sourceHue" min="-1" max="1" step=".05" value="${src.hue}"></div><div class="field"><label class="toggle"><input type="checkbox" id="sourceEnabled" ${src.enabled?'checked':''}>Active / propagating</label></div>`;
@@ -648,6 +743,19 @@ if(S.signalEnabled && S.signalIntensity>0 && S.sources.length){
     }
   }
   st.restore();
+  if(S.speciesWar&&S.speciesBorders&&S.speciesBorderGlow>0){
+    const census=C.colonyCensus(geo,field);st.save();st.globalCompositeOperation='screen';st.lineCap='round';
+    const stride=Math.max(1,Math.ceil(geo.connections.length/(Math.min(w,h)<900?850:1500)));
+    for(let z=0;z<geo.connections.length;z+=stride){
+      const link=geo.connections[z],a=census.leaders[link.a],b=census.leaders[link.b];
+      if(a<0||b<0||a===b)continue;
+      const mid=p(link.mid),c1=p(geo.tiles[link.a].c),c2=p(geo.tiles[link.b].c),col=pickColor((sources[a]?.hue||0)+.25);
+      st.lineWidth=Math.max(.7,sc*.065)*S.speciesBorderGlow;st.strokeStyle=rgb(col,Math.min(.65,.24*S.speciesBorderGlow));
+      st.beginPath();st.moveTo(...c1);st.lineTo(...mid);st.lineTo(...c2);st.stroke();
+      drawPoint(mid[0],mid[1],Math.max(.7,sc*.09)*S.speciesBorderGlow,rgb('#ffffff',Math.min(.85,.3*S.speciesBorderGlow)));
+    }
+    st.restore();
+  }
 }
 if(S.sources.length){st.save();st.globalCompositeOperation='screen';for(const [i,source] of S.sources.entries()){
  const [x,y]=p(source.pos);if(x<-35||y<-35||x>w+35||y>h+35)continue;
@@ -663,9 +771,16 @@ return {shown,structural,connections:geo.connections.length};
 }
 function animate(ms){if(!lastTime)lastTime=ms;const dt=Math.min(.08,(ms-lastTime)/1000);lastTime=ms;if(isPlaying){elapsed+=dt*S.speed;signalAccumulator+=dt*S.speed;}const phase=((elapsed/S.period)%1+1)%1;if(ms-lastDraw<1000/C.clamp(Number(S.previewFps)||18,8,30)){requestAnimationFrame(animate);return;}lastDraw=ms;
 try{const geo=computed(phase);
- if(S.signalEnabled&&isPlaying&&S.sources.length){let steps=0;while(signalAccumulator>=.14&&steps<3){signalSim.advance(geo,S.sources,{diffusion:S.signalDiffusion,decay:S.signalDecay,competition:S.signalCompetition,imprint:S.signalImprint,cultivation:S.cultivationEnabled,wake:S.cultivationWake,exhaust:S.cultivationExhaust,recover:S.cultivationRecover,rest:S.cultivationRest});signalAccumulator-=.14;steps++;}}
+ if(S.signalEnabled&&isPlaying&&S.sources.length){let steps=0;while(signalAccumulator>=.14&&steps<3){signalSim.advance(geo,S.sources,{diffusion:S.signalDiffusion,decay:S.signalDecay,competition:S.signalCompetition,imprint:S.signalImprint,cultivation:S.cultivationEnabled,wake:S.cultivationWake,exhaust:S.cultivationExhaust,recover:S.cultivationRecover,rest:S.cultivationRest,genetics:S.speciesWar});signalAccumulator-=.14;steps++;}}
  else if(!S.signalEnabled||!isPlaying)signalAccumulator=0;
- const result=draw(canvas,canvas.width,canvas.height,phase,geo);if(frameNo++%10===0){$$('#signalCounter').textContent=signalSim.stats().tickCount+' history steps';$$('#signalOwners').textContent=S.cultivationEnabled?`${signalSim.stats().active} conducting · ${signalSim.stats().refractory} refractory`:(S.sources.length+' source colonies');$$('#signalState').textContent=!S.signalEnabled?'✺ MEMORY PAUSED':S.cultivationEnabled?'✺ CULTIVATION ACTIVE':'✺ LIVING MEMORY';const life=$$('#lifeReadout');if(life){const x=signalSim.stats();life.textContent=`${x.active} conducting · ${x.refractory} refractory · ${x.dormant} dormant · ${x.tickCount} steps`;}const [u,v]=gPhase(phase);$$('#tileStats').textContent=`${geo.thick} THICK · ${geo.thin} THIN`;$$('#motionStats').textContent=`U ${u.toFixed(2)} · V ${v.toFixed(2)}`;$$('#loopStats').textContent=`LOOP ${S.period.toFixed(1)}s · ${result.shown} TILES · ${result.structural.changed}/${result.structural.shared} CHANGED · ${result.connections} LINKS${S.twinEnabled?' · TWIN ACTIVE':''}${S.stitches.length?' · '+S.stitches.length+' STITCHES':''}${S.signalEnabled?' · '+signalSim.stats().occupied+' CHARGED':''}${geo.near?' · GRID DEGENERACY':''}`;}}catch(err){flash('Render issue: '+err.message)}requestAnimationFrame(animate);}
+ const result=draw(canvas,canvas.width,canvas.height,phase,geo);if(frameNo++%10===0){$$('#signalCounter').textContent=signalSim.stats().tickCount+' history steps';$$('#signalOwners').textContent=S.cultivationEnabled?`${signalSim.stats().active} conducting · ${signalSim.stats().refractory} refractory`:(S.sources.length+' source colonies');$$('#signalState').textContent=!S.signalEnabled?'✺ MEMORY PAUSED':S.cultivationEnabled?'✺ CULTIVATION ACTIVE':'✺ LIVING MEMORY';const genesUI=$$('#geneReadout');
+ if(genesUI){const census=C.colonyCensus(geo,signalSim.view(geo));
+   genesUI.textContent=`${S.speciesWar?'GENETIC LAWS ON':'PHASE 008 BASELINE'} · `+S.sources.map(src=>{
+    const idx=signalSim.view(geo).owners.indexOf(src.id);
+    return `${src.species} ${src.id.slice(-5)}: ${idx<0?0:census.occupied[idx]} tiles`;
+   }).join(' · ')+` · ${signalSim.stats().tickCount} history steps`;
+ }
+ const life=$$('#lifeReadout');if(life){const x=signalSim.stats();life.textContent=`${x.active} conducting · ${x.refractory} refractory · ${x.dormant} dormant · ${x.tickCount} steps`;}const [u,v]=gPhase(phase);$$('#tileStats').textContent=`${geo.thick} THICK · ${geo.thin} THIN`;$$('#motionStats').textContent=`U ${u.toFixed(2)} · V ${v.toFixed(2)}`;$$('#loopStats').textContent=`LOOP ${S.period.toFixed(1)}s · ${result.shown} TILES · ${result.structural.changed}/${result.structural.shared} CHANGED · ${result.connections} LINKS${S.twinEnabled?' · TWIN ACTIVE':''}${S.stitches.length?' · '+S.stitches.length+' STITCHES':''}${S.signalEnabled?' · '+signalSim.stats().occupied+' CHARGED':''}${geo.near?' · GRID DEGENERACY':''}`;}}catch(err){flash('Render issue: '+err.message)}requestAnimationFrame(animate);}
 function togglePlay(){isPlaying=!isPlaying;$$('#playBtn').textContent=isPlaying?'Ⅱ Pause':'▶ Play';$$('#liveDot').style.background=isPlaying?'#e7ff72':'#ff62e5';$$('#liveText').textContent=isPlaying?'STRUCTURAL MOTION':'PAUSED';}
 function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),12000);}
 function frameCanvas(maxEdge,phase){const a=getAspect();let w,h;if(a>=1){w=maxEdge;h=Math.round(maxEdge/a);}else{h=maxEdge;w=Math.round(maxEdge*a);}const output=document.createElement('canvas');output.width=w;output.height=h;draw(output,w,h,phase);return output;}
@@ -774,7 +889,7 @@ async function saveMp4(){
 function saveSheet(){try{const width=512,cols=4,rows=4,sheet=document.createElement('canvas');sheet.width=width*cols;sheet.height=width*rows;const k=sheet.getContext('2d');for(let i=0;i<16;i++){const c=frameCanvas(width,i/16);k.fillStyle='#080b18';k.fillRect((i%4)*width,Math.floor(i/4)*width,width,width);k.drawImage(c,(i%4)*width+(width-c.width)/2,Math.floor(i/4)*width+(width-c.height)/2);k.fillStyle='#ffffffbd';k.font='13px monospace';k.fillText(`${i+1}/16`,(i%4)*width+10,Math.floor(i/4)*width+24);}toBlob(sheet,b=>download(b,`phason-riot-${S.seed}-16-frame-sheet.png`));}catch(e){flash('Frame sheet export failed: '+e.message)}}
 function undoEdit(){if(!undo.length)return;redo.push(snapshot());restore(undo.pop());if(!selectedStitch())selectedStitchId=S.stitches[S.stitches.length-1]?.id||null;if(!selectedSource())selectedSourceId=S.sources[S.sources.length-1]?.id||null;resetGrid();renderPanel();resize();updateHistory();syncTouchMode();}
 function redoEdit(){if(!redo.length)return;undo.push(snapshot());restore(redo.pop());if(!selectedStitch())selectedStitchId=S.stitches[S.stitches.length-1]?.id||null;if(!selectedSource())selectedSourceId=S.sources[S.sources.length-1]?.id||null;resetGrid();renderPanel();resize();updateHistory();syncTouchMode();}
-function newDesign(){if(!confirm('Generate a different design? You can Undo to restore this one.'))return;const old=snapshot(),gen=rnd(S.seed+7919);S.seed=Math.floor(gen()*2147483647);S.material=Object.keys(mats)[Math.floor(gen()*Object.keys(mats).length)];S.palette=Object.keys(palettes)[Math.floor(gen()*Object.keys(palettes).length)];S.mode=Object.keys(modes)[Math.floor(gen()*Object.keys(modes).length)];S.amp=.4+gen()*1.1;S.baseU=(gen()-.5)*.6;S.baseV=(gen()-.5)*.6;S.sources=[{id:`src-${S.seed}-1`,pos:[(gen()-.5)*S.radius,(gen()-.5)*S.radius],species:'bloom',power:1,hue:gen(),enabled:true},{id:`src-${S.seed}-2`,pos:[(gen()-.5)*S.radius,(gen()-.5)*S.radius],species:'leech',power:1,hue:gen(),enabled:true}];S.sourceSerial=3;selectedSourceId=S.sources[0].id;signalSim.load(null);signalAccumulator=0;elapsed=0;resetGrid();addHistory(old);renderPanel();}
+function newDesign(){if(!confirm('Generate a different design? You can Undo to restore this one.'))return;const old=snapshot(),gen=rnd(S.seed+7919);S.seed=Math.floor(gen()*2147483647);S.material=Object.keys(mats)[Math.floor(gen()*Object.keys(mats).length)];S.palette=Object.keys(palettes)[Math.floor(gen()*Object.keys(palettes).length)];S.mode=Object.keys(modes)[Math.floor(gen()*Object.keys(modes).length)];S.amp=.4+gen()*1.1;S.baseU=(gen()-.5)*.6;S.baseV=(gen()-.5)*.6;S.sources=[{id:`src-${S.seed}-1`,pos:[(gen()-.5)*S.radius,(gen()-.5)*S.radius],species:'bloom',power:1,hue:gen(),enabled:true},{id:`src-${S.seed}-2`,pos:[(gen()-.5)*S.radius,(gen()-.5)*S.radius],species:'leech',power:1,hue:gen(),enabled:true}];S.sources=cleanSources(S.sources);S.sourceSerial=3;S.geneSerial=1;selectedSourceId=S.sources[0].id;signalSim.load(null);signalAccumulator=0;elapsed=0;resetGrid();addHistory(old);renderPanel();}
 for(const b of document.querySelectorAll('[data-tab]'))b.addEventListener('click',()=>{active=b.dataset.tab;for(const x of document.querySelectorAll('[data-tab]'))x.classList.toggle('active',x===b);renderPanel();});
 $$('#playBtn').addEventListener('click',togglePlay);$$('#newBtn').addEventListener('click',newDesign);$$('#undoBtn').addEventListener('click',undoEdit);$$('#redoBtn').addEventListener('click',redoEdit);$$('#exportPng').addEventListener('click',savePng);$$('#exportJson').addEventListener('click',saveRecipe);
 function syncTouchMode(){
@@ -883,26 +998,3 @@ function lzw(indices){
   const CLEAR=256,END=257;let dict=new Map(),next=258,bits=9;const raw=[];let buffer=0,used=0;
   function emit(v){buffer|=v<<used;used+=bits;while(used>=8){raw.push(buffer&255);buffer>>>=8;used-=8;}}
   function reset(){dict=new Map();next=258;bits=9;}
-  emit(CLEAR);let phrase=indices[0];
-  for(let i=1;i<indices.length;i++){
-    const k=indices[i],key=phrase*256+k,v=dict.get(key);
-    if(v!==undefined){phrase=v;continue;}
-    emit(phrase);
-    if(next<510){dict.set(key,next++);}
-    else {emit(CLEAR);reset();}
-    phrase=k;
-  }
-  emit(phrase);emit(END);if(used)raw.push(buffer&255);
-  for(let start=0;start<raw.length;start+=255){const len=Math.min(255,raw.length-start);byte(len);for(let j=0;j<len;j++)byte(raw[start+j]);}byte(0);
-}
-function frame(buffer,frameDelay){const rgba=new Uint8ClampedArray(buffer),ix=new Uint8Array(W*H),bayer=[0,8,2,10,12,4,14,6,3,11,1,9,15,7,13,5];
-  for(let y=0;y<H;y++)for(let x=0;x<W;x++){
-    const off=(y*W+x)*4,d=(bayer[(x&3)+((y&3)<<2)]-7.5)*2.3;
-    const r=Math.min(255,Math.max(0,rgba[off]+d)),g=Math.min(255,Math.max(0,rgba[off+1]+d)),b=Math.min(255,Math.max(0,rgba[off+2]+d));
-    ix[y*W+x]=(Math.floor(r/32)<<5)|(Math.floor(g/32)<<2)|(Math.floor(b/64));
-  }
-  byte(0x21);byte(0xf9);byte(4);byte(4);word(frameDelay||delay);byte(0);byte(0);
-  byte(0x2c);word(0);word(0);word(W);word(H);byte(0);byte(8);lzw(ix);count++;
-}
-onmessage=e=>{try{const d=e.data;if(d.type==='init')start(d.w,d.h,d.delay);else if(d.type==='frame')frame(d.pixels,d.delay);else if(d.type==='finish'){byte(0x3b);parts.push(chunk.subarray(0,usedBytes));const blob=new Blob(parts,{type:'image/gif'});postMessage({type:'done',blob,frames:count});}}catch(err){postMessage({type:'error',message:String(err)});}};
-</script></body></html>
