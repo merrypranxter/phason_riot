@@ -1,29 +1,22 @@
-# PHASON RIOT · Roadmap after Phase 006
+# PHASON RIOT — Development after Phase 007
 
-## Shipped through Phase 006
+## Shipped
 
-- Two independently orbiting real de Bruijn pentagrid fields and finite-patch neighborhood reassignments.
-- Actual tile adjacency-driven filaments and traveler routes.
-- Save up to eight editable stitch identities, whole-route dragging, surgical draggable control points, insert/delete, and deterministic re-routing.
-- Wander / Fan / Reef structural branch navigators with return traversal along the tile graph.
-- Independent, closed chromatic territories: traveling fronts, drifting islands, spiral regions; color layer reversible via Off and strength=0.
-- Lamellar Opal stylized animated material finish, plus original materials and palette imports.
-- GIF89a local encoder, PNG, JSON, native browser-only MP4 capability checks.
-- 390px/1280px Chromium checks and scriptable regression tests. No GitHub Actions or Netlify.
+- Phase 001–006: finite de Bruijn dual pentagrid, animated global phason coordinates, independent twin field, verified shared-edge graph, guided stitches, point-level editing, three branching families, moving color territories, stylized optical materials, exact-phase GIF89a worker, optional native MP4 recorder.
+- **007 — Signal Garden:** `✺ Seed` planting and dragging, Bloom/Leech/Fossil source species, graph-restricted energy spread, rival inhibition, actual stored imprint field affecting future motion, source-specific hue/power, compact history checkpoints, Undo/Redo and recipe round-trip, frozen-state periodic exports. Automated math and Chromium UI tests.
 
-## Phase 007 — A more articulate ecosystem
+## 008 — The Cultivation Chamber (proposed, NOT implemented)
 
-- Persistent named *signal sources* connected to authored graph routes: charge, depletion and state-aware route history. Distinguish deterministic analytical ornament from truly accumulated simulated state.
-- Curve-based route sculpting (Catmull-Rom input → graph projection) and per-point locking; preserve inverse edits.
-- Depth illusion with vertex displacement and cross-sectional facet shading, keeping the true underlying adjacency graph stable.
-- Palette vault import from explicit user-owned source, per-route color IDs and per-territory palettes.
-- Better iPhone performance: geometry pooling, cached optical gradients, reduced-motion quick-pause, export cancellation and progress.
+1. Three distinct history-aware state-driven behaviors (not just gain changes): dormant→active→refractory source cycle, event trace and hysteresis; prove the rule transition by ablation before calling it 'Equation Mutiny'.
+2. In-canvas brush to **attract, protect, or erase accumulated signal** without changing Penrose matching geometry. Every brush stroke has a durable identity, can be undone, and is serialized.
+3. Territory-based design with persistent competing frontiers, branching/spore source replication with seeded source cap, and optional 'fossil map' reveal.
+4. Save named snapshots and compare lineage while preserving the existing palettes, touch tools and scenes.
 
-## Later — Harder math, honest claims
+## Export/quality (future)
 
-- Local legal rhomb flip simulator with explicit matching-rule audit and a real reversible state ledger. Keep it separate from current global phason offsets.
-- Native MP4 timeline/quality QA across browsers, possible offline encoder fallback if actually feasible (no fake extension).
-- Seamless tile output via explicit periodic *approximant*, not naive square cropping of finite aperiodic patches.
-- High quality 9:16 and 1:1 compositions with locked/protected focal regions.
+- Add a separate **non-looping** time-lapse exporter with deterministic fixed-step history simulation distinct from the current snapshot-loop export. Provide real progress, frame cap, and iOS memory guards. Never claim that a finite simulation is mathematically periodic.
+- Improve GIF quantization and stress-test real MP4 on iPhone Safari (iOS media encoding varies). Verify orientation, audio silence, no duplicates, and the actual output MIME.
+- Better mobile source pick radius, color accessibility, performance profiling for radius 14, import hardening, checkpoint memory cap and offscreen state preservation.
+- Add optional 'Surprise Me' button that randomizes every supported system without wiping precious art, with clear undo and seed reproducibility.
 
-**Invariants:** every optional feature can be turned off; old artwork survives; New Design requires confirmation; no surprise deploy, paid service, or GitHub Actions.
+**Never silently alter the old geometry, mutate artist presets, use paid APIs, or touch Netlify.**
